@@ -6,20 +6,12 @@
 </template>
 
 <script>
-import {gigService} from "../services/gig-service";
 export default {
   data() {
     return {};
   },
-  created() {
-    this.get()
-  },
-  methods: {
-    async get() {
-      const res=await gigService.query();
-      console.log(res);
-    },
-  },
+  created() {},
+  methods: {},
   computed: {},
   unmounted() {},
 };

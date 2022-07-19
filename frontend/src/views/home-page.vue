@@ -7,7 +7,7 @@
 </template>
 
 <script>
-// import sixerrHeader from '../components/sixerr-header.cmp.vue';
+import { gigService } from "../services/gig-service";
 export default {
 
 data() {
@@ -16,8 +16,15 @@ return {};
   components: {
       // sixerrHeader,
     },
-created() {},
-methods: {},
+created() {
+     this.get();
+},
+methods: {
+    async get() {
+      const res = await gigService.query();
+      console.log("res", res);
+    },
+},
 computed: {},
 unmounted() {},
 };
