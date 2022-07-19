@@ -1,32 +1,30 @@
 <template>
-  <main>
-
-    <h1>Home page</h1>
-  
-  </main>
+    <section>
+        <sixerr-hero />
+    </section>
 </template>
 
 <script>
-import { gigService } from "../services/gig-service";
+import { gigService } from '../services/gig-service'
+import sixerrHero from '../cmps/sixerr-hero.cmp.vue'
 export default {
-
-data() {
-return {};
-},
-  components: {
-      // sixerrHeader,
+    data() {
+        return {}
     },
-created() {
-     this.get();
-},
-methods: {
-    async get() {
-      const res = await gigService.query();
-      console.log("res", res);
+    components: {
+        // sixerrHeader,
+        sixerrHero,
     },
-},
-computed: {},
-unmounted() {},
-};
+    created() {
+        this.get()
+    },
+    methods: {
+        async get() {
+            const res = await gigService.query()
+            console.log('res', res)
+        },
+    },
+    computed: {},
+    unmounted() {},
+}
 </script>
-
