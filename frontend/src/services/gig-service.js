@@ -1,5 +1,5 @@
-const fs = require('fs')
-const gigs = require('../../data/gig.json')
+// const fs = require('fs')
+// gigs = require('../../data/gig.json')
 
 export const gigService = {
     query,
@@ -9,6 +9,14 @@ export const gigService = {
     _makeId,
     _saveGigsToFile,
 }
+// export const gigService = {
+//     query,
+//     getById,
+//     save,
+//     remove,
+//     _makeId,
+//     _saveGigsToFile,
+// }
 
 
 
