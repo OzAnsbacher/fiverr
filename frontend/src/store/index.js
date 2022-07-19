@@ -3,7 +3,7 @@ import gigStore from './modules/gig-store'
 import userStore from './modules/user-store'
 import reviewStore from './modules/review-store'
 
-const store = createStore({
+export const store = createStore({
   strict: true,
   state: {},
   getters: {},
@@ -16,4 +16,4 @@ const store = createStore({
   },
 })
 
-export default store
+// export default store
