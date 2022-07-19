@@ -1,5 +1,7 @@
 <template>
-  <!-- <div class="conteiner-tags">{{ getTags }}</div> -->
+  <div class="conteiner-tags">
+    {{ tags }}
+  </div>
   <div>{{ gigs }}</div>
 </template>
 
@@ -8,20 +10,33 @@ export default {
   data() {
     return {
       gigs: null,
+      tags: [
+        "modern logo",
+        "logo",
+        "custom logo",
+        "creative logo",
+        "professional logo",
+        "logo maker",
+      ],
     };
   },
   components: {},
   async created() {
-    await this.$store.dispatch({ type: "loadGigs" });
+    try {
+      await this.$store.dispatch({ type: "loadGigs" });
+      this.gigs = this.$store.getters.gigsToShow;
+    } catch (error) {
+      console.log("error explore", error);
+    }
   },
   methods: {},
   computed: {
     gigs() {
       return this.$store.getters.gigsToShow;
     },
-    // getTags() {
-    //   return this.gigs.map(gig)
-    // },
+    getTags() {
+      return;
+    },
   },
   unmounted() {},
 };
