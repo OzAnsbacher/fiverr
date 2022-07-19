@@ -1,5 +1,5 @@
-// const fs = require('fs')
-// const gigs = require('../../data/gig.json')
+const fs = require('fs')
+const gigs = require('../../data/gig.json')
 
 export const gigService = {
     query,
