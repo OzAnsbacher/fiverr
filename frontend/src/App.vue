@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import sixerrHeader from '../src/components/sixerr-header.cmp.vue';
+import sixerrHeader from '../src/cmps/sixerr-header.cmp.vue';
 // import homePage from './views/home-page.vue'
 // import { RouterLink } from 'vue-router'
 

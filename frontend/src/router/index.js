@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import homePage from '../views/home-page.vue'
 import explorePage from '../views/explore-page.vue'
-import detailsPage from '../views/details-page.vue'
+import gigPage from '../views/gig-page.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,9 +17,9 @@ const router = createRouter({
       component: explorePage,
     },
     {
-      path: '/details',
-      name: 'details',
-      component: detailsPage,
+      path: '/gig',
+      name: 'gig',
+      component: gigPage,
     },
   ]
 })
