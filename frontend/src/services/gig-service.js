@@ -28,9 +28,19 @@ function query(filter) {
   });
 }
 
-function getById(gigId) {
-  const gig = gGigs.find((gig) => gig.id === gigId);
+async function getById(gigId) {
+  try {
+  let gigs = await query()
+  console.log(gigs)
+  gigs = gigs[0].gigs
+  console.log(gigs)
+  const gig = gigs.find((gig) => gig._id === gigId);
+  console.log(gig)
   return Promise.resolve(gig);
+  } catch (error) {
+    console.log('error', error)
+  }
+  
 }
 
 function save(gig) {
