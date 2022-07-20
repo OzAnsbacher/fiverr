@@ -1,14 +1,9 @@
 <template>
-  <div class="category-conteiner">
-    <ul>
-      <li v-for="tag in tags" :key="tag">{{tag}}</li>
-    </ul>
-  </div>
+  <div>filters</div>
 </template>
 
 <script>
 export default {
-  props: ["tags"],
   data() {
     return {};
   },

@@ -15,10 +15,13 @@ export const gigService = {
   _saveGigsToFile,
 };
 
-function query() {
-
+function query(filter) {
   return axios.get("../../data/gig.json").then((response) => {
-    gGigs = response.data
+    if(filter==='gigs'){
+      gGigs = response.data[0].gigs;
+    } else{
+      gGigs = response.data
+    }
     console.log("gGigs", gGigs);
 
     return gGigs;
@@ -70,4 +73,29 @@ function _makeId(length = 5) {
     txt += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return txt;
+}
+
+function getEmptyGig() {
+  return {
+    _id: _makeId(),
+    title:null,
+    price:null,
+    owner:{
+      id:null,
+      fullname:null,
+      imgUrl:null,
+      level:null,
+      rate:null,
+    },
+    dayToMake:null,
+    description:null,
+    imgUrl:null,
+    tags:[
+      "modern logo",
+      "logo",
+      "custom logo",
+      "creative logo",
+    ],
+    likeByUsers:['mini-user']
+  };
 }
