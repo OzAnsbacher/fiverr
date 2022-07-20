@@ -1,6 +1,6 @@
 <template>
   <div class="conteiner-tags">
-  <explore-tags :tags="tags" />
+  <explore-categories :tags="tags" />
   <explore-results :res="res" />
   
    </div>
