@@ -1,5 +1,5 @@
 <template>
-<section class="gig-page main-layout">
+<section v-if="gig" class="gig-page main-layout">
   <div class="info-side">
     <div class="details-title-info">
       <!-- <h1>{{ gig.title }}</h1> -->
@@ -27,14 +27,19 @@ export default {
     };
   },
   async created() {
-    var { _id } = this.$route.params;
-    await gigService.getById(_id).then((gig) => {
-      this.gig = gig;
-      this.images = gig.images
-      });
+      var { gigid } = this.$route.params;
+      console.log(gigid)
+      const res = await gigService.getById(gigid) 
+      console.log(res)
+      // this.gig = res;
+      // this.images = res.images
     },
   methods: {},
   computed: {
+    gigImg() {
+      return this.gig.image;
+    }
+  // return this.gig and save it in the created 
   },
   unmounted() {},
 };
