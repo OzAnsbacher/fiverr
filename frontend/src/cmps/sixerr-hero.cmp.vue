@@ -8,7 +8,7 @@
                 <div class="hero-content">
                     <h1>
                         Find the perfect
-                        <span>freelance</span>
+                        <span class="freelance">freelance</span>
                         <br />
                         services for your business
                     </h1>
@@ -21,7 +21,7 @@
                             <a>Website Design</a>
                         </span>
                         <span>
-                            <a>Wordpress</a>
+                            <a>WordPress</a>
                         </span>
                         <span>
                             <a>Logo Design</a>

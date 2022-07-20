@@ -7,7 +7,7 @@
                     <h1 to="/">
                         <router-link class="logo" to="/">
                             <div class="logo-part">
-                                <p :class="$route.meta.logoClass">
+                                <p class="sixerr-logo">
                                     Sixerr
                                     <span class="point">.</span>
                                 </p>
@@ -15,7 +15,7 @@
                         </router-link>
                     </h1>
                     <div class="hamburger-nav">
-                        <ul>
+                        <!-- <ul>
                             <li class="btn-close-nav">X</li>
                             <a class="join-nav">Join</a>
                             <a>Sign in</a>
@@ -25,7 +25,7 @@
                             <router-link to="/order-app">
                                 <li>Become a seller</li>
                             </router-link>
-                        </ul>
+                        </ul> -->
                     </div>
                     <!-- gig filter header to come next complete later -->
                 </div>

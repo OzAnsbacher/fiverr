@@ -15,8 +15,10 @@
 @import './views/app-explore';
 
 //COMPONENTS
+@import './cmps/app-header';
 @import './cmps/app-hero';
 @import './cmps/gig-details';
 @import './cmps/explore-filters';
 @import './cmps/explore-category';
 @import './cmps/explore-cards';
+@import './cmps/category-preview';

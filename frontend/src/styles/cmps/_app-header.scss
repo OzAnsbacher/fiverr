@@ -9,12 +9,14 @@
         width: 100%;
         position: fixed;
         p {
-            color: black;
+            // color: black;
+            color: white;
         }
     }
 }
 
 .main-header {
+    background-color: #b64c67;
     display: flex;
     text-align: center;
     height: 100%;
@@ -66,4 +68,74 @@ input {
     display: flex;
     flex-direction: row;
     height: 2em;
+}
+
+.header-flex {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.main-header {
+    display: flex;
+    text-align: center;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.point {
+    color: $clr1;
+}
+
+.sixerr-logo {
+    color: white;
+}
+
+p {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 100%;
+    // font-family: 'helvetica';
+    font-family: 'Macan-regular';
+    align-items: center;
+    position: relative;
+    a {
+        text-decoration: none;
+        // color: #62646a;
+        color: white;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 16px;
+        transition: color 0.3s;
+        header.change-color & {
+            // color: #62646a;
+            color: white;
+        }
+    }
+}
+.join {
+    border: 1px solid $clr1;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 100%;
+    // margin-left: 1em;
+    padding: 7px 20px;
+    transition: all 0.2s ease;
+    color: $clr1;
+    margin-left: 15px;
+}
+.join:hover {
+    background-color: $clr1;
+    border-color: $clr1;
+    color: white;
 }
