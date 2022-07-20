@@ -1,30 +1,28 @@
-
 <template>
-  <header>
-  
-  </header>
-   <sixerr-header/>
-     <router-view />
-<!-- <home-page></home-page> -->
+    <header></header>
+    <sixerr-header />
+    <router-view />
+    <!-- <home-page></home-page> -->
 </template>
 
 <script>
-import sixerrHeader from '../src/cmps/sixerr-header.cmp.vue';
+import sixerrHeader from '../src/cmps/sixerr-header.cmp.vue'
 // import homePage from './views/home-page.vue'
 // import { RouterLink } from 'vue-router'
 
-  export default {
+export default {
     data() {
-      return {};
-  },
-    components: {
-      sixerrHeader,
-      // homePage,
+        return {}
     },
-  created() {},
-  methods: {},
-  computed: {},
-  unmounted() {},
-  };
+    components: {
+        sixerrHeader,
+        // homePage,
+    },
+    created() {
+        // this.$store.dispatch({ type: 'loadCategories' })
+    },
+    methods: {},
+    computed: {},
+    unmounted() {},
+}
 </script>
-

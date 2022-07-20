@@ -1,0 +1,55 @@
+<template>
+    <section class="categories-container">
+        <h2 class="category-title">Popular professional services</h2>
+
+        <Carousel :items-to-show="5" :wrap-around="true" v-if="categories">
+            <Slide v-for="category in categories" :key="category.name">
+                <li class="category-preview-box" @click="explore(category.name)">
+                    <div class="category-txt-name-box">
+                        <small class="category-txt">{{ category.txt }}</small>
+                        <h4 class="category-name">{{ category.name }}</h4>
+                    </div>
+                    <img :src="category.img" alt="Cant load img right now" />
+                </li>
+            </Slide>
+
+            <template #addons>
+                <Navigation />
+            </template>
+        </Carousel>
+    </section>
+</template>
+
+<script>
+import { defineComponent } from 'vue'
+import { Carousel, Navigation, Slide } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css'
+export default defineComponent({
+    name: 'wrap-around',
+    props: ['categories'],
+
+    computed: {
+        // categoryImg() {
+        //     return this.category.img
+        // },
+        getCategories() {
+            console.log(this.categories)
+            return this.categories
+        },
+    },
+    methods: {
+        explore(filter) {
+            this.$emit('explore', filter)
+            this.$router.push(`/explore/${filter}`)
+        },
+    },
+    created() {
+        console.log(this.categories)
+    },
+    components: {
+        Carousel,
+        Slide,
+        Navigation,
+    },
+})
+</script>

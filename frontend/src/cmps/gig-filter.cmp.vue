@@ -1,7 +1,7 @@
 <template>
     <section class="gig-filter">
         <form @submit.prevent="test" class="search-section">
-            <div>Img will come here...</div>
+            <!-- <div>Img will come here...</div> -->
             <input @change="setFilter" v-model="filterBy.title" type="text" placeholder='Try "building mobile app"' class="search" />
             <button class="search-btn">Search</button>
         </form>
