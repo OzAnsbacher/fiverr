@@ -17,7 +17,7 @@ const router = createRouter({
       component: explorePage,
     },
     {
-      path: '/gig',
+      path: '/gig/:gigid',
       name: 'gig',
       component: gigPage,
     },
