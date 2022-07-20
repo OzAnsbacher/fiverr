@@ -1,0 +1,43 @@
+.explore-card {
+  height: 300px;
+  width: 200px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  line-height: 0;
+  .img-gig {
+    width: 100%;
+    height: 45%;
+  }
+  .explore-grid-details {
+    display: grid;
+    grid-template-areas:
+      "pic fullname . "
+      "pic degree . "
+      "title title title"
+      "rate rate rate"
+      "like . price";
+    .explore-img-owner {
+      grid-area: pic;
+      width: 40px;
+      height: 40px;
+    }
+    .explore-card-name {
+      grid-area: fullname;
+    }
+    .explore-card-degree {
+      grid-area: degree;
+    }
+    .explore-card-title {
+      grid-area: title;
+    }
+    .explore-card-rate {
+      grid-area: rate;
+    }
+    .explore-card-like {
+      grid-area: like;
+    }
+    .explore-card-price {
+      grid-area: price;
+    }
+  }
+}
