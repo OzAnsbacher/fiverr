@@ -1,11 +1,15 @@
 <template>
   <div class="conteiner-tags">
-    {{ tags }}
-  </div>
-  <div>{{ gigs }}</div>
+  <explore-tags :tags="tags" />
+  <explore-results :res="res" />
+  
+   </div>
+  <!-- <div>{{ gigs }}</div> -->
 </template>
 
 <script>
+import exploreTags from '../cmps/explore-tags.cmp.vue'
+import exploreResults from '../cmps/explore-results.cmp.vue'
 export default {
   data() {
     return {
@@ -18,9 +22,13 @@ export default {
         "professional logo",
         "logo maker",
       ],
+      res:"All Categories"
     };
   },
-  components: {},
+  components: {
+    exploreTags,
+    exploreResults,
+  },
   async created() {
     try {
       await this.$store.dispatch({ type: "loadGigs" });

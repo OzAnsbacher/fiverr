@@ -1,5 +1,8 @@
 // const fs = require('fs')
 // var gGigs = require('../../data/gig.json')
+import Axios from "axios";
+
+var axios = Axios.create({ withCredentials: true });
 
 var gGigs;
 
@@ -13,8 +16,9 @@ export const gigService = {
 };
 
 function query() {
-  return fetch("../../data/gig.json").then((response) => {
-    gGigs = response.json();
+
+  return axios.get("../../data/gig.json").then((response) => {
+    gGigs = response.data
     console.log("gGigs", gGigs);
 
     return gGigs;
