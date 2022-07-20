@@ -4,12 +4,19 @@
 @import './setup/typography';
 @import './setup/variables';
 
+//BASIC
+@import './basic/base';
+@import './basic/helpers';
+@import './basic/layout';
+@import './basic/screen';
+
 //VIEWS
 @import './views/app-details';
 @import './views/app-explore';
 
 //COMPONENTS
 @import './cmps/app-hero';
+@import './cmps/gig-details';
 @import './cmps/explore-filters';
 @import './cmps/explore-category';
 @import './cmps/explore-cards';
