@@ -7,6 +7,7 @@
     font-family: sans-serif;
     padding: 32px 0 0 ;
     line-height: 150%;
+    background-color: bisque;
 }
 
 
@@ -47,7 +48,7 @@
 }
 
 .profile-img {
-    margin: auto;
+    margin-right: 50px;
     padding: auto;
     display: flex;
     align-items: center;
@@ -56,4 +57,28 @@
 .seller-img {
     border-radius: 50%;
     width: 30px;
+}
+
+.buy-btn {
+    text-align: center;
+    margin: auto 0;
+    button {
+        width: 100%;
+        background: green;
+        border: none;
+        padding: 12px 24px;
+        font-weight: 700;
+        line-height: 100%;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+    button:hover {
+        cursor: pointer;
+    }
+}
+
+.about-title {
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 10px;
 }
