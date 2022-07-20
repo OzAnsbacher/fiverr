@@ -15,9 +15,13 @@ export const gigService = {
   _saveGigsToFile,
 };
 
-function query() {
+function query(filter) {
   return axios.get("../../data/gig.json").then((response) => {
-    gGigs = response.data;
+    if(filter==='gigs'){
+      gGigs = response.data[0].gigs;
+    } else{
+      gGigs = response.data
+    }
     console.log("gGigs", gGigs);
 
     return gGigs;

@@ -6,6 +6,10 @@
 
 //VIEWS
 @import './views/app-details';
+@import './views/app-explore';
 
 //COMPONENTS
 @import './cmps/app-hero';
+@import './cmps/explore-filters';
+@import './cmps/explore-category';
+@import './cmps/explore-cards';

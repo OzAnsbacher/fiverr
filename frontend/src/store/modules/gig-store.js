@@ -16,7 +16,7 @@ export default {
   },
   actions: {
     loadGigs({ commit, state }) {
-      gigService.query(state.filterBy).then((gigs) => {
+      gigService.query('gigs').then((gigs) => {
         commit({ type: "setGigs", gigs });
       });
     },

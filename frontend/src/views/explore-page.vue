@@ -1,32 +1,31 @@
 <template>
   <div class="conteiner-tags">
-  <explore-categories :tags="tags" />
-  <explore-results :res="res" />
-  <explore-filters />
-  <explore-cards />
-  
-   </div>
+    <explore-categories :tags="tags" />
+    <explore-results :res="res" />
+    <explore-filters />
+    <explore-cards :gigs="gigs" />
+  </div>
   <!-- <div>{{ gigs }}</div> -->
 </template>
 
 <script>
-import exploreCategories from '../cmps/explore-categories.cmp.vue'
-import exploreResults from '../cmps/explore-results.cmp.vue'
-import exploreFilters from '../cmps/explore-filters.cmp.vue'
-import exploreCards from '../cmps/explore-cards.cmp.vue'
+import exploreCategories from "../cmps/explore-categories.cmp.vue";
+import exploreResults from "../cmps/explore-results.cmp.vue";
+import exploreFilters from "../cmps/explore-filters.cmp.vue";
+import exploreCards from "../cmps/explore-cards.cmp.vue";
 export default {
   data() {
     return {
       gigs: null,
       tags: [
-        "modern logo",
-        "logo",
-        "custom logo",
-        "creative logo",
-        "professional logo",
-        "logo maker",
+        "logo-design",
+        "wordpress",
+        "voice-over",
+        "artisitic",
+        "proffesional",
+        "accessible",
       ],
-      res:"All Categories"
+      res: "All Categories",
     };
   },
   components: {
