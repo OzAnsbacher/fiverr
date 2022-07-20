@@ -16,9 +16,8 @@ export const gigService = {
 };
 
 function query() {
-
   return axios.get("../../data/gig.json").then((response) => {
-    gGigs = response.data
+    gGigs = response.data;
     console.log("gGigs", gGigs);
 
     return gGigs;
@@ -70,4 +69,29 @@ function _makeId(length = 5) {
     txt += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return txt;
+}
+
+function getEmptyGig() {
+  return {
+    _id: _makeId(),
+    title:null,
+    price:null,
+    owner:{
+      id:null,
+      fullname:null,
+      imgUrl:null,
+      level:null,
+      rate:null,
+    },
+    dayToMake:null,
+    description:null,
+    imgUrl:null,
+    tags:[
+      "modern logo",
+      "logo",
+      "custom logo",
+      "creative logo",
+    ],
+    likeByUsers:['mini-user']
+  };
 }

@@ -2,6 +2,8 @@
   <div class="conteiner-tags">
   <explore-categories :tags="tags" />
   <explore-results :res="res" />
+  <explore-filters />
+  <explore-cards />
   
    </div>
   <!-- <div>{{ gigs }}</div> -->
@@ -10,6 +12,8 @@
 <script>
 import exploreCategories from '../cmps/explore-categories.cmp.vue'
 import exploreResults from '../cmps/explore-results.cmp.vue'
+import exploreFilters from '../cmps/explore-filters.cmp.vue'
+import exploreCards from '../cmps/explore-cards.cmp.vue'
 export default {
   data() {
     return {
@@ -28,6 +32,8 @@ export default {
   components: {
     exploreCategories,
     exploreResults,
+    exploreFilters,
+    exploreCards,
   },
   async created() {
     try {
