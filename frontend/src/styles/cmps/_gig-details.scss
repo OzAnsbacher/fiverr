@@ -5,9 +5,80 @@
 .gig-page {
     display: flex;
     font-family: sans-serif;
+    padding: 32px 0 0 ;
+    line-height: 150%;
+    background-color: bisque;
 }
 
 
 .info-side {
+    margin-right: 100px;
+}
 
+.details-title-info {
+    color: green;
+    margin-bottom: auto;
+    h1 {
+        font-size: 28px;
+        margin: 0;
+        padding-bottom: 16px;
+    }
+}
+
+.seller-info {
+    font-family: sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    line-height: 21px;
+    gap: 11px;
+    .owner-name {
+        color: orange;
+        font-weight: 1000;
+        margin: 5px;
+    }
+}
+
+.about-gig {
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+    color: grey;
+    margin-bottom: 64px;
+    margin-top: 64px;
+}
+
+.profile-img {
+    margin-right: 50px;
+    padding: auto;
+    display: flex;
+    align-items: center;
+}
+
+.seller-img {
+    border-radius: 50%;
+    width: 30px;
+}
+
+.buy-btn {
+    text-align: center;
+    margin: auto 0;
+    button {
+        width: 100%;
+        background: green;
+        border: none;
+        padding: 12px 24px;
+        font-weight: 700;
+        line-height: 100%;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+    button:hover {
+        cursor: pointer;
+    }
+}
+
+.about-title {
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 10px;
 }
