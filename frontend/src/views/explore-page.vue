@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import exploreTags from '../cmps/explore-tags.cmp.vue'
+import exploreCategories from '../cmps/explore-categories.cmp.vue'
 import exploreResults from '../cmps/explore-results.cmp.vue'
 export default {
   data() {
@@ -26,7 +26,7 @@ export default {
     };
   },
   components: {
-    exploreTags,
+    exploreCategories,
     exploreResults,
   },
   async created() {
