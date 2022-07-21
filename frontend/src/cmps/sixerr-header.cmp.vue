@@ -48,19 +48,20 @@
                     <div class="avatar-box">
                         <!-- add functionality inside div tag later -->
                     </div>
+
                     <div class="online-dot"></div>
-                    <ul class="profile-nav">
-                        <!-- add functionality inside ul tag later -->
-                        <li>
-                            <router-link to="/user-profile" class="profile-txt">
-                                Profile
-                                <!-- add functionality inside router-link tag later -->
-                            </router-link>
-                        </li>
+                    <!-- <ul class="profile-nav"> -->
+                    <!-- add functionality inside ul tag later -->
+                    <!-- <li> -->
+                    <!-- <router-link to="/user-profile" class="profile-txt"> -->
+                    <!-- Profile -->
+                    <!-- add functionality inside router-link tag later -->
+                    <!-- </router-link> -->
+                    <!-- </li>
                         <li class="line"></li>
                         <li class="logout-btn">Logout</li>
                         <li class="triangle"></li>
-                    </ul>
+                    </ul> -->
                 </nav>
             </div>
         </main>
