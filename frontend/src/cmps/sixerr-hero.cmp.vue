@@ -85,6 +85,7 @@ export default {
     data() {
         return {
             images: ['src/img/hero1.png', 'src/img/hero2.png'],
+
             image: 'src/img/hero1.png',
 
             sellerNames: ['Levi, Full Stack Developer', 'Oz, King Of Coding'],

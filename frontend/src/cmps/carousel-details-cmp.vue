@@ -32,12 +32,7 @@
                 :gap="2.5"
                 :arrows="false"
             >
-                <vueper-slide
-                    v-for="(image, i) in images"
-                    :key="i"
-                    :image="image"
-                    @click.native="$refs.vueperslides2.goToSlide(i)"
-                >
+                <vueper-slide v-for="(image, i) in images" :key="i" :image="image" @click.native="$refs.vueperslides2.goToSlide(i)">
                     <img :src="(image, i)" alt />
                 </vueper-slide>
             </vueper-slides>
@@ -45,21 +40,20 @@
     </div>
 </template>
 <script>
-import { VueperSlide, VueperSlides } from "vueperslides";
-import "vueperslides/dist/vueperslides.css";
+import { VueperSlide, VueperSlides } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
 
 export default {
-    props: ["images"],
+    props: ['images'],
     data() {
-        return {
-        };
+        return {}
     },
     created() {},
     componets: {
         VueperSlides,
         VueperSlide,
     },
-};
+}
 </script>
 
 <style>

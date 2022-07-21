@@ -71,18 +71,36 @@
               <img src="https://img.freepik.com/free-vector/background-coming-soon-with-clock_1017-5059.jpg?size=338&ext=jpg" alt />
               <p>{{ gig.daysToMake }} Days Delivery</p>
             </div>
-          </div>
         </div>
-        <div class="promises-section">
-          <div class="guarentee-section">
-            <p>High quality product guarenteed</p>
-          </div>
-          <div class="guarentee-section">
-            <p>Delivery on time guarentee</p>
-          </div>
-          <div class="guarentee-section">
-            <p>1 Product</p>
-          </div>
+        <div class="check-out-section">
+            <div class="check-out-part">
+                <div class="checkout-title">
+                    <p class="service">{{ gig.category }}</p>
+                    <p class="price">${{ gig.price }}</p>
+                </div>
+                <div class="additional-info">
+                    <div class="delivery-wrapper">
+                        <div class="img-clock">
+                            <!-- <img src="../assets/logo/clock.png" alt /> -->
+                            <p>{{ gig.daysToMake }} Days Delivery</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="promises-section">
+                    <div class="guarentee-section">
+                        <p>High quality product guarenteed</p>
+                    </div>
+                    <div class="guarentee-section">
+                        <p>Delivery on time guarentee</p>
+                    </div>
+                    <div class="guarentee-section">
+                        <p>1 Product</p>
+                    </div>
+                </div>
+                <div class="buy-btn">
+                    <button>Continue to checkout {{ gig.price }}</button>
+                </div>
+            </div>
         </div>
         <div class="buy-btn">
           <span>Continue to checkout {{ gig.price }}$</span>
@@ -93,45 +111,45 @@
 </template>
 
 <script>
-import { gigService } from "../services/gig-service";
-import carouselDetails from "../cmps/carousel-details-cmp.vue";
+import { gigService } from '../services/gig-service'
+import carouselDetailsCmp from '../cmps/carousel-details-cmp.vue'
 
 export default {
-    name: "gig-detail",
+    name: 'gig-detail',
     data() {
         return {
             gig: null,
-            images: "",
-            rates: "",
+            images: '',
+            rates: '',
             currUser: null,
             reviewToAdd: {
-              txt: "",
-              createdAt: new Date().getMinutes(),
-              flag: "",
-            }
-        };
+                txt: '',
+                createdAt: new Date().getMinutes(),
+                flag: '',
+            },
+        }
     },
     async created() {
-        var { gigid } = this.$route.params;
-        console.log(gigid);
-        const res = await gigService.getById(gigid);
-        console.log(res);
-        this.gig = res;
-        this.images = res.images;
-        const userId = this.gig.owner._id; 
+        var { gigid } = this.$route.params
+        console.log(gigid)
+        const res = await gigService.getById(gigid)
+        console.log(res)
+        this.gig = res
+        this.images = res.images
+        const userId = this.gig.owner._id
     },
     methods: {},
     computed: {
         gigImg() {
-            return this.gig.image;
+            return this.gig.image
         },
         // return this.gig and save it in the created
     },
-    unmounted() { },
-    components: { 
-        carouselDetails
-      }
-};
+    unmounted() {},
+    components: {
+        carouselDetailsCmp,
+    },
+}
 </script>
 
 <style></style>
