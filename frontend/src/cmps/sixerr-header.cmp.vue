@@ -75,15 +75,39 @@
 </template>
 
 <script>
+import exploreTagsHeaderCmpVue from './explore-tags-header.cmp.vue'
+
 export default {
     template: `
         `,
     data() {
-        return {}
+        return {
+            scrollPosition: null,
+        }
     },
-    created() {},
-    methods: {},
+    created() {
+        window.addEventListener('scroll', this.updateScroll)
+    },
+    methods: {
+        updateScroll() {
+            if (!this.isHome) {
+                return
+            }
+            this.scrollPosition = window.scrollY
+        },
+    },
+    mounted() {
+        window.addEventListener('scroll', this.updateScroll)
+    },
+
     computed: {},
+    watch: {
+        isHome: {
+            handler() {
+                if (!this.isHome) this.scrollPosition = 0
+            },
+        },
+    },
     unmounted() {},
 }
 </script>
