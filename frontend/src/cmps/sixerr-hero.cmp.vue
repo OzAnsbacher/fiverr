@@ -1,8 +1,9 @@
 <template>
     <div class="hero-section animation-hero">
         <div class="hero-img">
-            <!-- <div :style="{ backgroundImage: `url(${image})` }" class="hero-img-box"></div> -->
-            <img class="hero-img1 animation-hero" :src="image" alt="" />
+            <div :style="{ backgroundImage: `url(${image})` }" class="hero-img-box"></div>
+            <!-- <img class="hero-img1 animation-hero" :src="image" alt="" /> -->
+
             <!-- <img class="hero-img2 animation-hero" :src="image1" alt="" /> -->
         </div>
         <div class="hero-box">
@@ -83,9 +84,9 @@ export default {
     },
     data() {
         return {
-            // images: ['src/img/hero1.png'],
+            images: ['src/img/hero1.png', 'src/img/hero2.png'],
             image: 'src/img/hero1.png',
-            // image1: 'src/img/hero2.png',
+
             sellerNames: ['Levi, Full Stack Developer', 'Oz, King Of Coding'],
             sellerName: 'Levi, Full Stack Developer',
         }
@@ -102,6 +103,11 @@ export default {
             //     }
             // }, 5000)
         },
+        setFilter(filterBy) {
+            this.$store.dispatch({ type: 'setFilter', filterBy })
+            this.$router.push('/explore')
+        },
+
         setSellerName() {
             var i = 0
             const that = this
