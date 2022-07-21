@@ -58,31 +58,7 @@
     border-radius: 50%;
     max-width: 100%;
   }
-  .carusel-img {
-    width: 630px;
-    height: 459px;
-    img {
-      width: 100%;
-    }
-  }
-  .reviews {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    border-bottom: 1px solid #DADBDD;
-    padding-bottom: 25px;
-    p {
-      color: #404145;
-      font-size: 20px;
-      font-weight: 700;
-    }
-    a {
-      color: $clr1;
-      font-weight: 400;
-      font-size: 14px;
-      cursor: pointer;
-    }
-  }
+
   .check-out-section {
     width: 100%;
     text-align: -webkit-right;
