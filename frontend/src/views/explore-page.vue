@@ -44,7 +44,6 @@ export default {
   },
   methods: {
     async getCategory(filterBy) {
-      console.log(filterBy);
       try {
         await this.$store.dispatch({ type: "loadGigs", filterBy });
         this.gigs = this.$store.getters.gigsToShow;
@@ -52,7 +51,6 @@ export default {
         console.log("error explore", error);
       }
     },
- 
   },
   computed: {
     gigs() {

@@ -40,24 +40,14 @@ export default defineComponent({
   },
   methods: {
     explore(category) {
-      //   filterBy = setCarFilter(filterBy);
-      //   state.commit({ type: "changeFilter", filterBy });
       const filterBy = {
         category,
       };
-      //   const queryStringParams = `explore`;
       const queryStringParams = `explore?category=${filterBy.category}`;
-      //   this.$router.push(`/explore`);
-      //    const queryStringParams =  gigService.getqueryStringParams(filterBy);
       const newUrl = queryStringParams;
       console.log(newUrl);
       this.$router.push(newUrl);
     },
-
-    // explore(filter) {
-    //   this.$emit("explore", filter);
-    //   this.$router.push(`/explore/${filter}`);
-    // },
   },
   created() {
     console.log(this.categories);
