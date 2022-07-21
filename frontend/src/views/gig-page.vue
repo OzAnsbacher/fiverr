@@ -68,7 +68,7 @@
         <div class="additional-info">
           <div class="delivery-wrapper">
             <div class="img-clock">
-              <img src="../assets/logo/clock.png" alt />
+              <img src="https://img.freepik.com/free-vector/background-coming-soon-with-clock_1017-5059.jpg?size=338&ext=jpg" alt />
               <p>{{ gig.daysToMake }} Days Delivery</p>
             </div>
           </div>
@@ -85,7 +85,7 @@
           </div>
         </div>
         <div class="buy-btn">
-          <button>Continue to checkout {{ gig.price }}</button>
+          <span>Continue to checkout {{ gig.price }}$</span>
         </div>
       </div>
     </div>

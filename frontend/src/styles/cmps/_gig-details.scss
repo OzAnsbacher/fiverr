@@ -61,15 +61,17 @@
 
   .check-out-section {
     width: 100%;
-    text-align: -webkit-right;
+    text-align: -webkit-center;
   }
   .check-out-part {
     position: sticky;
-    top: 50px;
+    top: 100px;
     max-width: 416px;
     border: 1px solid #DADBDD;
-    padding: 24px;
+    padding: 32px 24px 0;
   }
+
+
   .about-title {
     color: #404145;
     font-size: 20px;
@@ -196,31 +198,30 @@
       font-weight: bold;
       
       color: #62646A;
-      p {
-        margin-left: 8px;
-       
-      }
     }
   }
   .buy-btn {
-      margin: auto 0;
     text-align: center;
-    button {
+    margin: 24px 0;
+    span {
       width: 100%;
-      padding: 12px 24px;
+      display: inline-block;
+      padding: 12px 24px 12px 24px;
       border: none;
-      background-color: $clr1;
+      background-color: #1dbf73;
       font-weight: 600;
       line-height: 100%;
       color: #fff;
-      font-size: 14px;
+      font-size: 16px;
       border-radius: 4px;
     }
-    button:hover {
+    span:hover {
       background-color: #1DA164;
       cursor: pointer;
     }
   }
+
+
  
   .header-info {
     display: block;
