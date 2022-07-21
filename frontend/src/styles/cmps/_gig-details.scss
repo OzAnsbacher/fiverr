@@ -5,14 +5,20 @@
 .gig-page {
     display: flex;
     font-family: sans-serif;
-    padding: 32px 0 0 ;
+    padding: 32px 24px 0 ;
     line-height: 150%;
-    background-color: bisque;
+    background-color: #fff;
+    max-width: 1304;
+        img {
+            max-width: 100%;
+        }
+   
 }
 
 
 .info-side {
     margin-right: 100px;
+    max-width: 710px;
 }
 
 .details-title-info {
@@ -26,10 +32,10 @@
 }
 
 .seller-info {
-    font-family: sans-serif;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    font-size: 14px;
     line-height: 21px;
     gap: 11px;
     .owner-name {
@@ -45,6 +51,9 @@
     color: grey;
     margin-bottom: 64px;
     margin-top: 64px;
+    background-color: bisque;
+    width: 1000px;
+    height: 100%;
 }
 
 .profile-img {
@@ -52,6 +61,7 @@
     padding: auto;
     display: flex;
     align-items: center;
+
 }
 
 .seller-img {
@@ -81,4 +91,9 @@
     font-weight: 700;
     font-size: 20px;
     padding-bottom: 10px;
+    color: #404145;
+}
+
+.gig-details-category {
+    margin-bottom: 10px;
 }
