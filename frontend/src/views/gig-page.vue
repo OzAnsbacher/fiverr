@@ -2,6 +2,9 @@
     <section v-if="gig" class="gig-page main-layout">
         <div class="info-side">
             <div class="details-title-info">
+                <div class="gig-details-category">
+                    <p> {{ gig.tags }}  </p>
+                </div>
                 <h1>{{ gig.title }}</h1>
                 <div class="seller-info">
                     <div class="profile-img">
@@ -10,31 +13,29 @@
                             alt=""
                             class="seller-img"
                         />
+                        <p class="owner-name">{{ gig.owner.fullname }}</p>
+                        <p class="owner-level">
+                            level 3 seller{{ gig.owner.level }}
+                        </p>
                     </div>
-                    <p class="owner-name">{{ gig.owner.fullname }}</p>
-                    <p class="owner-level">{{ gig.owner.level }}</p>
                 </div>
             </div>
-            <div class="gig-details-category">
-                <p>{{ gig.tags }}</p>
-            </div>
+
             <p>Price ${{ gig.price }}</p>
             <p>Days to make {{ gig.daysToMake }}</p>
             <p><img :src="gig.imgUrl" alt="" /></p>
         </div>
-                <div class="buy-btn">
-                  <button @click="addOrder">Continue (${{ gig.price }})</button>
+        <div class="about-gig">
+            <p class="about-title">About this gig</p>
+            <p>{{ gig.description }}</p>
+            <div class="buy-btn">
+                <button @click="addOrder">Continue (${{ gig.price }})</button>
+            </div>
+            <p class="about-title">About the seller</p>
+            <div class="about-seller">
+                <div class="seller-profile"></div>
+            </div>
         </div>
-                  <div class="about-gig">
-                    <p class="about-title">About this gig</p>
-                      <p>{{ gig.description }}</p>
-                  </div>
-                  <p class="about-title">About the seller</p>
-                  <div class="about-seller">
-                    <div class="seller-profile">
-                      
-                    </div>
-                  </div>
     </section>
 </template>
 
