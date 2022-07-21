@@ -44,7 +44,6 @@
         </div>
     </div>
 </template>
-
 <script>
 import { VueperSlide, VueperSlides } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
@@ -52,7 +51,8 @@ import "vueperslides/dist/vueperslides.css";
 export default {
     props: ["images"],
     data() {
-        return {};
+        return {
+        };
     },
     created() {},
     componets: {
