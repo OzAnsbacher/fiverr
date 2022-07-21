@@ -12,7 +12,7 @@ const router = createRouter({
             component: homePage,
         },
         {
-            path: '/explore/:category?',
+            path: '/explore',
             name: 'explore',
             component: explorePage,
         },

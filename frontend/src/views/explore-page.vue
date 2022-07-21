@@ -1,7 +1,7 @@
 <template>
   <div class="conteiner-tags">
-    <explore-categories :tags="tags" />
-    <explore-results @setCategory="getCategory" :res="res" />
+    <explore-tags :tags="tags" />
+    <explore-category @setCategory="getCategory" :res="res" />
     <explore-filters />
     <explore-cards :gigs="gigs" />
   </div>
@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import exploreCategories from "../cmps/explore-categories.cmp.vue";
-import exploreResults from "../cmps/explore-results.cmp.vue";
+import exploreTags from "../cmps/explore-tags-header.cmp.vue";
+import exploreCategory from "../cmps/explore-category.cmp.vue";
 import exploreFilters from "../cmps/explore-filters.cmp.vue";
 import exploreCards from "../cmps/explore-cards.cmp.vue";
 export default {
@@ -29,8 +29,8 @@ export default {
     };
   },
   components: {
-    exploreCategories,
-    exploreResults,
+    exploreTags,
+    exploreCategory,
     exploreFilters,
     exploreCards,
   },
@@ -43,15 +43,16 @@ export default {
     // }
   },
   methods: {
-   async getCategory(category){
-    console.log(category);
-                  try {
-      await this.$store.dispatch({ type: "loadGigs", category });
-      this.gigs = this.$store.getters.gigsToShow;
-    } catch (error) {
-      console.log("error explore", error);
-    }
-    }
+    async getCategory(filterBy) {
+      console.log(filterBy);
+      try {
+        await this.$store.dispatch({ type: "loadGigs", filterBy });
+        this.gigs = this.$store.getters.gigsToShow;
+      } catch (error) {
+        console.log("error explore", error);
+      }
+    },
+ 
   },
   computed: {
     gigs() {

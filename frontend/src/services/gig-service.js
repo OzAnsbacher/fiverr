@@ -6,15 +6,6 @@ var axios = Axios.create({ withCredentials: true });
 
 var gGigs;
 
-const categories = [
-  {
-    name: "Logo Design",
-    type: "logos",
-    txt: "Build your brand",
-    img: "https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png",
-  },
-];
-
 export const gigService = {
   query,
   getById,
@@ -23,27 +14,20 @@ export const gigService = {
   _makeId,
   _saveGigsToFile,
   getCategories,
+  getqueryStringParams,
 };
 
-function query(filter) {
-  return axios.get("../../data/gig.json").then((response) => {
-    if (filter === "gigs") {
-      gGigs = response.data[0].gigs;
-    } else {
-      gGigs = response.data;
-    }
-    return gGigs;
-  });
+async function query(filterBy) {
+  var res = await axios.get("../../data/gig.json");
+  var gigs=res.data[0].gigs
+  if(filterBy) gigs=setGigsFilters(gigs, filterBy)
+  return gigs;
 }
 
 async function getById(gigId) {
   try {
     let gigs = await query();
-    console.log(gigs);
-    gigs = gigs[0].gigs;
-    console.log(gigs);
     const gig = gigs.find((gig) => gig._id === gigId);
-    console.log(gig);
     return Promise.resolve(gig);
   } catch (error) {
     console.log("error", error);
@@ -114,4 +98,20 @@ function getEmptyGig() {
 
 function getCategories() {
   return categories;
+}
+
+function setGigsFilters(gigs, filter){
+
+  return gigs
+}
+
+function getqueryStringParams(filterBy){
+  const queryStringParams = `explore`;
+  // const queryStringParams = `explore?category=${filterBy.category}`;
+  // const newUrl =
+    return window.location.protocol +"//" +
+    window.location.host +
+    window.location.pathname +
+    queryStringParams;
+    // return newUrl
 }

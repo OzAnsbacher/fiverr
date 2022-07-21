@@ -65,6 +65,7 @@ export default {
         img: "https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/book-covers-2x.png",
       },
     ],
+    filterBy:null
   },
   getters: {
     gigsToShow({ gigs }) {
@@ -73,20 +74,27 @@ export default {
     categoriesToShow({ categories }) {
       return categories;
     },
+    // categoriesToShow({ filterBy }) {
+    //   return filterBy;
+    // },
   },
   mutations: {
     setGigs(state, { gigs }) {
       state.gigs = gigs;
     },
+    changeFilter(state, {filterBy}){
+      state.filterBy=filterBy
+    }
   },
   actions: {
-    async loadGigs(state, { category }) {
+    async loadGigs(state, { filterBy }) {
       try {
         //todo change in filter in category
         const gigs = await gigService.query("gigs");
         state.commit({ type: "setGigs", gigs });
       } catch (error) {}
     },
+ 
     //     loadCategories({commit}){
     // this.categories = await gigService.getCategories()
     // console.log(this.categories);

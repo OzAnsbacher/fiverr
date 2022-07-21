@@ -13,17 +13,19 @@ export default {
     };
   },
   created() {
-    const { category } = this.$route.params;
-    this.stringCategory(category)
-    this.setCategory(category)
+    const { category , price} = this.$route.query;
+    console.log('category', category, price)
+    const filterBy={category}
+    this.stringCategory(filterBy)
+    this.setCategory(filterBy)
   },
   methods: {
-    stringCategory(category) {
+    stringCategory({category}) {
       if (!category) this.category = "All Categories";
       else this.category = category;
     },
-  setCategory(category){
-    this.$emit('setCategory', category)
+  setCategory(filterBy){
+    this.$emit('setCategory', filterBy)
   }
   },
   computed: {
