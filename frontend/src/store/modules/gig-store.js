@@ -90,7 +90,7 @@ export default {
     async loadGigs(state, { filterBy }) {
       try {
         //todo change in filter in category
-        const gigs = await gigService.query("gigs");
+        const gigs = await gigService.query(filterBy);
         state.commit({ type: "setGigs", gigs });
       } catch (error) {}
     },

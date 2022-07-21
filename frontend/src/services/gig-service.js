@@ -19,8 +19,8 @@ export const gigService = {
 
 async function query(filterBy) {
   var res = await axios.get("../../data/gig.json");
-  var gigs=res.data[0].gigs
-  if(filterBy) gigs=setGigsFilters(gigs, filterBy)
+  var gigs = res.data[0].gigs;
+  if (filterBy) gigs = setGigsFilters(gigs, filterBy);
   return gigs;
 }
 
@@ -100,18 +100,25 @@ function getCategories() {
   return categories;
 }
 
-function setGigsFilters(gigs, filter){
+function setGigsFilters(gigs, filter) {
+  console.log(filter);
+  if (filter.category) {
+    gigs = gigs.filter((gig) => gig.category === filter.category);
+  }
 
-  return gigs
+  return gigs;
 }
 
-function getqueryStringParams(filterBy){
+function getqueryStringParams(filterBy) {
   const queryStringParams = `explore`;
   // const queryStringParams = `explore?category=${filterBy.category}`;
   // const newUrl =
-    return window.location.protocol +"//" +
+  return (
+    window.location.protocol +
+    "//" +
     window.location.host +
     window.location.pathname +
-    queryStringParams;
-    // return newUrl
+    queryStringParams
+  );
+  // return newUrl
 }
