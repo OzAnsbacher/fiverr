@@ -1,4 +1,6 @@
 <template>
+<p>carousel test
+</p>
     <div class="carousel">
         <vueper-slides
             ref="vueperslides1"
