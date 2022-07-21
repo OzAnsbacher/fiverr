@@ -1,7 +1,7 @@
 <template>
   <div class="conteiner-tags">
     <explore-categories :tags="tags" />
-    <explore-results :res="res" />
+    <explore-results @setCategory="getCategory" :res="res" />
     <explore-filters />
     <explore-cards :gigs="gigs" />
   </div>
@@ -35,14 +35,24 @@ export default {
     exploreCards,
   },
   async created() {
-    try {
-      await this.$store.dispatch({ type: "loadGigs" });
+    // try {
+    //   await this.$store.dispatch({ type: "loadGigs" });
+    //   this.gigs = this.$store.getters.gigsToShow;
+    // } catch (error) {
+    //   console.log("error explore", error);
+    // }
+  },
+  methods: {
+   async getCategory(category){
+    console.log(category);
+                  try {
+      await this.$store.dispatch({ type: "loadGigs", category });
       this.gigs = this.$store.getters.gigsToShow;
     } catch (error) {
       console.log("error explore", error);
     }
+    }
   },
-  methods: {},
   computed: {
     gigs() {
       return this.$store.getters.gigsToShow;

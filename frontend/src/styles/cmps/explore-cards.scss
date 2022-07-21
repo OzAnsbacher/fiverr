@@ -1,8 +1,14 @@
+.explore-cards-conteiner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .explore-card {
+  font-family: sans-serif;
   height: 366px;
-  width: 272px;
+  width: 275px;
   margin-bottom: 10px;
-  border: 1px solid black;
+  border: 1px solid #efeff0;
   line-height: 1;
   .img-gig {
     width: 100%;
@@ -16,10 +22,14 @@
       "title title title"
       "rate rate rate"
       "like . price";
+    grid-template-columns: 40px 1fr 1fr;
+    grid-template-rows: 20px 20px 2.3fr 1fr 1.5fr;
     .explore-img-owner {
       grid-area: pic;
-      width: 40px;
-      height: 40px;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      margin: 10px;
     }
     .explore-card-name {
       grid-area: fullname;
@@ -29,15 +39,33 @@
     }
     .explore-card-title {
       grid-area: title;
+      margin: auto;
+      padding: 0 10px;
+      line-height: 1.5;
     }
     .explore-card-rate {
       grid-area: rate;
+      color: #ffbe5b;
+      padding-left: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #efeff0;
     }
     .explore-card-like {
+      margin: auto;
       grid-area: like;
+      fill: #b5b6ba;
     }
     .explore-card-price {
+      // direction: ltr;
+      // text-align: left;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: auto;
+      margin-right: 2px;     
       grid-area: price;
+      span {
+        font-size: 0.7em;
+      }
     }
   }
 }
