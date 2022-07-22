@@ -1,5 +1,5 @@
 <template>
-    <header class="app-header full" :class="{ 'change-color': scrollPosition > 50 }">
+    <header class="app-header full" :class="{ 'change-color': scrollPosition > 50 || getIsNotHome }">
         <button class="hamburger hide">☰</button>
         <main class="main-header" ref="nav">
             <div class="main-layout header-flex">
@@ -14,6 +14,7 @@
                             </div>
                         </router-link>
                     </h1>
+                    <!-- <input type="text" placeholder="" v-show="scrollPosition > 50 || getIsNotHome" /> -->
                     <div class="hamburger-nav">
                         <!-- <ul>
                             <li class="btn-close-nav">X</li>
@@ -27,7 +28,7 @@
                             </router-link>
                         </ul> -->
                     </div>
-                    <!-- gig filter header to come next complete later -->
+                    <header-filter @setFilter="setFilter" :class="{ 'search-header': scrollPosition > 100 }" class="hide" />
                 </div>
                 <nav class="nav">
                     <router-link to="/explore" class="explore">
@@ -36,11 +37,11 @@
                     <router-link :class="$route.meta.logoClass" to="/" class="become-seller">Become a seller</router-link>
                     <div>
                         <!-- add functionality inside div tag later -->
-                        <a class="sign-in" :class="$route.meta.logoClass">Sign in</a>
+                        <a class="sign-in" :class="$route.meta.logoClass" @click="toggleLogin">Sign in</a>
                         <a class="join" :class="$route.meta.bodyClass">Join</a>
                     </div>
-                    <div class="login-modal">
-                        <!-- add functionality inside div tag later -->
+                    <div class="login-modal" v-show="showLogin" @click="closeLogin">
+                        <sign-in @toggleLogin="toggleLogin" @closeLogin="toggleLogin" />
                     </div>
                     <div class="signup-modal">
                         <!-- add functionality inside div tag later -->
@@ -75,15 +76,21 @@
 </template>
 
 <script>
-import exploreTagsHeaderCmpVue from './explore-tags-header.cmp.vue'
-
+import headerFilter from './header-filter.cmp.vue'
+import signIn from './sign-in.cmp.vue'
 export default {
     template: `
         `,
     data() {
         return {
             scrollPosition: null,
+            isNotHome: null,
+            showLogin: false,
         }
+    },
+    components: {
+        headerFilter,
+        signIn,
     },
     created() {
         window.addEventListener('scroll', this.updateScroll)
@@ -95,12 +102,34 @@ export default {
             }
             this.scrollPosition = window.scrollY
         },
+        toggleLogin() {
+            this.showLogin = !this.showLogin
+        },
+        closeLogin(event) {
+            const elModal = document.getElementsByClassName('login-container')[0]
+            if (elModal.contains(event.target)) return
+            this.showLogin = false
+        },
+        join() {
+            this.toggleLogin()
+        },
     },
     mounted() {
         window.addEventListener('scroll', this.updateScroll)
     },
 
-    computed: {},
+    computed: {
+        isHome() {
+            return this.$route.path === '/'
+        },
+        getIsNotHome() {
+            var path = this.$route.path
+            if (!path.endsWith('/')) {
+                this.isNotHome = true
+            } else this.isNotHome = false
+            return this.isNotHome
+        },
+    },
     watch: {
         isHome: {
             handler() {

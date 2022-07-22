@@ -1,7 +1,7 @@
 <template>
-    <div class="hero-section animation-hero">
+    <div class="hero-section">
         <div class="hero-img">
-            <div :style="{ backgroundImage: `url(${image})` }" class="hero-img-box"></div>
+            <div :style="{ backgroundImage: `url(${images[imgIdx]})` }" class="hero-img-box"></div>
             <!-- <img class="hero-img1 animation-hero" :src="image" alt="" /> -->
 
             <!-- <img class="hero-img2 animation-hero" :src="image1" alt="" /> -->
@@ -84,25 +84,26 @@ export default {
     },
     data() {
         return {
-            images: ['src/img/hero1.png', 'src/img/hero2.png'],
+            images: ['src/img/hero1.png', 'src/img/hero2.png', 'src/img/hero3.png', 'src/img/hero4.png'],
+            imgIdx: 0,
 
             image: 'src/img/hero1.png',
 
-            sellerNames: ['Levi, Full Stack Developer', 'Oz, King Of Coding'],
-            sellerName: 'Levi, Full Stack Developer',
+            sellerNames: ['Emma, Full Stack Developer', 'Alice, Product Manager', 'David, Data Analyst', 'John, Economist'],
+            sellerName: 'Emma, Full Stack Developer',
         }
     },
     methods: {
         setImage() {
             var i = 0
             const that = this
-            // setInterval(function () {
-            //     that.image = that.image[i]
-            //     i = i + 1
-            //     if (i === that.images.length) {
-            //         i = 0
-            //     }
-            // }, 5000)
+            setInterval(function () {
+                that.image = that.image[i]
+                i = i + 1
+                if (i === that.images.length) {
+                    i = 0
+                }
+            }, 5000)
         },
         setFilter(filterBy) {
             this.$store.dispatch({ type: 'setFilter', filterBy })
@@ -122,8 +123,16 @@ export default {
         },
     },
     created() {
-        this.setImage()
+        // this.setImage()
         this.setSellerName()
+    },
+    mounted() {
+        setInterval(() => {
+            this.imgIdx++
+            if (this.images.length <= this.imgIdx) {
+                this.imgIdx = 0
+            }
+        }, 5000)
     },
 }
 </script>
