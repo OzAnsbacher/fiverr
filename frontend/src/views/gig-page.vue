@@ -13,7 +13,6 @@
                 </div>
             </div>
             <carousel-details-cmp :images="images"></carousel-details-cmp>
-
             <div class="about-gig">
                 <p class="about-title">About This Gig</p>
                 <p class="about-text">{{ gig.description }}</p>
