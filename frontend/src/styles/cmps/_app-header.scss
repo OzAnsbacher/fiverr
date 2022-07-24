@@ -127,7 +127,6 @@ button.search-btn-new:hover {
         margin: 0;
         width: 320px;
         padding: 6px;
-        padding-left: 30px;
         margin-left: 32px;
         border: 1px solid #c5c6c9;
         border-radius: 3px;
@@ -185,8 +184,14 @@ button.search-btn-new:hover {
         position: relative;
     }
 }
+
+.sixerr-logo {
+    font-family: 'Macan-bold';
+    letter-spacing: -4px;
+    font-size: 1.5em;
+}
 .main-header h1 {
-    font-family: 'Cabin', sans-serif;
+    font-family: Macan-bold, Helvetica Neue, Helvetica, Arial, sans-serif;
     .point {
         color: $clr1;
         border-radius: 50%;
@@ -195,7 +200,8 @@ button.search-btn-new:hover {
         position: absolute;
         right: -18px;
         bottom: -8px;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'Macan-bold';
+        margin-bottom: 6px;
     }
 }
 nav {
@@ -213,7 +219,7 @@ nav {
 
     a {
         color: white;
-        font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-family: 'Macan-regular';
         text-decoration: none;
         cursor: pointer;
         font-weight: 600;
@@ -258,56 +264,13 @@ nav {
     border-color: $clr1;
     color: white;
 }
-footer {
-    border-top: 1px solid #e4e5e7;
-    width: 100%;
-    height: 60px;
-    background: white;
-    margin-top: 70px;
 
-    h1 {
-        font-size: 0.875rem;
-        font-weight: 700;
-        line-height: 100%;
-        font-family: 'Cabin', sans-serif;
-        text-align: center;
-    }
-}
 .bg-img {
     position: absolute;
     inset: 0;
     height: 100%;
     z-index: -1;
     object-fit: cover;
-}
-.el-avatar {
-    --el-avatar-bg-color: rgb(90, 172, 207);
-}
-.avatar-box {
-    display: flex;
-    justify-content: center;
-    margin-right: -10px;
-    :hover {
-        cursor: pointer;
-    }
-    .user-avatar {
-        .user-letter {
-            left: 50%;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-    .online-dot {
-        background-color: #1dbf73;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        position: relative;
-        height: 12px;
-        width: 12px;
-        right: 10px;
-        bottom: -28px;
-    }
 }
 
 .profile-nav {
