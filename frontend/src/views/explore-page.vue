@@ -1,15 +1,20 @@
 <template>
   <div class="conteiner-tags">
-    <explore-tags :tags="tags" />
+    <explore-tags @setTag="getCategory" :tags="tags" />
     <explore-category @setCategory="getCategory" :res="res" />
+    <explore-carousel-category
+      :categories="categories"
+      @setCategory="getCategory"
+    />
+    <!-- <explore-filters @filter="getFilter" /> -->
     <explore-filters />
-    <explore-cards :gigs="gigs" />
+    <explore-cards :gigs="getGigs" />
   </div>
-  <!-- <div>{{ gigs }}</div> -->
 </template>
 
 <script>
 import exploreTags from "../cmps/explore-tags-header.cmp.vue";
+import exploreCarouselCategory from "../cmps/explore-carousel-category.cmp.vue";
 import exploreCategory from "../cmps/explore-category.cmp.vue";
 import exploreFilters from "../cmps/explore-filters.cmp.vue";
 import exploreCards from "../cmps/explore-cards.cmp.vue";
@@ -17,13 +22,15 @@ export default {
   data() {
     return {
       gigs: null,
+      categories: null,
+      filter: {},
       tags: [
-        "logo-design",
-        "wordpress",
-        "voice-over",
-        "artisitic",
-        "proffesional",
-        "accessible",
+        "lading page",
+        "minimal logo",
+        "voice active",
+        "2d animation",
+        "marketing video",
+        "instegram",
       ],
       res: "All Categories",
     };
@@ -33,14 +40,10 @@ export default {
     exploreCategory,
     exploreFilters,
     exploreCards,
+    exploreCarouselCategory,
   },
-  async created() {
-    // try {
-    //   await this.$store.dispatch({ type: "loadGigs" });
-    //   this.gigs = this.$store.getters.gigsToShow;
-    // } catch (error) {
-    //   console.log("error explore", error);
-    // }
+  created() {
+    this.categories = this.$store.getters.categoriesToShow;
   },
   methods: {
     async getCategory(filterBy) {
@@ -51,17 +54,28 @@ export default {
         console.log("error explore", error);
       }
     },
+    // getFilter(filter) {
+    //   for (const key in filter) {
+    //     this.filter[key] = filter[key];
+    //   }
+    // },
+    getFilterGigs() {
+      var gigs = this.gigs;
+      const filter = this.$store.getters.setFilterEx;
+      // gigs = gigs.filter((gig) => gig.price > filter.min);
+      // console.log("this.gigs", this.gigs);
+      console.log("gigs", gigs);
+
+      return gigs;
+    },
   },
   computed: {
-    gigs() {
-      return this.$store.getters.gigsToShow;
-    },
-    getTags() {
-      return;
+    getGigs() {
+      const gigs = this.getFilterGigs();
+      console.log(gigs);
+      return gigs;
     },
   },
   unmounted() {},
 };
 </script>
-
-<style lang="scss" scoped></style>

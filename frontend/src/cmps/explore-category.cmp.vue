@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="ex-titele-category">
     <h2>{{ getCategory }}</h2>
   </div>
 </template>
@@ -13,20 +13,19 @@ export default {
     };
   },
   created() {
-    const { category , price} = this.$route.query;
-    console.log('category', category, price)
-    const filterBy={category}
-    this.stringCategory(filterBy)
-    this.setCategory(filterBy)
+    const { category, price } = this.$route.query;
+    const filterBy = { category };
+    this.stringCategory(filterBy);
+    this.setCategory(filterBy);
   },
   methods: {
-    stringCategory({category}) {
+    stringCategory({ category }) {
       if (!category) this.category = "All Categories";
       else this.category = category;
     },
-  setCategory(filterBy){
-    this.$emit('setCategory', filterBy)
-  }
+    setCategory(filterBy) {
+      this.$emit("setCategory", filterBy);
+    },
   },
   computed: {
     getCategory() {

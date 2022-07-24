@@ -101,11 +101,12 @@ function getCategories() {
 }
 
 function setGigsFilters(gigs, filter) {
-  console.log(filter);
   if (filter.category) {
     gigs = gigs.filter((gig) => gig.category === filter.category);
   }
-
+  if (filter.tag) {
+    gigs = gigs.filter((gig) => gig.tags.includes(filter.tag));
+  }
   return gigs;
 }
 

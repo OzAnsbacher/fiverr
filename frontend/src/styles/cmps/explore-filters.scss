@@ -1,1 +1,23 @@
+.ex-filter-conteiner {
+  display: flex;
+  .ex-btn {
+    width: 9em;
+    box-shadow: 0px 0px 1px 1px #bab2b2;
+  }
+  .ex-filtr-rateing {
+    box-shadow: 0px 1px 1px 0.5px #bab2b2;
+    padding: 10px;
+  }
 
+}
+
+.el-select-dropdown__item {
+  path{
+    fill: #ffbe5b;
+
+  }
+  // padding: 10px;
+  // box-shadow: 0px 1px 1px 0.5px #bab2b2;
+  // display: none;
+
+}
