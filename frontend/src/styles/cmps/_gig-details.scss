@@ -274,10 +274,14 @@
       border-bottom: 1px solid #DADBDD;
       margin-bottom: 10px;
     }
-    .gig-category {
-      color: #446ee7;
-      font-weight: 700;
-      margin-bottom: 15px;
+  }
+
+  .gig-category {
+    color: #446ee7;
+    margin-bottom: 15px;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
     }
   }
   .seller-info {
