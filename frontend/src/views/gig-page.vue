@@ -2,11 +2,16 @@
     <section v-if="gig" class="gig-page main-layout">
         <div class="info-side">
             <div class="details-title-info">
-                <p class="gig-category">{{ gig.category }}</p>
+                <!-- <p class="gig-tags">{{ gig.tags }}</p> -->
+                <p class="gig-category">{{ gig.category }} > Technical Press > Programming</p>
                 <h1>{{ gig.title }}</h1>
                 <div class="seller-info">
                     <div class="profile-img">
-                        <img :src="gig.owner.imgUrl" alt="" class="seller-img" />
+                        <img
+                            :src="gig.owner.imgUrl"
+                            alt=""
+                            class="seller-img"
+                        />
                     </div>
                     <p class="owner-name">{{ gig.owner.fullname }}</p>
                     <p>Level {{ gig.owner.level }} Seller</p>
@@ -22,11 +27,16 @@
             <div class="about-seller">
                 <div class="seller-profile">
                     <div class="profile-img-about">
-                        <img :src="gig.owner.imgUrl" alt="" class="seller-img" />
+                        <img
+                            :src="gig.owner.imgUrl"
+                            alt=""
+                            class="seller-img"
+                        />
                     </div>
                 </div>
                 <div class="rate-profile">
                     <p>{{ gig.owner.fullname }}</p>
+                    <span class="star-details"> {{ getStars }} </span>
                     <button class="contact-me-btn">Contact Me</button>
                 </div>
             </div>
@@ -39,23 +49,25 @@
                             <b>{{ gig.owner.country }}</b>
                         </li>
                         <li>
-                            Avg. response time
+                            Average response time
                             <br />
-                            <b>Way too long</b>
+                            <b>{{ gig.averageResponseTime }}</b>
                         </li>
                         <li>
                             Member since
                             <br />
-                            <b>August 1993</b>
+                            <b>{{ gig.memberSince }}</b>
                         </li>
                         <li>
                             Last delivery
                             <br />
-                            <b>Three months ago</b>
+                            <b>{{ gig.lastDelivery }}</b>
                         </li>
                     </ul>
                 </div>
-                <div class="seller-description">{{ gig.owner.description }}</div>
+                <div class="seller-description">
+                    {{ gig.owner.description }}
+                </div>
             </div>
         </div>
         <div class="check-out-section">
@@ -67,24 +79,24 @@
                 <div class="additional-info">
                     <div class="delivery-wrapper">
                         <div class="img-clock">
-                            <img src="https://img.freepik.com/free-vector/wall-office-clock-with-black-red-hands-white-dial_1284-8992.jpg?w=2000" alt />
+                            <img
+                                src="https://img.freepik.com/free-vector/wall-office-clock-with-black-red-hands-white-dial_1284-8992.jpg?w=2000"
+                                alt
+                            />
                             <p>{{ gig.daysToMake }} Days Delivery</p>
                         </div>
                     </div>
                 </div>
                 <div class="promises-section">
                     <div class="guarentee-section">
-                        <p>High quality product guarenteed</p>
+                        <p>✔ High quality product guarenteed</p>
                     </div>
                     <div class="guarentee-section">
-                        <p>Delivery on time guarentee</p>
-                    </div>
-                    <div class="guarentee-section">
-                        <p>1 Product</p>
+                        <p>✔ Delivery on time guarentee </p>
                     </div>
                 </div>
                 <div class="buy-btn">
-                    <span>Continue to checkout {{ gig.price }}</span>
+                    <button>Continue to checkout ${{ gig.price }}</button>
                 </div>
             </div>
         </div>
@@ -92,37 +104,44 @@
 </template>
 
 <script>
-import { gigService } from '../services/gig-service'
-import carouselDetailsCmp from '../cmps/carousel-details-cmp.vue'
+import { gigService } from "../services/gig-service";
+import carouselDetailsCmp from "../cmps/carousel-details-cmp.vue";
 
 export default {
-    name: 'gig-detail',
+    name: "gig-detail",
     data() {
         return {
             gig: null,
-            images: '',
-            rates: '',
+            images: "",
+            rates: "",
             currUser: null,
             reviewToAdd: {
-                txt: '',
+                txt: "",
                 createdAt: new Date().getMinutes(),
-                flag: '',
+                flag: "",
             },
-        }
+        };
     },
     async created() {
-        var { gigid } = this.$route.params
-        console.log(gigid)
-        const res = await gigService.getById(gigid)
-        console.log(res)
-        this.gig = res
-        this.images = res.images
-        const userId = this.gig.owner._id
+        var { gigid } = this.$route.params;
+        console.log(gigid);
+        const res = await gigService.getById(gigid);
+        console.log(res);
+        this.gig = res;
+        this.images = res.images;
+        console.log(this.images)
     },
     methods: {},
     computed: {
         gigImg() {
-            return this.gig.image
+            return this.gig.image;
+        },
+        getStars() {
+            let stars = "";
+            for (let index = 0; index < this.gig.owner.rate; index++) {
+                stars += "★";
+            }
+            return stars;
         },
         // return this.gig and save it in the created
     },
@@ -130,7 +149,7 @@ export default {
     components: {
         carouselDetailsCmp,
     },
-}
+};
 </script>
 
 <style></style>
