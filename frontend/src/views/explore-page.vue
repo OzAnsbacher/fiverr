@@ -75,7 +75,24 @@ export default {
       console.log(gigs);
       return gigs;
     },
-  },
-  unmounted() {},
-};
-</script>
+    methods: {
+        async getCategory(filterBy) {
+            try {
+                await this.$store.dispatch({ type: 'loadGigs', filterBy })
+                this.gigs = this.$store.getters.gigsToShow
+            } catch (error) {
+                console.log('error explore', error)
+            }
+        },
+    },
+    computed: {
+        gigs() {
+            return this.$store.getters.gigsToShow
+        },
+        getTags() {
+            return
+        },
+    },
+    unmounted() {},
+}
+}

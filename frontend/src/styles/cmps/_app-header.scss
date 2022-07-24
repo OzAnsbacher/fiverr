@@ -1,4 +1,7 @@
 .app-header {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    position: absolute;
     width: 100%;
     height: 80px;
     top: 0px;
@@ -7,10 +10,19 @@
     &.change-color {
         background-color: white;
         width: 100%;
+        color: #62646a;
         position: fixed;
         p {
             color: black;
         }
+    }
+}
+.change-color {
+    .become-seller:hover {
+        color: #1dbf73;
+    }
+    .sign-in:hover {
+        color: #1dbf73;
     }
 }
 
@@ -48,16 +60,14 @@
 .search-btn-new {
     padding: 8px 16px;
     height: 100%;
-    display: block;
-    font-size: 14px;
-    font-weight: 700;
-    border-radius: 0 3px 3px 0;
-    flex-shrink: 0;
-    text-shadow: none;
-    border: 1px solid transparent;
-    background-color: #1dbf73;
-    color: #fff;
+    border-radius: 0 4px 4px 0;
+    background-color: #222325;
+    fill: #fff;
     cursor: pointer;
+    border: 0;
+}
+button.search-btn-new:hover {
+    background-color: #62646a;
 }
 
 .search-section-header-new {
@@ -80,7 +90,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    background-color: #8c2100;
+    // background-color: #8c2100;
 }
 .search-box {
     align-items: center;
@@ -102,8 +112,6 @@
     transition: background-color 0.5s ease;
 }
 .search-bar-header {
-    // display: flex;
-
     align-items: center;
     opacity: 0;
     transition: opacity 1s;
@@ -165,7 +173,6 @@
 .logo {
     text-decoration: none;
     font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
-    // color: black;
     color: white;
     letter-spacing: -1.5px;
     font-size: 32px;
@@ -200,20 +207,29 @@ nav {
     font-family: 'Macan-regular';
     align-items: center;
     position: relative;
+    &:hover {
+        color: $clr1;
+    }
+
     a {
+        color: white;
         font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
         text-decoration: none;
-        color: white;
-        // color: #62646a;
         cursor: pointer;
         font-weight: 600;
         font-size: 16px;
         transition: color 0.3s;
         header.change-color & {
-            // color: #62646a;
+            color: #62646a;
+
+            a:hover {
+                color: #1dbf73;
+                background-color: white;
+            }
         }
     }
 }
+
 .join {
     border: 1px solid $clr1;
     border-radius: 4px;
@@ -222,11 +238,23 @@ nav {
     line-height: 100%;
     padding: 7px 20px;
     transition: all 0.2s ease;
-    color: $clr1;
+    color: #1dbf73;
     margin-left: 15px;
+    color: white;
+    border-color: white;
+    &:hover {
+        background-color: #1dbf73;
+    }
+    header.change-color & {
+        color: $clr1;
+        border: 1px solid #1dbf73;
+    }
+    header.change-color &:hover {
+        background-color: $clr1;
+        color: white;
+    }
 }
 .join:hover {
-    background-color: $clr1;
     border-color: $clr1;
     color: white;
 }
