@@ -86,11 +86,16 @@ export default {
 <style>
 .carousel {
   width: 100%;
+    font-family: 'Macan-bold';
 }
 
 .vueperslides.vueperslide {
-  height: 400px;
+  height: 400px;   
+}
 
+.vueperslide.vueperslide:hover {
+    transition: 0.5s;
+    transform: scale(1.04);
 }
 
 .vueperslides__parallax-wrapper {
@@ -104,6 +109,7 @@ export default {
   max-width: 16px;
   color: black;
   left: -24px;
+  font-family: 'Macan-bold';
 }
 
 .thumbnails {
@@ -118,9 +124,7 @@ export default {
   opacity: 0.3;
   cursor: pointer;
 }
-.thumbnails .vueperslide:hover {
-    transform: scale(1.1);
-}
+
 
 .thumbnails .vueperslide--active {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);

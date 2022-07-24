@@ -94,9 +94,12 @@
                     <div class="guarentee-section">
                         <p>✔ Delivery on time guarentee </p>
                     </div>
+                                        <div class="guarentee-section">
+                        <p>✔ Refund guarentee if not satisfied </p>
+                    </div>
                 </div>
                 <div class="buy-btn">
-                    <button>Continue to checkout ${{ gig.price }}</button>
+                    <button>Continue</button>
                 </div>
             </div>
         </div>
