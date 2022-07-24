@@ -8,8 +8,8 @@
                 <button>Continue</button>
             </form>
             <div class="login-footer flex justify-center align-center">
-                <p>Not a member yet?</p>
-                <a @click="Join">Join Now</a>
+                <p>Not a member yet? &nbsp</p>
+                <a @click="Join">Join now</a>
             </div>
         </div>
     </section>
@@ -21,22 +21,7 @@ export default {
             loginCred: { username: '', password: '' },
         }
     },
-    methods: {
-        // async doLogin() {
-        //     this.$emit('toggleLogin')
-        //     try {
-        //         this.$store.dispatch({ type: 'login', cred: this.loginCred })
-        //     } catch (err) {
-        //         console.log('error', err)
-        //     }
-        // },
-        // Join() {
-        //     this.$emit('join')
-        // },
-        // doLogout() {
-        //     this.$store.dispatch({ type: 'logout' })
-        // },
-    },
+    methods: {},
     computed: {},
 }
 </script>

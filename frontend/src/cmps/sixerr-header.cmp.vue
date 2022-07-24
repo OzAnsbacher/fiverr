@@ -38,13 +38,13 @@
                     <div>
                         <!-- add functionality inside div tag later -->
                         <a class="sign-in" :class="$route.meta.logoClass" @click="toggleLogin">Sign in</a>
-                        <a class="join" :class="$route.meta.bodyClass">Join</a>
+                        <a class="join" :class="$route.meta.bodyClass" @click="toggleSignUp">Join</a>
                     </div>
                     <div class="login-modal" v-show="showLogin" @click="closeLogin">
                         <sign-in @toggleLogin="toggleLogin" @closeLogin="toggleLogin" />
                     </div>
-                    <div class="signup-modal">
-                        <!-- add functionality inside div tag later -->
+                    <div class="signup-modal" v-show="showSignUp" @click="closeSignUp">
+                        <sign-up @toggleSignUp="toggleSignUp" @closeSignUp="toggleSignUp" />
                     </div>
                     <div class="avatar-box">
                         <!-- add functionality inside div tag later -->
@@ -78,6 +78,8 @@
 <script>
 import headerFilter from './header-filter.cmp.vue'
 import signIn from './sign-in.cmp.vue'
+import signUp from './sign-up.cmp.vue'
+
 export default {
     template: `
         `,
@@ -86,11 +88,13 @@ export default {
             scrollPosition: null,
             isNotHome: null,
             showLogin: false,
+            showSignUp: false,
         }
     },
     components: {
         headerFilter,
         signIn,
+        signUp,
     },
     created() {
         window.addEventListener('scroll', this.updateScroll)
@@ -112,6 +116,15 @@ export default {
         },
         join() {
             this.toggleLogin()
+            this.toggleSignUp()
+        },
+        toggleSignUp() {
+            this.showSignUp = !this.showSignUp
+        },
+        closeSignUp(event) {
+            const elModal = document.getElementsByClassName('sign-up-container')[0]
+            if (elModal.contains(event.target)) return
+            this.showSignUp = false
         },
     },
     mounted() {

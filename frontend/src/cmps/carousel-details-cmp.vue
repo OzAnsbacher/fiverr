@@ -1,72 +1,101 @@
 <template>
-<p>carousel test
-</p>
-<div class="carousel">
-<vueper-slides
-  ref="vueperslides1"
-  :touchable="false"
-  fade
-  :autoplay="false"
-  :bullets="false"
-  @slide="$refs.vueperslides2.goToSlide($event.currentSlide.index, { emit: false })"
-  fixed-height="400px">
-  <vueper-slide
-    v-for="(slide, i) in slides"
-    :key="i"
-    :image="slide.image">
-  </vueper-slide>
-</vueper-slides>
-<div class="thumbnails">
-<vueper-slides
-  class="no-shadow thumbnails"
-  ref="vueperslides2"
-  @slide="$refs.vueperslides1.goToSlide($event.currentSlide.index, { emit: false })"
-  :visible-slides="slides.length"
-  fixed-height="75px"
-  :bullets="false"
-  :touchable="false"
-  :gap="2.5"
-  :arrows="false">
-  <vueper-slide
-    v-for="(slide, i) in slides"
-    :key="i"
-    :image="slide.image"
-    @click.native="$refs.vueperslides2.goToSlide(i)">
-  </vueper-slide>
-</vueper-slides>
-</div>
-</div>
+    <div class="carousel">
+        <vueper-slides
+            ref="vueperslides1"
+            :touchable="false"
+            fade
+            :autoplay="false"
+            :bullets="false"
+            @slide="
+                $refs.vueperslides2.goToSlide($event.currentSlide.index, {
+                    emit: false,
+                })
+            "
+            fixed-height="400px"
+        >
+            <vueper-slide
+                v-for="(slide, i) in slides"
+                :key="i"
+                :image="slide.image"
+            >
+            </vueper-slide>
+        </vueper-slides>
+        <div class="thumbnails">
+            <vueper-slides
+                class="no-shadow thumbnails"
+                ref="vueperslides2"
+                @slide="
+                    $refs.vueperslides1.goToSlide($event.currentSlide.index, {
+                        emit: false,
+                    })
+                "
+                :visible-slides="slides.length"
+                fixed-height="75px"
+                :bullets="false"
+                :touchable="false"
+                :gap="2.5"
+                :arrows="false"
+            >
+                <vueper-slide
+                    v-for="(slide, i) in slides"
+                    :key="i"
+                    :image="slide.image"
+                    @click.native="$refs.vueperslides2.goToSlide(i)"
+                >
+                </vueper-slide>
+            </vueper-slides>
+        </div>
+    </div>
 </template>
 <script>
-import { VueperSlide, VueperSlides } from 'vueperslides'
-import 'vueperslides/dist/vueperslides.css'
+import { VueperSlide, VueperSlides } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
 
 export default {
     props: ["images"],
     data() {
         return {
-              slides: [
-    { image: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/4abf6f5b58e4d78cfb7c410cf8d7a9ac-1626111679444/4a04b77c-22ee-4ce8-b4be-747fd059e9ff.jpg" },
-    { image: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/4abf6f5b58e4d78cfb7c410cf8d7a9ac-1626111679444/4a04b77c-22ee-4ce8-b4be-747fd059e9ff.jpg" },
-    { image: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/4abf6f5b58e4d78cfb7c410cf8d7a9ac-1626111679444/4a04b77c-22ee-4ce8-b4be-747fd059e9ff.jpg" }
-  ]
-        }
+            slides: [
+                // {
+                //     image: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/4abf6f5b58e4d78cfb7c410cf8d7a9ac-1626111679444/4a04b77c-22ee-4ce8-b4be-747fd059e9ff.jpg",
+                // },
+                // {
+                //     image: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/4abf6f5b58e4d78cfb7c410cf8d7a9ac-1626111679444/4a04b77c-22ee-4ce8-b4be-747fd059e9ff.jpg",
+                // },
+                // {
+                //     image: "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/4abf6f5b58e4d78cfb7c410cf8d7a9ac-1626111679444/4a04b77c-22ee-4ce8-b4be-747fd059e9ff.jpg",
+                // },
+            ],
+        };
     },
-    created() {},
+    created() {
+        console.log(this.images)
+        this.slides = this.images
+         
+    },
+    computed: {
+        
+    },
     components: {
         VueperSlides,
         VueperSlide,
     },
-}
+};
 </script>
 
 <style>
 .carousel {
   width: 100%;
+    font-family: 'Macan-bold';
 }
 
 .vueperslides.vueperslide {
-  height: 400px;
+  height: 400px;   
+}
+
+.vueperslide.vueperslide:hover {
+    transition: 0.5s;
+    transform: scale(1.04);
 }
 
 .vueperslides__parallax-wrapper {
@@ -80,6 +109,7 @@ export default {
   max-width: 16px;
   color: black;
   left: -24px;
+  font-family: 'Macan-bold';
 }
 
 .thumbnails {
@@ -94,6 +124,7 @@ export default {
   opacity: 0.3;
   cursor: pointer;
 }
+
 
 .thumbnails .vueperslide--active {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
@@ -112,18 +143,16 @@ export default {
 
 .vueperslides__arrows svg {
   max-width: 40px;
+  font-weight: bold;
 }
 .vueperslides__arrow {
   max-width: 40px;
-  opacity: none;
 }
 
 .vueperslides__arrow--next {
   right: -15px;
-  opacity: none;
 }
-
 .vueperslides__arrow--prev {
-  left: -30px;
+  left: -25px;
 }
 </style>
