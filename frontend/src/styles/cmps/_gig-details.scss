@@ -257,8 +257,9 @@
     box-sizing: border-box;
     line-height: 150%;
     padding: 32px 24px 0;
-    padding-top: 75px;
+    padding-top: 85px;
     background-color: #fff;
+    font-family: 'Macan-regular';
   }
   .info-side {
     margin-right: 115px;
@@ -274,8 +275,9 @@
       margin-bottom: 10px;
     }
     .gig-category {
-      text-decoration: underline;
-      color: navy;
+      color: #446ee7;
+      font-weight: 700;
+      margin-bottom: 15px;
     }
   }
   .seller-info {
@@ -311,7 +313,7 @@
     max-width: 416px;
     border: 1px solid #DADBDD;
     padding: 24px;
-    margin-right: 105px;
+    margin-right: 95px;
   }
   .about-title {
     color: $clr3;
