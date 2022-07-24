@@ -12,7 +12,6 @@ import sixerrHero from '../cmps/sixerr-hero.cmp.vue'
 import mainInfo from '../cmps/main-info.cmp.vue'
 import carouselCategory from '../cmps/carousel-category.vue'
 
-
 export default {
     data() {
         return {
@@ -20,11 +19,11 @@ export default {
         }
     },
     components: {
-    // sixerrHeader,
-    sixerrHero,
-    mainInfo,
-    carouselCategory,
-},
+        // sixerrHeader,
+        sixerrHero,
+        mainInfo,
+        carouselCategory,
+    },
     created() {
         // console.log(gigService.getCategories())
         // this.$store.dispatch({ type: loadCategories })

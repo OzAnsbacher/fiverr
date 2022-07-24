@@ -6,6 +6,7 @@
     position: relative;
     color: #ffffff;
     list-style: none;
+
     :hover {
         cursor: pointer;
     }
@@ -20,6 +21,10 @@
     img {
         height: 100%;
         width: 100%;
+        &:hover {
+            opacity: 0.85;
+            transition: opacity 0.3s ease-in-out;
+        }
     }
     h4 {
         margin-top: 12px;
@@ -31,10 +36,11 @@
         line-height: 20px;
         font-weight: 400;
         display: block;
+        z-index: 10;
     }
 }
 .rating-star-preview {
-    font-family: 'macan-bold';
+    font-family: 'Macan-bold';
 }
 .carousel {
     text-align: left;
@@ -44,6 +50,7 @@
         height: 48px;
         width: 48px;
         box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+
         .carousel__icon {
             color: black;
             height: 35px;
@@ -55,12 +62,19 @@
         height: 48px;
         width: 48px;
         box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+
         .carousel__icon {
             color: black;
             height: 35px;
             width: 35px;
         }
     }
+}
+button.carousel__next {
+    right: -14px;
+}
+button.carousel__prev {
+    left: 11px;
 }
 
 .category-title {
