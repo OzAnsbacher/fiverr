@@ -12,6 +12,10 @@
   line-height: 1;
   :hover{
     cursor: pointer;
+    .hover-green{
+      color: $clr1;
+    
+    }
   }
   .img-gig {
     width: 100%;
@@ -66,10 +70,12 @@
       margin-top: auto;
       margin-bottom: auto;
       margin-left: auto;
-      margin-right: 2px;     
+      // margin-right: 2px; 
+      font-size: 1.2em;    
       grid-area: price;
+      text-align-last: end;
       span {
-        font-size: 0.7em;
+           font-size: 0.7em;
       }
     }
   }

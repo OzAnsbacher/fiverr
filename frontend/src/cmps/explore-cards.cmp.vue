@@ -11,7 +11,7 @@
         <img class="explore-img-owner" :src="gig.owner.imgUrl" />
         <h3 class="explore-card-name">{{ gig.owner.fullname }}</h3>
         <p class="explore-card-degree">{{ gig.owner.level }}</p>
-        <p class="explore-card-title">{{ gig.title }}</p>
+        <p class="explore-card-title hover-green">{{ gig.title }}</p>
         <p class="explore-card-rate">
           <svg
             xmlns="http://www.w3.org/2000/svg"

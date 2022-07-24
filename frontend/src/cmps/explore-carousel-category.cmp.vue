@@ -1,8 +1,12 @@
 <template>
   <carousel :items-to-show="5">
     <slide v-for="category in getCategories" :key="category.name">
-      <div class="explore-category-carusel" @click="loadCategory(category.name)">
-        {{ category.name }}
+      <div
+        class="explore-category-carusel"
+        @click="loadCategory(category.name)"
+      >
+        <img :src="category.icon" />
+        <h5>{{ category.name }}</h5>
       </div>
     </slide>
 
@@ -35,8 +39,8 @@ export default {
   },
   methods: {
     loadCategory(category) {
-      const filterBy={category}
-      this.$emit('setCategory', filterBy)
+      const filterBy = { category };
+      this.$emit("setCategory", filterBy);
     },
   },
 };

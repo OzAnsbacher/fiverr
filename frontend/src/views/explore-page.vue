@@ -25,12 +25,12 @@ export default {
       categories: null,
       filter: {},
       tags: [
-        "lading page",
-        "minimal logo",
-        "voice active",
-        "2d animation",
-        "marketing video",
-        "instegram",
+        "Lading Page",
+        "Minimal Logo",
+        "Voice Active",
+        "2D Animation",
+        "Marketing Video",
+        "Instegram",
       ],
       res: "All Categories",
     };
@@ -69,30 +69,43 @@ export default {
       return gigs;
     },
   },
+
+  methods: {
+    async getCategory(filterBy) {
+      try {
+        await this.$store.dispatch({ type: "loadGigs", filterBy });
+        this.gigs = this.$store.getters.gigsToShow;
+      } catch (error) {
+        console.log("error explore", error);
+      }
+    },
+  },
   computed: {
+    // gigs() {
+    //   return this.$store.getters.gigsToShow;
+    // },
+    getTags() {
+      return this.tags;
+    },
     getGigs() {
-      const gigs = this.getFilterGigs();
-      console.log(gigs);
+      const filterEx = this.$store.getters.getFilterEx;
+      var gigs = this.gigs;
+      if (!gigs) return;
+      if (filterEx.min) {
+        var gigs = gigs.filter((gig) => gig.price > filterEx.min);
+      }
+      if (filterEx.max) {
+        var gigs = gigs.filter((gig) => gig.price < filterEx.max);
+      }
+      if (filterEx.populary) {
+        var gigs = gigs.filter((gig) => gig.owner.rate >= filterEx.populary);
+      }
+      if (filterEx.time) {
+        var gigs = gigs.filter((gig) => gig.daysToMake <= filterEx.time);
+      }
       return gigs;
     },
-    methods: {
-        async getCategory(filterBy) {
-            try {
-                await this.$store.dispatch({ type: 'loadGigs', filterBy })
-                this.gigs = this.$store.getters.gigsToShow
-            } catch (error) {
-                console.log('error explore', error)
-            }
-        },
-    },
-    computed: {
-        gigs() {
-            return this.$store.getters.gigsToShow
-        },
-        getTags() {
-            return
-        },
-    },
-    unmounted() {},
-}
-}
+  },
+  unmounted() {},
+};
+</script>

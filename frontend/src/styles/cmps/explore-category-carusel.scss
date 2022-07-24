@@ -1,5 +1,17 @@
 .explore-category-carusel {
-  height: 144px;
-  width: 153px;
-  border: 1px black solid;
+  margin: 10px 0;
+  height: 160px;
+  width: 174px;
+  box-shadow: 0 0px 5px 2px #e6dede;
+  text-align: center;
+  cursor: pointer;
+  img {
+    margin: 15px;
+    height: 80px;
+    width: 80px;
+  }
+  &:hover{
+    box-shadow: 0 0px 15px 3px #e6dede;
+    color: $clr1;
+  }
 }

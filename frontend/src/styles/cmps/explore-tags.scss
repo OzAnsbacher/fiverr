@@ -1,12 +1,18 @@
-.category-conteiner ul{
-    padding: 1em 0;
-display: flex;
-justify-content: space-between;
-list-style: none;
-box-shadow: 0 0 1px 2px #e4e5e7;
-font-size: 1.3em;
-
+.category-conteiner {
+  position: relative;
+  top: 90px;
 }
 
-
-
+.category-conteiner ul {
+  padding: .5em 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  box-shadow: 0 0 1px 2px #e4e5e7;
+  font-size: 1.1em;
+  color: #74767e;
+  li {
+    cursor: pointer;
+    font-weight: 200;
+  }
+}

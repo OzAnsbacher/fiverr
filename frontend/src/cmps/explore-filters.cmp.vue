@@ -1,8 +1,8 @@
 <template>
   <div class="ex-filter-conteiner">
-    <explore-filter-popularity />
+    <explore-filter-popularity @populary="getFilter" />
     <explore-filter-price @price="getFilter" />
-    <explore-filter-time />
+    <explore-filter-time @time="getFilter" />
   </div>
 </template>
 
@@ -22,6 +22,8 @@ export default {
   created() {},
   methods: {
     getFilter(filter) {
+      console.log('filter', filter)
+      
       this.$store.dispatch({ type: "getFilterExp", filter });
     },
   },
