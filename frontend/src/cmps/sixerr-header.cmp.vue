@@ -38,19 +38,6 @@
                     />
                 </div>
                 <nav class="nav">
-<<<<<<< HEAD
-                    <router-link to="/explore" class="explore">
-                        <a :class="$route.meta.logoClass">Explore</a>
-                    </router-link>
-                    <router-link :class="$route.meta.logoClass" to="/" class="become-seller">Become a seller</router-link>
-                    <!-- <div> -->
-                        <!-- add functionality inside div tag later -->
-                        <a class="sign-in" :class="$route.meta.logoClass" @click="toggleLogin">Sign in</a>
-                        <a class="join" :class="$route.meta.bodyClass" @click="toggleSignUp">Join</a>
-                    <!-- </div> -->
-                    <div class="login-modal" v-show="showLogin" @click="closeLogin">
-                        <sign-in @toggleLogin="toggleLogin" @closeLogin="toggleLogin" />
-=======
                     <div class="left-links">
                         <router-link to="/explore" class="explore">
                             <a :class="$route.meta.logoClass">Explore</a>
@@ -86,7 +73,6 @@
                             @toggleLogin="toggleLogin"
                             @closeLogin="toggleLogin"
                         />
->>>>>>> 14551fd063a642caa3204538c14989723b8931a2
                     </div>
                     <div
                         class="signup-modal"
