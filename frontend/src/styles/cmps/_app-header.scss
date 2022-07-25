@@ -246,13 +246,10 @@ nav {
     }
 }
 
-
 .left-links {
     display: flex;
     gap: 20px;
 }
-
-
 
 .join {
     border: 1px solid $clr1;
@@ -333,5 +330,49 @@ nav {
         width: 0;
         border-bottom: 10px solid #fff;
         top: -10px;
+    }
+}
+
+.hamburger-nav {
+    ul {
+        font-family: 'macan-regular';
+        box-shadow: -2px -2px 20px rgb(0 0 0 / 25%);
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        margin: 0;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        justify-content: flex-start;
+        padding: 20px;
+        background-color: #fff;
+        width: 270px;
+        transform: translateX(0);
+        border-inline-end: 1px solid #e0e0e0;
+        transition: transform 0.6s, box-shadow 0.6s;
+        z-index: 100;
+        list-style-type: none;
+    }
+    a {
+        font-size: 1.2em;
+        padding: 10px 10px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #62646a;
+        &:hover {
+            color: $clr1;
+        }
+    }
+}
+.btn-close-nav {
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    &:hover {
+        opacity: 1;
     }
 }
