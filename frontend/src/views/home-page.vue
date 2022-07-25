@@ -1,6 +1,7 @@
 <template>
     <section>
         <sixerr-hero />
+        <trusted-by />
         <carousel-category class="main-layout" :categories="getCategories" />
         <main-info />
     </section>
@@ -11,6 +12,7 @@ import { gigService } from '../services/gig-service'
 import sixerrHero from '../cmps/sixerr-hero.cmp.vue'
 import mainInfo from '../cmps/main-info.cmp.vue'
 import carouselCategory from '../cmps/carousel-category.vue'
+import trustedBy from '../cmps/trusted-by.cmp.vue'
 
 export default {
     data() {
@@ -23,6 +25,7 @@ export default {
         sixerrHero,
         mainInfo,
         carouselCategory,
+        trustedBy,
     },
     created() {
         // console.log(gigService.getCategories())

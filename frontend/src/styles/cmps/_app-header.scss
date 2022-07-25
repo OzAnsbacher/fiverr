@@ -1,9 +1,9 @@
 .app-header {
+    width: 100%;
+    height: 80px;
     background-color: rgba(0, 0, 0, 0);
     color: white;
     position: absolute;
-    width: 100%;
-    height: 80px;
     top: 0px;
     z-index: 3;
     transition: background-color 0.5s;
@@ -205,7 +205,7 @@ button.search-btn-new:hover {
 }
 nav {
     display: flex;
-    // gap: 24px;
+    // gap: 20px;
     font-size: 0.875rem;
     font-weight: 700;
     line-height: 100%;
@@ -244,6 +244,12 @@ nav {
             }
         }
     }
+}
+
+
+.left-links {
+    display: flex;
+    gap: 20px;
 }
 
 

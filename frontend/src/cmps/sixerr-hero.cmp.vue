@@ -78,9 +78,11 @@
 
 <script>
 import gigFilter from './gig-filter.cmp.vue'
+import trustedBy from './trusted-by.cmp.vue'
 export default {
     components: {
         gigFilter,
+        trustedBy,
     },
     data() {
         return {

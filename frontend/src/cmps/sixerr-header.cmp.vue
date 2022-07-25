@@ -1,5 +1,8 @@
 <template>
-    <header class="app-header full" :class="{ 'change-color': scrollPosition > 50 || getIsNotHome }">
+    <header
+        class="app-header full"
+        :class="{ 'change-color': scrollPosition > 50 || getIsNotHome }"
+    >
         <button class="hamburger hide">☰</button>
         <main class="main-header" ref="nav">
             <div class="main-layout header-flex">
@@ -7,7 +10,7 @@
                     <h1 to="/">
                         <router-link class="logo" to="/">
                             <div class="logo-part">
-                                <p class="sixerr-logo">
+                                <p :class="$route.meta.logoClass" class="sixerr-logo">
                                     Sixerr
                                     <span class="point">.</span>
                                 </p>
@@ -28,9 +31,14 @@
                             </router-link>
                         </ul> -->
                     </div>
-                    <header-filter @setFilter="setFilter" :class="{ 'search-header': scrollPosition > 100 }" class="hide" />
+                    <header-filter
+                        @setFilter="setFilter"
+                        :class="{ 'search-header': scrollPosition > 100 }"
+                        class="hide"
+                    />
                 </div>
                 <nav class="nav">
+<<<<<<< HEAD
                     <router-link to="/explore" class="explore">
                         <a :class="$route.meta.logoClass">Explore</a>
                     </router-link>
@@ -42,15 +50,60 @@
                     <!-- </div> -->
                     <div class="login-modal" v-show="showLogin" @click="closeLogin">
                         <sign-in @toggleLogin="toggleLogin" @closeLogin="toggleLogin" />
+=======
+                    <div class="left-links">
+                        <router-link to="/explore" class="explore">
+                            <a :class="$route.meta.logoClass">Explore</a>
+                        </router-link>
+                        <router-link
+                            :class="$route.meta.logoClass"
+                            to="/"
+                            class="become-seller"
+                            >Become a seller</router-link
+                        >
+
+                        <!-- add functionality inside div tag later -->
+                        <a
+                            class="sign-in"
+                            :class="$route.meta.logoClass"
+                            @click="toggleLogin"
+                            >Sign in</a
+                        >
                     </div>
-                    <div class="signup-modal" v-show="showSignUp" @click="closeSignUp">
-                        <sign-up @toggleSignUp="toggleSignUp" @closeSignUp="toggleSignUp" />
+                    <a
+                        class="join"
+                        :class="$route.meta.bodyClass"
+                        @click="toggleSignUp"
+                        >Join</a
+                    >
+
+                    <div
+                        class="login-modal"
+                        v-show="showLogin"
+                        @click="closeLogin"
+                    >
+                        <sign-in
+                            @toggleLogin="toggleLogin"
+                            @closeLogin="toggleLogin"
+                        />
+>>>>>>> 14551fd063a642caa3204538c14989723b8931a2
+                    </div>
+                    <div
+                        class="signup-modal"
+                        v-show="showSignUp"
+                        @click="closeSignUp"
+                    >
+                        <sign-up
+                            @toggleSignUp="toggleSignUp"
+                            @closeSignUp="toggleSignUp"
+                        />
                     </div>
                     <div class="avatar-box">
                         <!-- add functionality inside div tag later -->
                     </div>
 
                     <div class="online-dot"></div>
+
                     <!-- <ul class="profile-nav"> -->
                     <!-- add functionality inside ul tag later -->
                     <!-- <li> -->
@@ -76,9 +129,9 @@
 </template>
 
 <script>
-import headerFilter from './header-filter.cmp.vue'
-import signIn from './sign-in.cmp.vue'
-import signUp from './sign-up.cmp.vue'
+import headerFilter from "./header-filter.cmp.vue";
+import signIn from "./sign-in.cmp.vue";
+import signUp from "./sign-up.cmp.vue";
 
 export default {
     template: `
@@ -89,7 +142,7 @@ export default {
             isNotHome: null,
             showLogin: false,
             showSignUp: false,
-        }
+        };
     },
     components: {
         headerFilter,
@@ -97,59 +150,61 @@ export default {
         signUp,
     },
     created() {
-        window.addEventListener('scroll', this.updateScroll)
+        window.addEventListener("scroll", this.updateScroll);
     },
     methods: {
         updateScroll() {
             if (!this.isHome) {
-                return
+                return;
             }
-            this.scrollPosition = window.scrollY
+            this.scrollPosition = window.scrollY;
         },
         toggleLogin() {
-            this.showLogin = !this.showLogin
+            this.showLogin = !this.showLogin;
         },
         closeLogin(event) {
-            const elModal = document.getElementsByClassName('login-container')[0]
-            if (elModal.contains(event.target)) return
-            this.showLogin = false
+            const elModal =
+                document.getElementsByClassName("login-container")[0];
+            if (elModal.contains(event.target)) return;
+            this.showLogin = false;
         },
         join() {
-            this.toggleLogin()
-            this.toggleSignUp()
+            this.toggleLogin();
+            this.toggleSignUp();
         },
         toggleSignUp() {
-            this.showSignUp = !this.showSignUp
+            this.showSignUp = !this.showSignUp;
         },
         closeSignUp(event) {
-            const elModal = document.getElementsByClassName('sign-up-container')[0]
-            if (elModal.contains(event.target)) return
-            this.showSignUp = false
+            const elModal =
+                document.getElementsByClassName("sign-up-container")[0];
+            if (elModal.contains(event.target)) return;
+            this.showSignUp = false;
         },
     },
     mounted() {
-        window.addEventListener('scroll', this.updateScroll)
+        window.addEventListener("scroll", this.updateScroll);
     },
 
     computed: {
         isHome() {
-            return this.$route.path === '/'
+            return this.$route.path === "/";
         },
         getIsNotHome() {
-            var path = this.$route.path
-            if (!path.endsWith('/')) {
-                this.isNotHome = true
-            } else this.isNotHome = false
-            return this.isNotHome
+            var path = this.$route.path;
+            if (!path.endsWith("/")) {
+                this.isNotHome = true;
+            } else this.isNotHome = false;
+            return this.isNotHome;
         },
     },
     watch: {
         isHome: {
             handler() {
-                if (!this.isHome) this.scrollPosition = 0
+                if (!this.isHome) this.scrollPosition = 0;
             },
         },
     },
     unmounted() {},
-}
+};
 </script>
