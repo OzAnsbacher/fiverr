@@ -7,7 +7,7 @@
                     <h1 to="/">
                         <router-link class="logo" to="/">
                             <div class="logo-part">
-                                <p class="sixerr-logo">
+                                <p :class="$route.meta.logoClass" class="sixerr-logo">
                                     Sixerr
                                     <span class="point">.</span>
                                 </p>
@@ -51,6 +51,7 @@
                     </div>
 
                     <div class="online-dot"></div>
+
                     <!-- <ul class="profile-nav"> -->
                     <!-- add functionality inside ul tag later -->
                     <!-- <li> -->

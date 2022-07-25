@@ -25,6 +25,7 @@ import { defineComponent } from 'vue'
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 import { gigService } from '../services/gig-service'
+
 export default defineComponent({
     name: 'wrap-around',
     props: ['categories'],
