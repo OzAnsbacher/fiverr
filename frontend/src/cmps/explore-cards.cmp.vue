@@ -6,7 +6,8 @@
       :key="gig._id"
       @click="loadGig(gig._id)"
     >
-      <img class="img-gig" v-if="gig.images" :src="gig.images[0].image" />
+      <carusel-card class="img-gig" v-if="gig.images" :images="gig.images" />
+      <!-- <img class="img-gig" v-if="gig.images" :src="gig.images[0].image" /> -->
       <div class="explore-grid-details">
         <img class="explore-img-owner" :src="gig.owner.imgUrl" />
         <h3 class="explore-card-name">{{ gig.owner.fullname }}</h3>
@@ -49,12 +50,16 @@
 </template>
 
 <script>
+import caruselCard from "../cmps/carousel-card.vue";
 export default {
   props: ["gigs"],
   data() {
     return {};
   },
   created() {},
+  components: {
+    caruselCard,
+  },
   methods: {
     loadGig(id) {
       this.$router.push("/gig/" + id);
