@@ -1,6 +1,9 @@
 .ex-carusel-main {
   max-width: 100%;
   margin: auto;
+  .carousel__slide {
+    width: 15% !important;
+  }
 }
 
 .carousel__pagination {

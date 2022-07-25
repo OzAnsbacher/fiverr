@@ -102,10 +102,16 @@ export default {
   height: 400px;
 }
 
+.vueperslides__arrow{
+    opacity :1;
+}
+
 .vueperslides__arrow svg {
     background-color: #fff;
+
   border-radius: 50%;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+  
   max-width: 16px;
   color: black;
   left: -24px;
