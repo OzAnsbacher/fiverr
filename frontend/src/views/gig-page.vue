@@ -3,7 +3,6 @@
         <div class="info-side">
             <div class="details-title-info">
                 <!-- <p class="gig-tags">{{ gig.tags }}</p> -->
-                <p class="gig-category">{{ gig.category }} > Technical Press > Programming</p>
                 <h1>{{ gig.title }}</h1>
                 <div class="seller-info">
                     <div class="profile-img">
@@ -99,7 +98,7 @@
                     </div>
                 </div>
                 <div class="buy-btn">
-                    <button>Continue to checkout ${{ gig.price }}</button>
+                    <span>Continue</span>
                 </div>
             </div>
         </div>

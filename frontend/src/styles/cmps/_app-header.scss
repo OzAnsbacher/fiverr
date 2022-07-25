@@ -104,7 +104,6 @@ button.search-btn-new:hover {
     width: 100%;
     height: 100px;
     position: fixed;
-    top: 0px;
     z-index: 3;
     background-color: transparent;
     color: black;
@@ -206,13 +205,23 @@ button.search-btn-new:hover {
 }
 nav {
     display: flex;
-    gap: 24px;
+    // gap: 24px;
     font-size: 0.875rem;
     font-weight: 700;
     line-height: 100%;
+    width: 500px;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    // align-items: flex-end;
+    // justify-items: end;
+    // direction: rtl;
     font-family: 'Macan-regular';
     align-items: center;
     position: relative;
+    > * {
+        // background-color: aqua;
+    }
     &:hover {
         color: $clr1;
     }
@@ -235,6 +244,8 @@ nav {
         }
     }
 }
+
+
 
 .join {
     border: 1px solid $clr1;
