@@ -5,7 +5,7 @@
       @select="filterPrice"
       multiple
       placeholder="Budget"
-      style="width: 240px"
+      
       :class="{ 'full-filter': min > 0 || max > 0 }"
     >
       <el-option value="">
