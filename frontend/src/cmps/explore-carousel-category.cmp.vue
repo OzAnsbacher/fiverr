@@ -1,4 +1,5 @@
 <template>
+<div class="ex-carusel-main">
   <carousel :items-to-show="5">
     <slide v-for="category in getCategories" :key="category.name">
       <div
@@ -15,6 +16,7 @@
       <pagination />
     </template>
   </carousel>
+</div>
 </template>
 
 <script>

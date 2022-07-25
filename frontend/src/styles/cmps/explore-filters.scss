@@ -1,5 +1,6 @@
 .ex-filter-conteiner {
   display: flex;
+  
   .ex-btn {
     margin-right: 1em;
     margin-bottom: 1em;
@@ -9,7 +10,7 @@
 
     .el-input__wrapper {
       box-shadow: 0 0 0;
-      &:focus {
+      &:hover {
         box-shadow: 0 0 0;
         outline: none;
         border: 0;

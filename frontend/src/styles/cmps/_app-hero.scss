@@ -1,15 +1,15 @@
 .hero-section {
     display: grid;
-    height: 100vh;
+    height: 78vh;
     max-width: 100%;
     align-items: center;
-    margin-bottom: 96px;
-}
-.hero-img-box {
-    height: 100%;
-    background-position-x: 16%;
-    background-size: cover;
-    transition: background-image ease 0.5s;
+
+    .hero-img-box {
+        height: 100%;
+        background-position-x: 16%;
+        background-size: cover;
+        transition: background-image ease 0.5s;
+    }
 }
 
 .hero-img {
