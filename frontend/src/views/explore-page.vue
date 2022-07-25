@@ -1,5 +1,5 @@
 <template>
-  <div class="conteiner-explore">
+  <div class="conteiner-explore main-layout">
     <explore-tags @setTag="getCategory" :tags="tags" />
     <explore-category @setCategory="getCategory" :res="res" />
     <explore-carousel-category

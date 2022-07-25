@@ -1,6 +1,6 @@
 <template>
 <div class="ex-carusel-main">
-  <carousel :items-to-show="7">
+  <carousel :items-to-show="6">
     <slide v-for="category in getCategories" :key="category.name">
       <div
         class="explore-category-carusel"
