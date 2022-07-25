@@ -1,6 +1,10 @@
 .ex-carusel-main {
-  max-width: 1150px;
+  max-width: 100%;
   margin: auto;
+}
+
+.carousel__pagination {
+  display: none;
 }
 
 .explore-category-carusel {
