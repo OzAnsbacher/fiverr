@@ -1,16 +1,25 @@
+.ex-carusel-main {
+  max-width: 1150px;
+  margin: auto;
+}
+
 .explore-category-carusel {
+  // li{
+  //   width: 174px important;
+  // }
   margin: 10px 0;
   height: 160px;
+  // width: 200px;
   width: 174px;
   box-shadow: 0 0px 5px 2px #e6dede;
   text-align: center;
   cursor: pointer;
   img {
-    margin: 15px;
+    margin: 20x;
     height: 80px;
     width: 80px;
   }
-  &:hover{
+  &:hover {
     box-shadow: 0 0px 15px 3px #e6dede;
     color: $clr1;
   }
