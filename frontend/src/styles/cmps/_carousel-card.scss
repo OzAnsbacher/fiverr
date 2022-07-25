@@ -1,0 +1,18 @@
+.explore-card {
+  .el-carousel {
+    button {
+      --el-carousel-arrow-background: white;
+      color: black;
+    }
+    :hover {
+      .el-carousel__arrow--right {
+        transform: translateX(28px);
+        // transform: translateX(28px) scale(1);
+      }
+      .el-carousel__arrow--left {
+        transform: translateX(-28px);
+        // transform: translateX(-28px) scale(1);
+      }
+    }
+  }
+}
