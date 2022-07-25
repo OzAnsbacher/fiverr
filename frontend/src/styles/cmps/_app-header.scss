@@ -205,7 +205,7 @@ button.search-btn-new:hover {
 }
 nav {
     display: flex;
-    // gap: 24px;
+    // gap: 20px;
     font-size: 0.875rem;
     font-weight: 700;
     line-height: 100%;
@@ -243,6 +243,12 @@ nav {
             }
         }
     }
+}
+
+
+.left-links {
+    display: flex;
+    gap: 20px;
 }
 
 

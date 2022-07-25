@@ -10,7 +10,7 @@
           "_id": "u101",
           "fullname": "Amar Zar",
           "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/d2b733c8f152a9baab1b8e2efc14e176-1655401248537/340ea128-2dbd-4524-83c3-321ae8101a44.jpeg",
-          "level": "basic",
+          "level": "4",
           "rate": 4,
           "description": "Experienced coder with over 10 years of experience behind me, traveled through many companies, decided to freelance since its my real passion",
           "country": "United States",
@@ -56,7 +56,7 @@
           "_id": "u102",
           "fullname": "Nil Dan",
           "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/c4f42348db227459e9cf2e165cb81430-1196474021652710032569/JPEG_20220516_190710_4231883719200085301.jpg",
-          "level": "basic",
+          "level": "2",
           "rate": 3,
           "description": "Proffesional autoblogger, Will do anything required of me within fivvers guidelines ofcourse :)",
           "country": "Croatia"
@@ -198,7 +198,7 @@
           "_id": "u104",
           "fullname": "Alex",
           "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/daa1e707125af345c8a27aec979025a2-1639752152694/1fa932d8-6382-420a-aa02-97c60e523526.jpg",
-          "level": "mediom",
+          "level": "4",
           "rate": 5,
           "country": "United Kingdom"
         },
@@ -242,7 +242,7 @@
           "_id": "u106",
           "fullname": "Even You",
           "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/fb5e1062fb144898f02feac3e44133dd-1656393604873/92896d13-5c6b-401d-8a9e-d6c5f051703a.JPG",
-          "level": "mediom",
+          "level": "5",
           "rate": 5
         },
         "daysToMake": 7,
@@ -285,7 +285,7 @@
           "_id": "u107",
           "fullname": "Jon Daff",
           "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f5e3944f37ecd11f0ea18503379dafca-1620745529349/04d08dfb-b55f-4281-9efc-2d2d724cbd73.jpg",
-          "level": "mediom",
+          "level": "3",
           "rate": 3
         },
         "daysToMake": 7,
@@ -329,7 +329,7 @@
           "_id": "u108",
           "fullname": "Ben Roo",
           "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/72867198f897ad13715dc583607abd25-1646719437960/396247a2-16d7-4e0e-9496-fbb43f978f97.jpg",
-          "level": "basic",
+          "level": "2",
           "rate": 4
         },
         "daysToMake": 7,
@@ -372,7 +372,7 @@
           "_id": "u105",
           "fullname": "Jack",
           "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/5f51f3fb29a56b4a4f692ae6b900bacf-1579009817378/e657cbc7-93e6-4869-a7c5-694251cd559e.JPG",
-          "level": "mediom",
+          "level": "3",
           "rate": 5
         },
         "daysToMake": 10,
@@ -415,7 +415,7 @@
           "_id": "u110",
           "fullname": "TR",
           "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/8f46db8257fe4476e8f89af9310f540a-1648538873131/881e7117-6ed6-43ce-b8d0-219e9638c632.png",
-          "level": "mediom",
+          "level": "4",
           "rate": 5
         },
         "daysToMake": 10,
@@ -452,7 +452,7 @@
           "_id": "u110",
           "fullname": "Yuri Ness",
           "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/5fba7ce5997627cfec0327969fc4cfa8-1646944878234/07b278e7-597d-4fe3-bfb8-5753bd43e6eb.jpg",
-          "level": "basic",
+          "level": "3",
           "rate": 4
         },
         "daysToMake": 8,
@@ -489,7 +489,7 @@
           "_id": "u110",
           "fullname": "Liz Han",
           "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/1c907673897451235f07ed1a44ca5ea7-1649169453136/53394fab-c43c-45d3-a6b5-31e1f7ddb79f.JPG",
-          "level": "mediom",
+          "level": "3",
           "rate": 4
         },
         "daysToMake": 8,
@@ -526,7 +526,7 @@
           "_id": "u112",
           "fullname": "Mike Lowry",
           "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/5d296d2ea120fb72caba4045755d8ff9-1653406929934/96636baf-a0cb-4648-9435-f8addbb81037.png",
-          "level": "premium",
+          "level": "4",
           "rate": 5
         },
         "daysToMake": 6,
