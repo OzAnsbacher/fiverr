@@ -2,25 +2,26 @@
     <section class="categories-container">
         <h2 class="category-title">Popular professional services</h2>
         <vueper-slides
-  class="no-shadow"
-  fixed-height="345px"
-  :visible-slides="5"
-  slide-multiple
-  :gap="3"
-  :slide-ratio="1 / 4"
-  :dragging-distance="200"
-  :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }">
-  <vueper-slide v-for="category in categories" :key="category.name"     :image="category.img"   >
-    <template #content>
+            class="no-shadow"
+            fixed-height="345px"
+            :visible-slides="5"
+            slide-multiple
+            :gap="3"
+            :slide-ratio="1 / 4"
+            :dragging-distance="200"
+            :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }"
+        >
+            <vueper-slide v-for="category in categories" :key="category.name" :image="category.img">
+                <template #content>
                     <li class="category-preview-box" @click="explore(category.name)">
-                    <div class="category-txt-name-box">
-                        <small class="category-txt">{{ category.txt }}</small>
-                        <h4 class="category-name">{{ category.name }}</h4>
-                    </div>
-                </li>
-    </template>
-  </vueper-slide>
-</vueper-slides>
+                        <div class="category-txt-name-box">
+                            <small class="category-txt">{{ category.txt }}</small>
+                            <h4 class="category-name">{{ category.name }}</h4>
+                        </div>
+                    </li>
+                </template>
+            </vueper-slide>
+        </vueper-slides>
         <!-- <Carousel :items-to-show="5" :wrap-around="true" v-if="categories">
             <Slide v-for="category in categories" :key="category.name">
                 <li class="category-preview-box" @click="explore(category.name)">
@@ -78,24 +79,39 @@ export default defineComponent({
         Carousel,
         Slide,
         Navigation,
-        VueperSlides, VueperSlide
+        VueperSlides,
+        VueperSlide,
     },
 })
 </script>
 <style>
-.vueperslide.vueperslide--visible{
-    border-radius:4px;
-    
+.vueperslide.vueperslide--visible {
+    border-radius: 4px;
 }
 
-.vueperslide.vueperslide--visible:hover{
+.vueperslide.vueperslide--visible:hover {
     transition: none;
-        transform: unset;
+    transform: unset !important;
+
+    opacity: 0.85;
 }
 
+.vueperslides--fixed-height.vueperslides--bullets-outside {
+    /* width: 1215px; */
+}
+.vueperslides__bullets--outside {
+    display: none;
+    position: relative;
+}
 
-
-.vueperslides--fixed-height.vueperslides--bullets-outside{
-    width: 1215px;
+.vueperslides__arrows svg {
+    position: absolute;
+    stroke-width: 1;
+}
+.vueperslides__arrows--outside .vueperslides__arrow--prev {
+    left: 0.2em;
+}
+.vueperslides__arrows--outside .vueperslides__arrow--next {
+    right: -1.2em;
 }
 </style>

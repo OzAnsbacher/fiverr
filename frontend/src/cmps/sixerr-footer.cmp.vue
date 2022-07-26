@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <div class="main-footer">
+        <div class="main-footer main-layout">
             <div class="left-side">
                 <div class="logo-footer">
                     Sixerr
