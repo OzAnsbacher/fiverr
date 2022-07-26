@@ -4,15 +4,27 @@
       --el-carousel-arrow-background: white;
       color: black;
     }
-    :hover {
-      .el-carousel__arrow--right {
-        transform: translateX(28px);
-        // transform: translateX(28px) scale(1);
-      }
-      .el-carousel__arrow--left {
-        transform: translateX(-28px);
-        // transform: translateX(-28px) scale(1);
-      }
+  }
+  :hover {
+   
+    // .el-carousel__item{
+    //       transform: translateX(0px) scale(1);
+    // }
+    // .el-carousel__item.is-animating {
+    //   transition: none !important ;
+    // }
+    
+    .el-carousel__arrow--right {
+      transform: translateX(28px);
+      // transform: translateX(28px) scale(1);
     }
+    .el-carousel__arrow--left {
+      transform: translateX(-28px);
+      // transform: translateX(-28px) scale(1);
+    }
+    --el-carousel-arrow-hover-background: white;
   }
 }
+// .el-carousel__item.is-animating {
+//   transition: none !important ;
+// }

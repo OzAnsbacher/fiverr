@@ -87,6 +87,9 @@ export default defineComponent({
 <style>
 .vueperslide.vueperslide--visible {
     border-radius: 4px;
+    /* .vueperslide.vueperslide--visible{
+    border-radius:4px;
+    
 }
 
 .vueperslide.vueperslide--visible:hover {
@@ -115,3 +118,8 @@ export default defineComponent({
     right: -1.2em;
 }
 </style>
+
+<!-- .vueperslides--fixed-height.vueperslides--bullets-outside{
+    width: 1215px;
+} */ -->
+<!-- </style> -->

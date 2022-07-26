@@ -3,6 +3,7 @@ import homePage from '../views/home-page.vue'
 import explorePage from '../views/explore-page.vue'
 import gigPage from '../views/gig-page.vue'
 import userProfile from '../views/user-profile.vue'
+// import checkOutPage from '../cmps/check-out-page.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,11 @@ const router = createRouter({
             name: 'user-profile',
             component: userProfile,
         },
+        // {
+        //     path: '/checkout',
+        //     name: 'checkout',
+        //     component: checkOutPage,
+        // },
     ],
 })
 

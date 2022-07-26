@@ -1,6 +1,7 @@
 <template>
   <div class="ex-titele-category">
     <h2>{{ getCategory }}</h2>
+    <p>Find the perfect freelance services for your business</p>
   </div>
 </template>
 

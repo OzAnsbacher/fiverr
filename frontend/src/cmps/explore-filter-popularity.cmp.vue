@@ -9,7 +9,7 @@
       placeholder="Populary"
     >
       <el-option value="⭐⭐"
-        >Less
+        >At Least
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1792 1792"
@@ -33,7 +33,7 @@
           ></path></svg
       ></el-option>
       <el-option value="⭐⭐⭐"
-        >Less
+        >At Least
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1792 1792"
@@ -68,7 +68,7 @@
           ></path></svg
       ></el-option>
       <el-option value="⭐⭐⭐⭐"
-        >Less
+        >At Least
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1792 1792"
