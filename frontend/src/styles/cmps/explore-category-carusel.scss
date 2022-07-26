@@ -17,7 +17,7 @@
 }
 
 .conteiner-explore .carousel__track{
-  gap:14px
+  gap:21px;
 }
 
 .carousel__pagination {
@@ -43,10 +43,15 @@
   padding: 17px;
   cursor: pointer;
   box-shadow: 0 .14px 2.29266pxrgba(0,0,0,.032),0 .37px 4.42626px rgba(0,0,0,.048),0 3px 7px rgba(0,0,0,.09);
+  
   img {
-    margin: 20x;
+    margin-left: 10x;
+    margin-top: 10px;
     height: 70px;
     width: 70px;
+  }
+  h5{
+    margin-top: 20px;
   }
  
 }

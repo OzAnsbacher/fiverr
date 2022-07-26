@@ -15,7 +15,6 @@ export default {
     name: 'carousel-gigpreview',
  props: ["images"],
       created() {
-        console.log(this.images);
       },
     components: {},
     computed: {
