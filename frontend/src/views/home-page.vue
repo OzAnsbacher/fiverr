@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="homepage-container">
         <sixerr-hero />
         <trusted-by />
         <carousel-category class="main-layout" :categories="getCategories" />
