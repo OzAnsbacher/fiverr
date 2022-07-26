@@ -1,34 +1,40 @@
 <template>
-  <div>
+
     <el-select
-      class="ex-btn"
+      class="ex-btn ex-price"
       @select="filterPrice"
       multiple
       placeholder="Budget"
-      
       :class="{ 'full-filter': min > 0 || max > 0 }"
     >
-      <el-option value="">
-        <input
+        <div class="input-min" >
+      <h5>MIN.</h5>
+      <el-option  value="">
+        <el-input 
           v-model="min"
           @change="filterPrice"
-          class="w-50 m-2"
-          placeholder="Min"
+          class="flex w-50 m-2"
+          placeholder="Any"
           :prefix-icon="Search"
+          
         />
       </el-option>
-      <el-option value="">
-        <input
-          class="w-50 m-2"
-          placeholder="Max"
+    </div>
+    <div class="input-max">
+      <h5>MAX.</h5>
+      <el-option  value="">
+        <el-input
+          class="flex w-50 m-2"
+          placeholder="Any"
           v-model="max"
           @change="filterPrice"
           :prefix-icon="Search"
+           width="40px"
         />
       </el-option>
-      <el-option value="">Aplly</el-option>
+    </div>
+    
     </el-select>
-  </div>
 </template>
 
 <script>
