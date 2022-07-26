@@ -991,18 +991,17 @@
 
 
 .gig-page {
-
   display: flex;
   margin: 0 auto;
   position: relative;
   line-height: 150%;
-  max-width: 1070px;
+  max-width: 1304px;
   padding: 32px 24px 0;
-  font-family: "Cabin", sans-serif;
+  font-family: "Macan-bold";
 }
 .info-side {
-  margin-right: 60px;
-  max-width: 610px;
+  margin-right: 110px;
+  max-width: 710px;
 }
 .details-title-info {
   margin-bottom: 24px;
@@ -1052,7 +1051,7 @@
 .check-out-part {
   position: sticky;
   top: 85px;
-  width: 390px;
+  width: 400px;
   border: 1px solid #DADBDD;
   padding: 24px;
 }
@@ -1348,7 +1347,8 @@
   display: block;
   float: left;
   color: rgb(255, 179, 62);
-  font-size: 20px;
+  font-size: 14px;
+  font-weight: 700;
   display: flex;
   gap: 5px;
   align-items: center;
@@ -1360,7 +1360,7 @@
   display: block;
   float: left;
   color: rgb(255, 179, 62);
-  font-size: 20px;
+  font-size: 14px;
 }
 .guarentee-section {
   display: flex;
@@ -1448,3 +1448,5 @@
 .review-form {
   margin-bottom: 24px;
 }
+
+
