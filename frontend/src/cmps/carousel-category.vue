@@ -83,7 +83,7 @@ export default defineComponent({
 })
 </script>
 <style>
-.vueperslide.vueperslide--visible{
+/* .vueperslide.vueperslide--visible{
     border-radius:4px;
     
 }
@@ -97,5 +97,5 @@ export default defineComponent({
 
 .vueperslides--fixed-height.vueperslides--bullets-outside{
     width: 1215px;
-}
+} */
 </style>
