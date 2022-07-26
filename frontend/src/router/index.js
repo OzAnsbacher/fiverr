@@ -25,7 +25,7 @@ const router = createRouter({
             component: gigPage,
         },
         {
-            path: '/checkout/:gigId',
+            path: '/checkout/:gigid',
             name: 'checkout',
             component: checkOutPage,
         },
