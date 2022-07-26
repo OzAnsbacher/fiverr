@@ -149,6 +149,7 @@
     </section>
 </template>
 
+
 <script>
 import { gigService } from "../services/gig-service";
 
@@ -197,3 +198,33 @@ export default {
 </script>
 
 <style></style> -->
+
+<template>
+<section v-if="gig" class="check-out-page main-layout">
+    <h1>{{ gig.title }}</h1>
+    <p> <img :src="gig.images[0].image" alt=""></p>
+    <p>${{ gig.price }}</p>
+    </section>
+</template>
+
+<script>
+import { gigService } from "../services/gig-service";
+export default {
+    data() {
+        return {
+            gig: null,
+            images: null,
+        };
+    },
+    async created() {
+        try {
+            var { gigid } = this.$route.params;
+            console.log(gigid);
+            const res = await gigService.getById(gigid);
+            console.log(res);
+            this.gig = res;
+            this.images = res.images;
+        } catch (error) {}
+    },
+};
+</script>

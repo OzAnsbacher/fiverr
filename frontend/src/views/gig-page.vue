@@ -246,9 +246,9 @@
                 </div>
 
                 <div class="buy-btn">
-                    <router-link to="/checkout">
-                        <button>Continue</button>
-                    </router-link>
+                    
+                        <button v-on:click="loadGig">Continue</button>
+                    
 
                 </div>
             </div>
@@ -296,7 +296,11 @@ export default {
         this.images = res.images;
         console.log(this.images);
     },
-    methods: {},
+    methods: {
+        loadGig() {
+      this.$router.push("/checkout/" + this.gig._id);
+    },
+    },
     computed: {
         gigImg() {
             return this.gig.image;
