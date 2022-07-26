@@ -7,7 +7,7 @@
     top: 0px;
     z-index: 3;
     transition: background-color 0.5s;
-   
+
     &.change-color {
         background-color: white;
         width: 100%;
@@ -61,7 +61,7 @@
 }
 .search-btn-new {
     padding: 8px 16px;
-    height: 100%;
+    height: 114%;
     border-radius: 0 4px 4px 0;
     background-color: #222325;
     fill: #fff;
@@ -124,9 +124,9 @@ button.search-btn-new:hover {
         color: #616164;
         font-family: 'Macan-regular';
         font-size: 15px;
-        height: 34px;
+        height: 40px;
         margin: 0;
-        width: 320px;
+        width: 585px;
         padding: 6px;
         margin-left: 32px;
         border: 1px solid #c5c6c9;
@@ -189,7 +189,7 @@ button.search-btn-new:hover {
 .sixerr-logo {
     font-family: 'Macan-bold';
     letter-spacing: -4px;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .main-header h1 {
     font-family: Macan-bold, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -199,10 +199,10 @@ button.search-btn-new:hover {
         font-size: 50px;
         height: fit-content;
         position: absolute;
-        right: -18px;
+        right: -9px;
         bottom: -8px;
         font-family: 'Macan-bold';
-        margin-bottom: 6px;
+        margin-bottom: 4px;
     }
 }
 nav {

@@ -1,13 +1,17 @@
 .ex-filter-conteiner {
   display: flex;
   .el-select {
+    --el-color-primary: white;
     --el-select-border-color-hover: 0;
     --el-select-input-focus-border-color: 0;
-    .el-input__inner{
+    .el-input__inner {
       color: black;
-
     }
-    .el-input__wrapper {
+    //   .el-select .el-input.is-focus .el-input__wrapper {
+    //     // box-shadow: 0 0 0 1px var(--el-select-input-focus-border-color) inset!important;
+    // }
+    .el-input.is-focus .el-input__wrapper {
+      background-color: #ffbe5b;
       box-shadow: none !important;
       :hover {
         --el-input-hover-border: #ffffff;
