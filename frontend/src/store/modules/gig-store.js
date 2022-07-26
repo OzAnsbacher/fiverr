@@ -83,8 +83,7 @@ export default {
   },
   getters: {
     gigsToShow({ gigs }) {
-        
-      return gigs
+      return gigs;
     },
     getFilterEx({ filterEx }) {
       return filterEx;
@@ -92,19 +91,22 @@ export default {
     categoriesToShow({ categories }) {
       return categories;
     },
-
   },
   mutations: {
     setGigs(state, { gigs }) {
       state.gigs = gigs;
     },
-    changeFilter(state, { filterBy }) {
-      state.filterBy = filterBy;
-    },
+    // changeFilter(state, { filterBy }) {
+    //   state.filterBy = filterBy;
+    // },
     changeFilterEx(state, { filter }) {
       for (const key in filter) {
         state.filterEx[key] = filter[key];
       }
+      console.log("state.filter", state.filterEx);
+    },
+    changeSortEx(state, { sortBy }) {
+      state.filterEx.sortBy = sortBy;
       console.log("state.filter", state.filterEx);
     },
   },
@@ -119,10 +121,9 @@ export default {
     getFilterExp(state, { filter }) {
       state.commit({ type: "changeFilterEx", filter });
     },
-
-    //     loadCategories({commit}){
-    // this.categories = await gigService.getCategories()
-    // console.log(this.categories);
-    //     },
+    getSortEx(state, { sort }) {
+      console.log(sort);
+      state.commit({ type: "changeSortEx", sort });
+    },
   },
 };

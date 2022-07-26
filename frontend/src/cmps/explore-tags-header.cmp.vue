@@ -1,13 +1,15 @@
 <template>
+
   <div class="category-conteiner">
-    <ul>
-      <li v-for="tag in tags" :key="tag" @click="tagFilter(tag)">{{ tag }}</li>
+    <ul class="ex-header main-layout">
+      <li  v-for="tag in tags" :key="tag" @click="tagFilter(tag)">{{ tag }}</li>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
+  
   props: ["tags"],
   data() {
     return {};

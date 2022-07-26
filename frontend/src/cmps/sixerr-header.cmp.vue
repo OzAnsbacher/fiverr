@@ -110,12 +110,6 @@
             </div>
         </main>
     </header>
-
-    <!-- <div class="toy-header flex">
-        <router-link class="btn btn-header" to="/">Home</router-link>
-        <router-link class="btn btn-header" to="/explore">Explore</router-link>
-        <router-link class="btn btn-header" to="/gig">Gig</router-link>
-    </div> -->
 </template>
 
 <script>
@@ -124,9 +118,7 @@ import signIn from "./sign-in.cmp.vue";
 import signUp from "./sign-up.cmp.vue";
 
 export default {
-    template: `
-        `,
-    data() {
+      data() {
         return {
             scrollPosition: null,
             isNotHome: null,

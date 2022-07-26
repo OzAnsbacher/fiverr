@@ -1,15 +1,19 @@
 <template>
-  <div class="conteiner-explore main-layout">
+  <!-- <div v-if="getGigs"> -->
+  <div>
     <explore-tags @setTag="getCategory" :tags="tags" />
-    <explore-category @setCategory="getCategory" :res="res" />
-    <explore-carousel-category
-      :categories="categories"
-      @setCategory="getCategory"
-    />
-    <!-- <explore-filters @filter="getFilter" /> -->
-    <explore-filters />
-    <explore-cards :gigs="getGigs" />
+    <div class="conteiner-explore main-layout">
+      <explore-category @setCategory="getCategory" :res="res" />
+      <explore-carousel-category
+        :categories="categories"
+        @setCategory="getCategory"
+      />
+      <explore-filters :gigs="getGigs" />
+      <explore-cards :gigs="getGigs" />
+    </div>
   </div>
+  <!-- <img v-else-if="!getGigs" src="../assets/gif/spinner.gif" alt=""> -->
+  <div></div>
 </template>
 
 <script>
@@ -21,6 +25,7 @@ import exploreCards from "../cmps/explore-cards.cmp.vue";
 export default {
   data() {
     return {
+      isGigs: null,
       gigs: null,
       categories: null,
       filter: {},
@@ -46,14 +51,14 @@ export default {
     this.categories = this.$store.getters.categoriesToShow;
   },
   methods: {
-    async getCategory(filterBy) {
-      try {
-        await this.$store.dispatch({ type: "loadGigs", filterBy });
-        this.gigs = this.$store.getters.gigsToShow;
-      } catch (error) {
-        console.log("error explore", error);
-      }
-    },
+    // async getCategory(filterBy) {
+    //   try {
+    //     await this.$store.dispatch({ type: "loadGigs", filterBy });
+    //     this.gigs = this.$store.getters.gigsToShow;
+    //   } catch (error) {
+    //     console.log("error explore", error);
+    //   }
+    // },
     // getFilter(filter) {
     //   for (const key in filter) {
     //     this.filter[key] = filter[key];
@@ -88,6 +93,8 @@ export default {
       return this.tags;
     },
     getGigs() {
+      this.isGigs = true;
+      console.log(this.isGigs);
       const filterEx = this.$store.getters.getFilterEx;
       var gigs = this.gigs;
       if (!gigs) return;
