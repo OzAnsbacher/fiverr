@@ -35,7 +35,7 @@ export default {
         "Voice Active",
         "2D Animation",
         "Marketing Video",
-        "Instegram",
+        "Instagram",
       ],
       res: "All Categories",
     };
