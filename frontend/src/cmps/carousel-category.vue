@@ -7,9 +7,12 @@
             :visible-slides="5"
             slide-multiple
             :gap="3"
+
+            :bullet="false"
             :slide-ratio="1 / 4"
             :dragging-distance="200"
-            :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }"
+            :breakpoints="{ 1240: {visibleSlides: 4,slideMultiple: 4}, 1060: {visibleSlides: 3,slideMultiple: 3} ,
+                        800: { visibleSlides: 2, slideMultiple: 2 } }"
         >
             <vueper-slide v-for="category in categories" :key="category.name" :image="category.img">
                 <template #content>
