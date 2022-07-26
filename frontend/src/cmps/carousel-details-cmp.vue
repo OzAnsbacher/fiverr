@@ -117,7 +117,9 @@ export default {
   left: -24px;
   font-family: 'Macan-bold';
 }
-
+.vueperslide__content-wrapper {
+    object-fit: contain;
+}
 .thumbnails {
   margin: auto;
   margin-top: 5px;

@@ -88,5 +88,12 @@ button.carousel__prev {
 
 .carousel__slide {
     // width: 19.8% !important;
-    
+}
+
+.homepage-container .vueperslide.vueperslide--visible:hover {
+    transition: none;
+    transform: unset !important;
+
+    opacity: 0.85;
+    transition: 0.85s;
 }

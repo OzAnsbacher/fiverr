@@ -100,9 +100,7 @@ export default {
     //   state.filterBy = filterBy;
     // },
     changeFilterEx(state, { filter }) {
-      for (const key in filter) {
-        state.filterEx[key] = filter[key];
-      }
+        state.filterEx = {...filter};
       console.log("state.filter", state.filterEx);
     },
     changeSortEx(state, { sortBy }) {

@@ -2,13 +2,13 @@
     margin-top: 100px;
     background-color: #f1fdf7;
     height: 705px;
-    display: flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
 
     img {
-        width: 100%;
+        width: 105%;
     }
 }
 
@@ -21,20 +21,21 @@
     grid-template-columns: 1fr 1fr;
     padding: 4em 0;
     padding-inline-end: 32px;
-    padding-inline-start: 32px;
 }
 
 .home-info {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding-right: 15%;
+    // padding-right: 15%;
+    padding-right: 30%;
 
     h2 {
         margin: 0;
         font-size: 32px;
         padding-bottom: 24px;
         color: $clr3;
+        line-height: 120%;
     }
 
     ul {
@@ -57,6 +58,7 @@
 
         svg {
             color: #62646a;
+            fill: rgb(122, 125, 133);
         }
     }
 
@@ -66,7 +68,9 @@
 
     p {
         margin: 0;
-        font-size: 1.125em;
+        // font-size: 1.125em;
         color: #62646a;
+        font-size: 18px;
+        line-height: 26px;
     }
 }

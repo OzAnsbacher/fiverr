@@ -998,9 +998,10 @@
   max-width: 1304px;
   padding: 32px 24px 0;
   font-family: "Macan-bold";
+  justify-content: space-between;
 }
 .info-side {
-  margin-right: 110px;
+  margin-right: 135px;
   max-width: 710px;
 }
 .details-title-info {
@@ -1050,8 +1051,9 @@
 }
 .check-out-part {
   position: sticky;
+  
   top: 85px;
-  width: 400px;
+  width: 380px;
   border: 1px solid #DADBDD;
   padding: 24px;
 }
