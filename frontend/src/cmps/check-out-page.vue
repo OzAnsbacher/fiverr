@@ -200,11 +200,50 @@ export default {
 <style></style> -->
 
 <template>
+<main class="main-content">
 <section v-if="gig" class="check-out-page main-layout">
-    <h1>{{ gig.title }}</h1>
-    <p> <img :src="gig.images[0].image" alt=""></p>
-    <p>${{ gig.price }}</p>
-    </section>
+    <div class="main-content-container">
+<div class="left-side-container">
+        <div class="main">
+            {{ gig.title }}
+        </div>
+        <div class="img-container">
+            <img :src="gig.images[0].image" alt="">
+        </div>
+        <div class="price">${{ gig.price }}</div>
+    </div>
+    <div class="details">
+<h2>order details</h2>
+<p>{{ gig.description }}</p>
+    </div>
+</div>
+<div class="right-side-container">
+    <div class="order-modal sticky">
+        <h3>Price summary</h3>
+        <ul class="clean-list">
+            <li>Subtotal</li>
+            <span>{{ gig.price }}</span>
+            <li>Service fee
+                <span>$5.00</span>
+            </li>
+            <li class="bold
+            ">total
+            <span> ${{ gig.price }}</span>
+            </li>
+            <li>delivery time
+                <span>{{ gig.price }}</span>
+                <div class="li-inner-container">
+                    <span>3</span>
+                    <span>days</span>
+                </div>
+            </li>
+        </ul>
+        <button class="btn">Purchase</button>
+    </div>
+
+</div>
+</section>
+</main>
 </template>
 
 <script>
