@@ -1,4 +1,30 @@
 .explore-cards-conteiner {
+<<<<<<< HEAD
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  gap: 32px;
+  // margin: auto;
+}
+
+.carousel-card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.explore-card {
+  height: 398px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #efeff0;
+  line-height: 1;
+  &:hover {
+    cursor: pointer;
+    & .explore-card-title {
+      color: $clr1;
+=======
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fill, 308px);
@@ -29,6 +55,7 @@
         // width: 100%;
         // height: 100%;
         // object-fit: contain;
+>>>>>>> d1c1965d6646e75ac3d532165ea34ab668d28752
     }
 
     .explore-grid-details {
@@ -92,4 +119,49 @@
             }
         }
     }
+<<<<<<< HEAD
+    .explore-card-name {
+      grid-area: fullname;
+      font-size: 1em;
+    }
+    .explore-card-degree {
+      grid-area: degree;
+    }
+    .explore-card-title {
+      grid-area: title;
+      padding-top: 14px;
+      padding-top: .9em;
+
+      // margin-top: 14px;
+      // height: max-content;
+      line-height: 1.5;
+    }
+    .explore-card-rate {
+      grid-area: rate;
+      color: #ffbe5b;
+      // padding-left: 10px;
+      // padding-bottom: 10px;
+      border-bottom: 1px solid #efeff0;
+      padding-bottom: 10px;
+    }
+    .explore-card-like {
+      // margin: auto;
+      align-self: center;
+      grid-area: like;
+      fill: #b5b6ba;
+    }
+    .explore-card-price {
+      align-self: center;
+      font-size: 1.2em;
+      grid-area: price;
+      text-align-last: end;
+      line-height: 1.2;
+      span {
+        color: #74767e;
+        font-size: 0.5em;
+      }
+    }
+  }
+=======
+>>>>>>> d1c1965d6646e75ac3d532165ea34ab668d28752
 }

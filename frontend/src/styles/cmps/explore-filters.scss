@@ -1,25 +1,8 @@
 .ex-filter-conteiner {
   display: flex;
   .el-select {
-    --el-color-primary: white;
-    --el-select-border-color-hover: 0;
-    --el-select-input-focus-border-color: 0;
     .el-input__inner {
       color: black;
-    }
-    //   .el-select .el-input.is-focus .el-input__wrapper {
-    //     // box-shadow: 0 0 0 1px var(--el-select-input-focus-border-color) inset!important;
-    // }
-    .el-input.is-focus .el-input__wrapper {
-      background-color: #ffbe5b;
-      box-shadow: none !important;
-      :hover {
-        --el-input-hover-border: #ffffff;
-        --el-select-border-color-hover: #ffffff;
-        box-shadow: 0 0 0 !important;
-        outline: none !important;
-        border: 0 !important;
-      }
     }
   }
   .ex-btn {
@@ -37,11 +20,6 @@
     }
     &.el-input__wrapper {
       box-shadow: none;
-      &:hover {
-        box-shadow: 0 0 0;
-        outline: none;
-        border: 0;
-      }
     }
     input {
       box-shadow: 0 0 0;
@@ -71,12 +49,51 @@
 }
 
 .el-select {
-  --el-select-border-color-hover: 0;
-  --el-select-input-focus-border-color: 0;
+  --el-color-primary: white !important;
+  --el-border-color: white !important;
+  --el-border-color-hover: white !important;
+  --el-input-border-color: white !important;
+  --el-input-hover-border: white !important;
+  --el-select-border-color-hover: white !important;
+  --el-select-border-color-hover: white !important;
+  --el-select-input-focus-border-color: white !important;
 }
 
 .count-gigs {
   p {
     color: #74767e;
+  }
+}
+
+.el-select-dropdown__wrap.el-scrollbar__wrap {
+  height: 110px;
+  padding: 20px;
+}
+
+.el-scrollbar__view {
+  display: flex;
+  flex-direction: row;
+  .input-max {
+    margin: 10px;
+    // padding: 16px;
+    h5 {
+      // margin-left: 20px;
+    }
+  }
+  .input-min {
+    margin: 10px;
+    margin-right: 20px;
+    h5 {
+   
+    }
+  }
+  .el-input__wrapper {
+    width: 120px;
+    height: 40px;
+    // margin-left: 20px;
+    // padding-right: 10px;
+  }
+  .el-select-dropdown__item {
+    padding: 0;
   }
 }
