@@ -1190,6 +1190,8 @@
   .img-clock {
     align-items: center;
     display: flex;
+    gap: 10px;
+    fill: #62646a;
   }
   img {
     max-width: 16px;
@@ -1376,6 +1378,9 @@
 }
 .promises-section {
   margin-bottom: 20px;
+  .v-image {
+    fill: #1dbf73;
+  }
 }
 .text-area-details {
   width: 100%;
