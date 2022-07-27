@@ -238,7 +238,7 @@ export default {
                 </div>
             </li>
         </ul>
-        <button class="btn">Purchase</button>
+        <button v-on:click="loadGig" class="btn" >Purchase</button>
     </div>
 
 </div>
@@ -264,6 +264,11 @@ export default {
             this.gig = res;
             this.images = res.images;
         } catch (error) {}
+    },
+        methods: {
+        loadGig() {
+      this.$router.push("/user-profile/" + this.gig._id);
+    },
     },
 };
 </script>
