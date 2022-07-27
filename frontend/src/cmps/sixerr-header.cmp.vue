@@ -83,7 +83,7 @@ import signIn from './sign-in.cmp.vue'
 import signUp from './sign-up.cmp.vue'
 
 export default {
-      data() {
+    data() {
         return {
             scrollPosition: null,
             isNotHome: null,
