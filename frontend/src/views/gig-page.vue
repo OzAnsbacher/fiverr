@@ -124,7 +124,7 @@
                     |
                     <div v-if="gig.owner.rate">
                         <span class="stars-details"
-                            >{{ getStars }} 3
+                            >{{ getStars }} {{ gig.owner.rate }}
                             <p class="review-length">(1k+)</p></span
                         >
                     </div>
@@ -149,7 +149,7 @@
                 <div class="rate-profile">
                     <p>{{ gig.owner.fullname }}</p>
                     <span class="stars-details"
-                        >{{ getStars }} 5 
+                        >{{ getStars }} {{ gig.owner.rate }}
                         <h1 class="review-length">(1k+)</h1></span
                     >
                     <!-- <img src="getStars" alt=""> -->
