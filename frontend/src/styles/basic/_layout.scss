@@ -1,7 +1,126 @@
 .main-layout {
-    // max-width: 1340px;
-    max-width: 1400px;
-    margin: 0 auto;
+  // max-width: 1340px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-
+@media (max-width: 1450px) {
+  .main-layout {
+    max-width: 1200px;
+    .explore-cards-conteiner {
+      gap: 1.2em;
+      .explore-card {
+        height: 390px;
+      }
+    }
+  }
+}
+@media (max-width: 1250px) {
+  .main-layout {
+    max-width: 1000px;
+    .explore-cards-conteiner {
+      grid-template-columns: repeat(3, 1fr);
+      .explore-card {
+        height: 380px;
+      }
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .main-layout {
+    max-width: 900px;
+    .explore-cards-conteiner {
+      grid-template-columns: repeat(3, 1fr);
+      .explore-card {
+        height: 390px;
+      }
+    }
+  }
+}
+@media (max-width: 950px) {
+  .main-layout {
+    max-width: 750px;
+    .explore-cards-conteiner {
+      grid-template-columns: repeat(2, 1fr);
+      .explore-card {
+        height: 398px;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .main-layout {
+    max-width: 600px;
+    .explore-cards-conteiner {
+      .explore-card {
+        height: 380px;
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .main-layout {
+    max-width: 500px;
+    // .explore-cards-conteiner {
+    //   .explore-card {
+    //     height: 380px;
+    //   }
+    // }
+  }
+}
+@media (max-width: 650px) {
+  .main-layout {
+    max-width: 500px;
+    .explore-cards-conteiner {
+      grid-template-columns: repeat(1, 1fr);
+      margin: auto;
+      margin-bottom: 10px;
+      .explore-card {
+        height: 500px;
+      }
+      .el-carousel__container {
+        height: 300px !important;
+      }
+    }
+  }
+}
+@media (max-width: 550px) {
+  .main-layout {
+    max-width: 350px;
+    .explore-cards-conteiner {
+    //   margin: auto;
+    //   margin-bottom: 10px;
+      .explore-card {
+        height: 400px;
+        .explore-grid-details {
+          height: 170px;
+        }
+        .explore-card-title {
+          padding-bottom: 10px;
+        }
+      }
+      .el-carousel__container {
+        height: 230px !important;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .main-layout {
+    max-width: 300px;
+    .explore-cards-conteiner {
+      grid-template-columns: repeat(1, 1fr);
+      margin: auto;
+      margin-bottom: 10px;
+      .explore-card {
+        height: 380px;
+      }
+      .explore-grid-details {
+        height: 180px;
+      }
+      .el-carousel__container {
+        height: 200px !important;
+      }
+    }
+  }
+}
