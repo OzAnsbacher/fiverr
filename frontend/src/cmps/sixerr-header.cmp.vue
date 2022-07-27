@@ -133,7 +133,7 @@ export default {
         },
         closeProfilePopover(event) {
             const elModal = document.getElementsByClassName('profile-nav')[0]
-            if (elModal.contains(event.target)) return
+            if (elModal?.contains(event.target)) return
             this.showProfileNav = false
         },
     },

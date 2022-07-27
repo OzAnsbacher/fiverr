@@ -1,13 +1,14 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import homePage from '../views/home-page.vue'
 import explorePage from '../views/explore-page.vue'
 import gigPage from '../views/gig-page.vue'
 import checkOutPage from '../cmps/check-out-page.vue'
 import userProfile from '../views/user-profile.vue'
-
+import signUp from '../cmps/sign-up.cmp.vue'
+import signIn from '../cmps/sign-in.cmp.vue'
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
+    history: createWebHashHistory(import.meta.env.BASE_URL),
     routes: [
         {
             path: '/',
@@ -33,6 +34,16 @@ const router = createRouter({
             path: '/user-profile',
             name: 'user-profile',
             component: userProfile,
+        },
+        {
+            path: '/signup',
+            name: 'signup',
+            component: signUp,
+        },
+        {
+            path: '/sign-in',
+            name: 'sign-in',
+            component: signIn,
         },
     ],
 })
