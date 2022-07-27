@@ -106,18 +106,14 @@
 </template> -->
 
 <template>
+    <overview-header />
     <section v-if="gig" class="gig-page main-layout">
-
         <div class="info-side">
             <div class="details-title-info">
                 <h1>{{ gig.title }}</h1>
                 <div class="seller-info">
                     <div class="profile-img">
-                        <img
-                            :src="gig.owner.imgUrl"
-                            alt="seller image"
-                            class="seller-img"
-                        />
+                        <img :src="gig.owner.imgUrl" alt="seller image" class="seller-img" />
                     </div>
                     <p class="owner-name">{{ gig.owner.fullname }}</p>
                     <p>Level {{ gig.owner.level }} Seller</p>
@@ -139,11 +135,7 @@
             <div class="about-seller">
                 <div class="seller-profile">
                     <div class="profile-img-about">
-                        <img
-                            :src="gig.owner.imgUrl"
-                            alt="seller image"
-                            class="seller-img"
-                        />
+                        <img :src="gig.owner.imgUrl" alt="seller image" class="seller-img" />
                     </div>
                 </div>
                 <div class="rate-profile">
@@ -205,7 +197,7 @@
                 <div class="promises-section">
                     <div class="guarentee-section">
                         <div class="v-image">
-                                <!-- <svg
+                            <!-- <svg
                                     width="16"
                                     height="16"
                                     viewBox="0 0 11 9"
@@ -246,14 +238,11 @@
                 </div>
 
                 <div class="buy-btn">
-                    
-                        <button v-on:click="loadGig">Continue</button>
-                    
-
+                    <button v-on:click="loadGig">Continue</button>
                 </div>
             </div>
         </div>
-                    <!-- <header class="sub-header block" >
+        <!-- <header class="sub-header block" >
         <p class="sub-header-content max-width-container equal-padding flex">
             <ul class="categories flex clean-list">
                 <li>ayo</li>
@@ -269,56 +258,58 @@
 </template>
 
 <script>
-import { gigService } from "../services/gig-service";
-import carouselDetailsCmp from "../cmps/carousel-details-cmp.vue";
+import { gigService } from '../services/gig-service'
+import carouselDetailsCmp from '../cmps/carousel-details-cmp.vue'
+import overviewHeader from '../cmps/overview-header.cmp.vue'
 
 export default {
-    name: "gig-detail",
+    name: 'gig-detail',
     data() {
         return {
             gig: null,
-            images: "",
-            rates: "",
+            images: '',
+            rates: '',
             currUser: null,
             reviewToAdd: {
-                txt: "",
+                txt: '',
                 createdAt: new Date().getMinutes(),
-                flag: "",
+                flag: '',
             },
-        };
+        }
     },
     async created() {
-        var { gigid } = this.$route.params;
-        console.log(gigid);
-        const res = await gigService.getById(gigid);
-        console.log(res);
-        this.gig = res;
-        this.images = res.images;
-        console.log(this.images);
+        var { gigid } = this.$route.params
+        console.log(gigid)
+        const res = await gigService.getById(gigid)
+        console.log(res)
+        this.gig = res
+        this.images = res.images
+        console.log(this.images)
     },
     methods: {
         loadGig() {
-      this.$router.push("/checkout/" + this.gig._id);
-    },
+            this.$router.push('/checkout/' + this.gig._id)
+        },
     },
     computed: {
         gigImg() {
-            return this.gig.image;
+            return this.gig.image
         },
         getStars() {
-            let stars = "";
+            let stars = ''
             for (let index = 0; index < this.gig.owner.rate; index++) {
-                stars += "★";
+                stars += '★'
             }
-            return stars;
+            return stars
         },
         // return this.gig and save it in the created
     },
     unmounted() {},
     components: {
         carouselDetailsCmp,
+        overviewHeader,
     },
-};
+}
 </script>
 
 <style></style>
