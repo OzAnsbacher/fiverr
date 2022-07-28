@@ -24,6 +24,11 @@
         height: 380px;
       }
     }
+    .search-header {
+      input {
+        width: 300px;
+      }
+    }
   }
 }
 @media (max-width: 1050px) {
@@ -46,6 +51,12 @@
         height: 398px;
       }
     }
+    .search-header {
+      input {
+        margin: 0;
+        width: 200px;
+      }
+    }
   }
 }
 @media (max-width: 800px) {
@@ -56,18 +67,36 @@
         height: 380px;
       }
     }
+    .search-section {
+      display: flex;
+      flex-direction: column;
+      img {
+        display: none;
+      }
+      .search {
+        border-radius: 8px;
+        width: 100%;
+      }
+      .search-btn {
+        border-radius: 8px;
+        width: 100%;
+      }
+    }
+    .popular-categories{
+      display: none ;
+    }
+    .trusted-by-text {
+      display: none;
+    }
+    .imgs-ul {
+      gap: 20px;
+    }
+  }
+  .category-conteiner {
+    display: none;
   }
 }
-@media (max-width: 650px) {
-  .main-layout {
-    max-width: 500px;
-    // .explore-cards-conteiner {
-    //   .explore-card {
-    //     height: 380px;
-    //   }
-    // }
-  }
-}
+//
 @media (max-width: 650px) {
   .main-layout {
     max-width: 500px;
@@ -88,8 +117,8 @@
   .main-layout {
     max-width: 350px;
     .explore-cards-conteiner {
-    //   margin: auto;
-    //   margin-bottom: 10px;
+      //   margin: auto;
+      //   margin-bottom: 10px;
       .explore-card {
         height: 400px;
         .explore-grid-details {
@@ -103,11 +132,40 @@
         height: 230px !important;
       }
     }
+    .search-header {
+      input {
+        margin: 0;
+        width: 150px;
+      }
+    }
+    .ex-filter-conteiner {
+      flex-direction: column;
+      align-items: baseline;
+      .ex-btn {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+      }
+    }
+ 
+    .carousel__track {
+      margin: 0 100px 0 100px;
+      gap: 80px !important;
+    }
+    .carousel__next,
+    .carousel__prev {
+      display: none;
+    }
+    .imgs-ul {
+      display: none ;
+    }
+    &.categories-container{
+      margin-top: 50px ;
+    }
   }
 }
 @media (max-width: 400px) {
   .main-layout {
-    max-width: 300px;
+    max-width: 280px;
     .explore-cards-conteiner {
       grid-template-columns: repeat(1, 1fr);
       margin: auto;
@@ -121,6 +179,21 @@
       .el-carousel__container {
         height: 200px !important;
       }
+    }
+    .search-header {
+      input {
+        display: none;
+      }
+      .search-btn-new {
+        display: none;
+      }
+    }
+    .carousel__track {
+      margin: 0 40px 0 40px;
+      gap: 40px !important;
+    }
+    .carousel__viewport {
+      margin: auto;
     }
   }
 }

@@ -18,6 +18,8 @@ export const gigService = {
 };
 
 async function query(filterBy) {
+  console.log(filterBy);
+  // _categoryParams(filterBy)
   var res = await axios.get("../../data/gig.json");
   var gigs = res.data[0].gigs;
   if (filterBy) gigs = setGigsFilters(gigs, filterBy);
@@ -100,12 +102,44 @@ function getCategories() {
   return categories;
 }
 
+// function _categoryParams(filterBy){
+  
+//   const queryStringParams = `explore?category=${filterBy.category}`;
+//   if(filterBy.time) queryStringParams +=`&daysToMake=${filterBy.time}`
+//   if(filterBy.min) queryStringParams +=`&minPrice=${filterBy.min}`
+//   if(filterBy.max) queryStringParams +=`&maxPrice=${filterBy.max}`
+//   const newUrl = queryStringParams;
+//   console.log(newUrl);
+//   this.$router.push(newUrl);
+// }
+
 function setGigsFilters(gigs, filter) {
+  console.log(filter);
   if (filter.category) {
     gigs = gigs.filter((gig) => gig.category === filter.category);
   }
   if (filter.tag) {
     gigs = gigs.filter((gig) => gig.tags.includes(filter.tag));
+  }
+  if (filter.min) {
+    var gigs = gigs.filter((gig) => gig.price > filter.min);
+  }
+  if (filter.max) {
+    var gigs = gigs.filter((gig) => gig.price < filter.max);
+  }
+  if (filter.populary) {
+    var gigs = gigs.filter((gig) => gig.owner.rate >= filter.populary);
+  }
+  if (filter.time) {
+    var gigs = gigs.filter((gig) => gig.daysToMake <= filter.time);
+  }
+  if (filter.sort === "Name") {
+    var gigs = gigs.sort((a, b) => {
+      if (a.title.toUpperCase() < b.title.toUpperCase()) return -1;
+      return 1;
+    });
+  }else if (filter.sort === "Price") {
+    var gigs = gigs.sort((a, b) => a-b);
   }
   return gigs;
 }

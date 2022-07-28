@@ -1,13 +1,13 @@
 <template>
   <div class="ex-filter-conteiner">
-    <explore-filter-popularity @populary="getFilter" />
-    <explore-filter-price @price="getFilter" />
-    <explore-filter-time @time="getFilter" />
+    <explore-filter-popularity @populary="setFilter" />
+    <explore-filter-price @price="setFilter" />
+    <explore-filter-time @time="setFilter" />
     <explore-budget />
   </div>
   <div class="ex-btn count-gigs flex align-center space-between">
-    <p >{{ gigs.length }} services available</p>
-    <explore-sort @sortBy="getSortby" />
+    <p>{{ gigs.length }} services available</p>
+    <explore-sort @sortBy="setSortby" />
   </div>
 </template>
 
@@ -33,11 +33,15 @@ export default {
     console.log(this.gigs);
   },
   methods: {
-    getFilter(filter) {
-      this.$store.dispatch({ type: "getFilterExp", filter });
+    async setFilter(filter) {
+       this.$store.commit({type: 'setFilterBy',filterBy: JSON.parse(JSON.stringify(filter)),});
+      // this.$store.dispatch({ type: "setFilterExp", filter });
+      await this.$store.dispatch({ type: "loadGigs"});
     },
-    getSortby(sort) {
-       this.$store.dispatch({ type: "getSortEx", sort });
+    async setSortby(sort) {
+      this.$store.commit({type: 'sortBy',filterBy: JSON.parse(JSON.stringify(sort)),});
+      //  this.$store.dispatch({ type: "setSortEx", sort });
+       await this.$store.dispatch({ type: "loadGigs"});
     },
   },
   computed: {},
