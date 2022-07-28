@@ -2,9 +2,8 @@
     scroll-behavior: smooth;
 }
 
-
 .header-content {
-    z-index: 15; 
+    z-index: 15;
     justify-content: space-evenly;
     font-size: 14px;
     border-bottom: 1px solid #e4e5e7;
@@ -32,11 +31,9 @@
     }
 }
 
-
 .clean-list {
     list-style: none;
     list-style-image: none;
-
 }
 
 .clean-link {
@@ -44,11 +41,10 @@
     padding: 0;
     text-decoration: none;
     cursor: pointer;
-    &:hover {   
+    &:hover {
         border-bottom: 1px solid green;
     }
 }
-
 
 .like-header {
     align-items: center;
@@ -66,7 +62,7 @@
     border-radius: 3px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    .likes-count::after{
+    .likes-count::after {
         z-index: 2;
         border-width: 8px 9px 8px 0;
         border-color: transparent #dadbdd transparent transparent;

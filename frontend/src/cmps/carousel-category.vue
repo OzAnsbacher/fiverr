@@ -69,6 +69,7 @@ export default defineComponent({
     },
     methods: {
         explore(category) {
+            
             const filterBy = {
                 category,
             }

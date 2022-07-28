@@ -2,10 +2,10 @@
     <div class="sign-up-container">
         <h3>Join Sixerr</h3>
 
-        <form @submit.prevent="signUp" class="signup-details">
-            <input type="text" placeholder="Fullname" />
-            <input type="text" placeholder="Username" />
-            <input type="text" placeholder="Password" />
+        <form @submit.prevent="signup" class="signup-details">
+            <input ref="fullname" v-model="cred.fullname" type="text" placeholder="Fullname" />
+            <input v-model="cred.username" type="text" placeholder="Username" />
+            <input v-model="cred.password" type="text" placeholder="Password" />
 
             <button>Continue</button>
             <h4>By joining I agree to receive emails from Sixerr.</h4>
@@ -18,13 +18,27 @@
 </template>
 <script>
 export default {
+    name: 'signup-page',
     data() {
-        return {}
+        return {
+            cred: {
+                fullname: '',
+                username: '',
+                password: '',
+            },
+        }
     },
     methods: {
-        signUp() {
-            console.log('testing sign up')
+        async signup() {
+            await this.$store.dispatch({ type: 'signup', cred: this.cred })
+            this.$router.push('/')
         },
+    },
+    mounted() {
+        // this.$refs.fullname.focus()
+        console.log('checking')
     },
 }
 </script>
+
+<style></style>

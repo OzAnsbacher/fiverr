@@ -1,12 +1,12 @@
 <template>
   <!-- <div v-if="getGigs"> -->
   <div>
-    <explore-tags @setTag="getCategory" :tags="tags" />
+    <explore-tags @setTag="setCategory" :tags="tags" />
     <div class="conteiner-explore main-layout">
-      <explore-category @setCategory="getCategory" :res="res" />
+      <explore-category @setCategory="setCategory" :res="getCategory" />
       <explore-carousel-category
-        :categories="categories"
-        @setCategory="getCategory"
+        :categories="getCategories"
+        @setCategory="setCategory"
       />
       <explore-filters :gigs="getGigs" />
       <explore-cards :gigs="getGigs" />
@@ -25,10 +25,10 @@ import exploreCards from "../cmps/explore-cards.cmp.vue";
 export default {
   data() {
     return {
-      isGigs: null,
+      // isGigs: null,
       gigs: null,
-      categories: null,
-      filter: {},
+      category: null,
+      // filter: {},
       tags: [
         "Lading Page",
         "Minimal Logo",
@@ -47,37 +47,34 @@ export default {
     exploreCards,
     exploreCarouselCategory,
   },
-  created() {
-    this.categories = this.$store.getters.categoriesToShow;
+  async created() {
+    try {
+      this.category = this.$store.getters.categoriesToShow;
+      this.$store.commit({
+        type: "setCategory",
+        category: JSON.parse(JSON.stringify(category)),
+      });
+      // console.log(this.categories);
+      await this.$store.dispatch({
+        type: "loadGigs",
+      });
+    } catch (error) {}
   },
-  methods: {
-    // async getCategory(filterBy) {
-    //   try {
-    //     await this.$store.dispatch({ type: "loadGigs", filterBy });
-    //     this.gigs = this.$store.getters.gigsToShow;
-    //   } catch (error) {
-    //     console.log("error explore", error);
-    //   }
-    // },
-    // getFilter(filter) {
-    //   for (const key in filter) {
-    //     this.filter[key] = filter[key];
-    //   }
-    // },
-    getFilterGigs() {
-      var gigs = this.gigs;
-      const filter = this.$store.getters.setFilterEx;
-      // gigs = gigs.filter((gig) => gig.price > filter.min);
-      // console.log("this.gigs", this.gigs);
-      console.log("gigs", gigs);
-
-      return gigs;
-    },
-  },
+  // methods: {
+  //   getFilterGigs() {
+  //     var gigs = this.gigs;
+  //     const filter = this.$store.getters.setFilterEx;
+  //     return gigs;
+  //   },
+  // },
 
   methods: {
-    async getCategory(filterBy) {
+    async setCategory(filterBy) {
       try {
+        this.$store.commit({
+          type: "setCategory",
+          category: JSON.parse(JSON.stringify(filterBy)),
+        });
         await this.$store.dispatch({ type: "loadGigs", filterBy });
         this.gigs = this.$store.getters.gigsToShow;
       } catch (error) {
@@ -86,30 +83,24 @@ export default {
     },
   },
   computed: {
-    // gigs() {
-    //   return this.$store.getters.gigsToShow;
-    // },
     getTags() {
       return this.tags;
     },
+    getCategories() {
+      const categories = this.$store.getters.categoriesToShow;
+      return categories;
+    },
+    // getCategory(filter) {
+    //   console.log(filter);
+    // },
     getGigs() {
-      this.isGigs = true;
-      console.log(this.isGigs);
-      const filterEx = this.$store.getters.getFilterEx;
-      var gigs = this.gigs;
+      const gigs = this.$store.getters.gigsToShow;
+      // this.isGigs = true;
+      // console.log(this.isGigs);
+      // const filterEx = this.$store.getters.getFilterEx;
+      this.gigs = gigs;
       if (!gigs) return;
-      if (filterEx.min) {
-        var gigs = gigs.filter((gig) => gig.price > filterEx.min);
-      }
-      if (filterEx.max) {
-        var gigs = gigs.filter((gig) => gig.price < filterEx.max);
-      }
-      if (filterEx.populary) {
-        var gigs = gigs.filter((gig) => gig.owner.rate >= filterEx.populary);
-      }
-      if (filterEx.time) {
-        var gigs = gigs.filter((gig) => gig.daysToMake <= filterEx.time);
-      }
+
       return gigs;
     },
   },

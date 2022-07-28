@@ -4,9 +4,9 @@
         :style="{ position: isHome ? 'fixed' : 'static' }"
         :class="{ 'change-color': scrollPosition > 50 || getIsNotHome }"
     >
-        <button class="hamburger hide" @click="toggleActive">☰</button>
         <main class="main-header" ref="nav">
             <div class="main-layout header-flex">
+        <button class="hamburger hide" @click="toggleActive">☰</button>
                 <div class="logo-and-search">
                     <h1 to="/">
                         <router-link class="logo" to="/">
@@ -33,7 +33,7 @@
                             </router-link>
                         </ul>
                     </div>
-                    <header-filter @setFilter="setFilter" :class="{ 'search-header': scrollPosition > 100 }" class="hide" />
+                    <header-filter @setFilter="setFilter" :class="{ 'search-header': scrollPosition > 100 || getIsNotHome }" class="hide" />
                 </div>
                 <nav class="nav">
                     <div class="left-links">
@@ -133,7 +133,7 @@ export default {
         },
         closeProfilePopover(event) {
             const elModal = document.getElementsByClassName('profile-nav')[0]
-            if (elModal.contains(event.target)) return
+            if (elModal?.contains(event.target)) return
             this.showProfileNav = false
         },
     },

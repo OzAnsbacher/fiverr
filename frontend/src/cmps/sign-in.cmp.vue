@@ -2,9 +2,9 @@
     <section class="login section">
         <div class="login-container">
             <h4>Sign In to Sixerr</h4>
-            <form @submit.prevent="doLogin" class="login-details">
-                <input type="text" v-model="loginCred.username" placeholder="Email / Username" />
-                <input type="text" v-model="loginCred.password" placeholder="Password" />
+            <form @submit.prevent="login" class="login-details">
+                <input type="text" ref="username" v-model="cred.username" placeholder="Email / Username" />
+                <input v-model="cred.password" type="password" placeholder="Password" />
                 <button>Continue</button>
             </form>
             <div class="login-footer flex justify-center align-center">
@@ -16,12 +16,26 @@
 </template>
 <script>
 export default {
+    name: 'login-page',
     data() {
         return {
-            loginCred: { username: '', password: '' },
+            cred: {
+                username: '',
+                password: '',
+            },
         }
     },
-    methods: {},
-    computed: {},
+    methods: {
+        async login() {
+            await this.$store.dispatch({ type: 'login', cred: this.cred })
+            // socketService.emit('set-user-socket', this.$store.getters.getUser._id)
+            this.$router.push('/')
+        },
+    },
+    mounted() {
+        this.$refs.username.focus()
+    },
 }
 </script>
+
+<style></style>

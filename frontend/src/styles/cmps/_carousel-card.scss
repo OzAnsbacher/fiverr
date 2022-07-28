@@ -3,17 +3,26 @@
     button {
       --el-carousel-arrow-background: white;
       color: black;
+      &.el-carousel__arrow--right {
+        transform: translateX(150px);
+        transition: transform 1s cubic-bezier(0.4, 0, 1, 1) !important;
+      }
+      &.el-carousel__arrow--left {
+        transform: translateX(-150px);
+        transition: transform 1s cubic-bezier(0.4, 0, 1, 1) !important;
+      }
+      --el-transition-duration: none !important;
     }
-    --el-transition-duration: 0 !important;
   }
 
   :hover {
     .el-carousel__arrow--right {
-      transform: translateX(28px);
+      transform: translateX(20px) !important;
+      border-radius: 50% 0% 0% 50%;
     }
     .el-carousel__arrow--left {
-      transform: translateX(-28px);
-      // transform: translateX(-28px) scale(1);
+      transform: translateX(-20px) !important;
+      border-radius: 0% 50% 50% 0%;
     }
     --el-carousel-arrow-hover-background: white;
   }

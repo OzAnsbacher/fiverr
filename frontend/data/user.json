@@ -1,0 +1,8 @@
+[
+    {
+        "fullname": "admin",
+        "username": "admin",
+        "password": "1234",
+        "isAdmin": true
+    }
+]

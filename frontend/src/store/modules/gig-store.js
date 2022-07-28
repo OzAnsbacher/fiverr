@@ -75,53 +75,47 @@ export default {
         img: "https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_2.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/book-covers-2x.png",
       },
     ],
-    filterBy: null,
-    filterEx: {
-      min: null,
-      max: null,
-    },
+    filterBy: { category: "" },
   },
   getters: {
     gigsToShow({ gigs }) {
       return gigs;
     },
-    getFilterEx({ filterEx }) {
-      return filterEx;
-    },
     categoriesToShow({ categories }) {
       return categories;
+    },
+    getCategory({ filterBy }) {
+      return filterBy;
     },
   },
   mutations: {
     setGigs(state, { gigs }) {
       state.gigs = gigs;
     },
-    // changeFilter(state, { filterBy }) {
-    //   state.filterBy = filterBy;
-    // },
-    changeFilterEx(state, { filter }) {
-        state.filterEx = {...filter};
-      console.log("state.filter", state.filterEx);
+    setCategory(state, { category }) {
+      // const currCategory = state.categories.find(
+      //   (_category) => category.category === _category.name
+      // );
+      state.filterBy.category = category.category;
     },
-    changeSortEx(state, { sortBy }) {
-      state.filterEx.sortBy = sortBy;
-      console.log("state.filter", state.filterEx);
+    setFilterBy(state, { filterBy }) {
+      const filter = Object.keys(filterBy);
+      state.filterBy[filter[0]] = Object.values(filterBy)[0];
+      if (filter[1]) state.filterBy[filter[1]] = Object.values(filterBy)[1];
     },
+    sortBy(state, { filterBy }) {
+      state.filterBy.sort = filterBy;
+    },
+ 
   },
   actions: {
-    async loadGigs(state, { filterBy }) {
+    async loadGigs({ commit, state }) {
       try {
-        //todo change in filter in category
-        const gigs = await gigService.query(filterBy);
-        state.commit({ type: "setGigs", gigs });
-      } catch (error) {}
-    },
-    getFilterExp(state, { filter }) {
-      state.commit({ type: "changeFilterEx", filter });
-    },
-    getSortEx(state, { sort }) {
-      console.log(sort);
-      state.commit({ type: "changeSortEx", sort });
+        const gigs = await gigService.query(state.filterBy);
+        commit({ type: "setGigs", gigs });
+      } catch (error) {
+        console.log(error, "err in gig-store");
+      }
     },
   },
 };
