@@ -1,43 +1,29 @@
-<template>
-
-    <el-select
-      class="ex-btn ex-price"
-      @select="filterPrice"
-      multiple
-      placeholder="Budget"
-      :class="{ 'full-filter': min > 0 || max > 0 }"
-    >
-        <div class="input-min" >
-      <h5>MIN.</h5>
-      <el-option  value="">
-        <el-input 
-          v-model="min"
-          @change="filterPrice"
-          class="flex w-50 m-2"
-          placeholder="Any"
-          :prefix-icon="Search"
-          
-        />
-      </el-option>
-    </div>
-    <div class="input-max">
-      <h5>MAX.</h5>
-      <el-option  value="">
-        <el-input
-          class="flex w-50 m-2"
-          placeholder="Any"
-          v-model="max"
-          @change="filterPrice"
-          :prefix-icon="Search"
-           width="40px"
-        />
-      </el-option>
-    </div>
     
+   <template>
+  <section class="budget-filter-container">
+    <el-select class="ex-btn ex-price" @select="filterPrice" placeholder="Budget"
+      :class="{ 'full-filter': min > 0 || max > 0 }">
+      <el-option hidden></el-option>
+      <section class="budget-filter-container">
+        <div class="inps-min-max">
+          <div class="input-min">
+            <h5>MIN.</h5>
+            <el-input v-model="min" @change="filterPrice" class="flex w-50 m-2" placeholder="Any"
+              :prefix-icon="Search" />
+          </div>
+          <div class="input-max">
+            <h5>MAX.</h5>
+            <el-input class="flex w-50 m-2" placeholder="Any" v-model="max" @change="filterPrice" :prefix-icon="Search"
+              width="40px" />
+          </div>
+        </div>
+        <el-button type="success">Apply</el-button>
+      </section>
     </el-select>
+  </section>
 </template>
-
-<script>
+ 
+   <script>
 export default {
   data() {
     return {
@@ -45,7 +31,7 @@ export default {
       max: null,
     };
   },
-  created() {},
+  created() { },
   methods: {
     filterPrice() {
       const filter = {
@@ -56,8 +42,26 @@ export default {
     },
   },
   computed: {},
-  unmounted() {},
+  unmounted() { },
 };
-</script>
-
-<style lang="scss" scoped></style>
+</script> 
+    
+  <style  >
+.budget-filter-container {
+  display: flex;
+  flex-direction: column;
+}
+.inps-min-max {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.el-select-dropdown__wrap.el-scrollbar__wrap.el-scrollbar__wrap--hidden-default {
+  height: 160px
+}
+.el-select-dropdown__wrap.el-scrollbar__wrap.el-scrollbar__wrap--hidden-default {
+  overflow-y: hidden;
+}
+</style>  
+    
+  
