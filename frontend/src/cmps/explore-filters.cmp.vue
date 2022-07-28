@@ -41,7 +41,7 @@ export default {
     async setSortby(sort) {
       this.$store.commit({type: 'sortBy',filterBy: JSON.parse(JSON.stringify(sort)),});
       //  this.$store.dispatch({ type: "setSortEx", sort });
-       await this.$store.dispatch({ type: "loadGigs"});
+       await this.$store.dispatch({ type: "llteroadGigs"});
     },
   },
   computed: {},
