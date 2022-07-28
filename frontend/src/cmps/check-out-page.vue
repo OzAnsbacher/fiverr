@@ -283,7 +283,7 @@ export default {
                             </div>
                         </li>
                     </ul>
-                    <button v-on:click="loadGig" class="btn">Purchase</button>
+                    <!-- <button v-on:click="loadGig" class="btn">Purchase</button> -->
                     <button @click="purchase" class="btn">Purchase</button>
                 </div>
             </div>
