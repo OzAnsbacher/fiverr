@@ -3,7 +3,7 @@ import router from '../../router'
 
 export default {
     state: {
-        orders: null,
+        orders: [],
     },
     getters: {
         getorders(state) {
@@ -11,10 +11,10 @@ export default {
         },
     },
     mutations: {
-        setorders(state, { orders }) {
+        setOrders(state, { orders }) {
             state.orders = orders
         },
-        addorder(state, { order }) {
+        addOrder(state, { order }) {
             state.orders.push(order)
         },
     },
@@ -23,26 +23,28 @@ export default {
             try {
                 const orders = await orderService.query(filterBy)
                 commit({
-                    type: 'setorders',
+                    type: 'setOrder',
                     orders,
                 })
             } catch (err) {
                 console.log(err)
             }
         },
-        async addorder(context, { content, toyId }) {
-            const user = context.rootGetters.getUser
-            if (!user) return router.push('/login')
-            const order = {
-                content,
-                userId: user._id,
-                toyId,
+        async addOrder({ commit }, { order }) {
+            try {
+                const savedOrder = await orderService.save(order)
+                commit({ type: 'addOrder', savedOrder })
+                return savedOrder
+            } catch (err) {
+                console.log('Err in adding order', err)
             }
-            await orderService.addorder(order)
-            // context.commit({
-            //   type: 'addorder',
-            //   order: addedorder
-            // })
+        },
+        async getOrdersById({ commit }, { userId }) {
+            try {
+                const orders = await orderService.query({ userId })
+                commit({ type: 'setOrders', orders })
+                return orders
+            } catch (error) {}
         },
     },
 }

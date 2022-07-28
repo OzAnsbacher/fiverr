@@ -1,11 +1,5 @@
-// const fs = require('fs')
-// var gorders = require('../../data/order.json')
-
 import { httpService } from './http.service.js'
 const ENDPOINT = 'order'
-// var axios = Axios.create({ withCredentials: true })
-
-var gorders
 
 export const orderService = {
     query,
@@ -16,6 +10,7 @@ export const orderService = {
     _saveordersToFile,
     getCategories,
     getqueryStringParams,
+    getEmptyOrder,
 }
 
 async function query(filterBy) {
@@ -83,11 +78,7 @@ function _makeId(length = 5) {
 function getEmptyOrder() {
     return Promise.resolve({
         createdAt: '',
-        description: '',
-        price: null,
         timeToDeliver: '',
-        daysToMake: '',
-        imgUrl: '',
         seller: {
             _id: '',
             fullname: '',
@@ -100,11 +91,10 @@ function getEmptyOrder() {
         },
         gig: {
             _id: '',
+            images: '',
             category: '',
             price: null,
             description: '',
-            timeToDeliver: '',
-            daysToMake: '',
         },
         status: 'Pending',
     })

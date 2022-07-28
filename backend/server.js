@@ -41,6 +41,7 @@ const authRoutes = require('./api/auth/auth.routes')
 const userRoutes = require('./api/user/user.routes')
 const reviewRoutes = require('./api/review/review.routes')
 const { connectSockets } = require('./services/socket.service')
+const orderRoutes = require('./api/order/order.routes')
 
 // routes
 const setupAsyncLocalStorage = require('./middlewares/setupAls.middleware')
@@ -50,6 +51,7 @@ app.use('/api/gig', gigRoutes)
 app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/review', reviewRoutes)
+app.use('/api/order', orderRoutes)
 
 connectSockets(http, session)
 

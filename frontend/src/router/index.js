@@ -6,6 +6,7 @@ import checkOutPage from '../cmps/check-out-page.vue'
 import userProfile from '../views/user-profile.vue'
 import signUp from '../cmps/sign-up.cmp.vue'
 import signIn from '../cmps/sign-in.cmp.vue'
+import backOffice from '../cmps/back-office.cmp.vue'
 
 const router = createRouter({
     history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,11 @@ const router = createRouter({
             path: '/sign-in',
             name: 'sign-in',
             component: signIn,
+        },
+        {
+            path: '/backoffice/',
+            name: 'back-office',
+            component: backOffice,
         },
     ],
 })
