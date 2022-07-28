@@ -83,7 +83,7 @@ import signIn from './sign-in.cmp.vue'
 import signUp from './sign-up.cmp.vue'
 
 export default {
-      data() {
+    data() {
         return {
             scrollPosition: null,
             isNotHome: null,
@@ -133,7 +133,7 @@ export default {
         },
         closeProfilePopover(event) {
             const elModal = document.getElementsByClassName('profile-nav')[0]
-            if (elModal.contains(event.target)) return
+            if (elModal?.contains(event.target)) return
             this.showProfileNav = false
         },
     },

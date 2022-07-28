@@ -1049,9 +1049,8 @@
   
   text-align: -webkit-right;
 }
-.check-out-part {
+.check-out-part ,.order-modal {
   position: sticky;
-  
   top: 85px;
   width: 380px;
   border: 1px solid #DADBDD;
@@ -1190,6 +1189,8 @@
   .img-clock {
     align-items: center;
     display: flex;
+    gap: 10px;
+    fill: #62646a;
   }
   img {
     max-width: 16px;
@@ -1277,6 +1278,7 @@
     height: 100%;
     display: block;
     border-radius: 50%;
+    object-fit: cover;
   }
 }
 .header-info {
@@ -1376,6 +1378,9 @@
 }
 .promises-section {
   margin-bottom: 20px;
+}
+.v-image {
+  fill: #1dbf73;
 }
 .text-area-details {
   width: 100%;

@@ -24,13 +24,14 @@
         height: 380px;
       }
     }
-    .search-header {
-      input {
-        width: 300px;
-      }
+  }
+  .search-header {
+    input {
+      width: 300px;
     }
   }
 }
+
 @media (max-width: 1050px) {
   .main-layout {
     max-width: 900px;
@@ -51,14 +52,15 @@
         height: 398px;
       }
     }
-    .search-header {
-      input {
-        margin: 0;
-        width: 200px;
-      }
+  }
+  .search-header {
+    input {
+      margin: 0;
+      width: 200px;
     }
   }
 }
+
 @media (max-width: 800px) {
   .main-layout {
     max-width: 600px;
@@ -67,35 +69,36 @@
         height: 380px;
       }
     }
-    .search-section {
-      display: flex;
-      flex-direction: column;
-      img {
-        display: none;
-      }
-      .search {
-        border-radius: 8px;
-        width: 100%;
-      }
-      .search-btn {
-        border-radius: 8px;
-        width: 100%;
-      }
-    }
-    .popular-categories{
-      display: none ;
-    }
-    .trusted-by-text {
+  }
+  .search-section {
+    display: flex;
+    flex-direction: column;
+    img {
       display: none;
     }
-    .imgs-ul {
-      gap: 20px;
+    .search {
+      border-radius: 8px;
+      width: 100%;
+    }
+    .search-btn {
+      border-radius: 8px;
+      width: 100%;
     }
   }
-  .category-conteiner {
+  .popular-categories {
     display: none;
   }
+  .trusted-by-text {
+    display: none;
+  }
+  .imgs-ul {
+    gap: 20px;
+  }
 }
+.category-conteiner {
+  display: none;
+}
+
 //
 @media (max-width: 650px) {
   .main-layout {
@@ -124,42 +127,36 @@
         .explore-grid-details {
           height: 170px;
         }
-        .explore-card-title {
-          padding-bottom: 10px;
+      }
+      .search-header {
+        input {
+          margin: 0;
+          width: 150px;
         }
       }
-      .el-carousel__container {
-        height: 230px !important;
+      .ex-filter-conteiner {
+        flex-direction: column;
+        align-items: baseline;
+        .ex-btn {
+          margin-top: 0;
+          margin-bottom: 0.5em;
+        }
       }
-    }
-    .search-header {
-      input {
-        margin: 0;
-        width: 150px;
+
+      .carousel__track {
+        margin: 0 100px 0 100px;
+        gap: 80px !important;
       }
-    }
-    .ex-filter-conteiner {
-      flex-direction: column;
-      align-items: baseline;
-      .ex-btn {
-        margin-top: 0;
-        margin-bottom: 0.5em;
+      .carousel__next,
+      .carousel__prev {
+        display: none;
       }
-    }
- 
-    .carousel__track {
-      margin: 0 100px 0 100px;
-      gap: 80px !important;
-    }
-    .carousel__next,
-    .carousel__prev {
-      display: none;
-    }
-    .imgs-ul {
-      display: none ;
-    }
-    &.categories-container{
-      margin-top: 50px ;
+      .imgs-ul {
+        display: none;
+      }
+      &.categories-container {
+        margin-top: 50px;
+      }
     }
   }
 }
@@ -197,22 +194,41 @@
     }
   }
 }
-// .main-layout-grid {
-//     display: grid;
-//     grid-template-columns: $layoutPadding 1fr $layoutPadding;
-//     > * {
-//         grid-column: 2;
-//     }
-//     > *.full {
-//         grid-column: 1 / -1;
-//     }
-//     @include for-narrow-layout {
-//         @include layoutGTC($break-narrow);
-//     }
-//     @include for-normal-layout {
-//         @include layoutGTC($break-normal);
-//     }
-//     @include for-wide-layout {
-//         @include layoutGTC($break-wide);
+// @media (max-width: 400px) {
+//     .main-layout {
+//         max-width: 300px;
+//         .explore-cards-conteiner {
+//             grid-template-columns: repeat(1, 1fr);
+//             margin: auto;
+//             margin-bottom: 10px;
+//             .explore-card {
+//                 height: 380px;
+//             }
+//             .explore-grid-details {
+//                 height: 180px;
+//             }
+//             .el-carousel__container {
+//                 height: 200px !important;
+//             }
+//         }
 //     }
 // }
+.main-layout-grid {
+  display: grid;
+  grid-template-columns: $layoutPadding 1fr $layoutPadding;
+  > * {
+    grid-column: 2;
+  }
+  > *.full {
+    grid-column: 1 / -1;
+  }
+  @include for-narrow-layout {
+    @include layoutGTC($break-narrow);
+  }
+  @include for-normal-layout {
+    @include layoutGTC($break-normal);
+  }
+  @include for-wide-layout {
+    @include layoutGTC($break-wide);
+  }
+}
