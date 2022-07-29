@@ -69,7 +69,6 @@ export default defineComponent({
     },
     methods: {
         explore(category) {
-            
             const filterBy = {
                 category,
             }
@@ -120,6 +119,7 @@ export default defineComponent({
 }
 .vueperslides__arrows--outside .vueperslides__arrow--prev {
     left: 0.2em;
+    transform: translateY(-28px);
 }
 .vueperslides__arrows--outside .vueperslides__arrow--next {
     right: -1.2em;
