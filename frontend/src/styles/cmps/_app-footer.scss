@@ -18,12 +18,11 @@ footer {
 }
 
 .main-footer {
-    border-top: 1px solid #e4e5e7;
+    // border-top: 1px solid #e4e5e7;
     display: flex;
 
     outline: 0;
-    height: 87px;
-    flex-wrap: wrap;
+     flex-wrap: wrap;
     justify-content: space-between;
 
     // width: 93.2em;
@@ -53,7 +52,7 @@ footer {
         line-height: 21px;
         font-size: 14px;
         color: #b5b6ba;
-        margin-left: 24px;
+        // margin-left: 24px;
         font-size: 20px;
         font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
     }
@@ -72,7 +71,7 @@ footer {
         cursor: pointer;
     }
     img {
-        width: 2.2em;
+        // width: 2.2em;
         margin-left: 10px;
     }
 }

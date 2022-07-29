@@ -11,7 +11,7 @@
       <div class="explore-grid-details">
         <img class="explore-img-owner" :src="gig.owner.imgUrl" />
         <h3 class="explore-card-name">{{ gig.owner.fullname }}</h3>
-        <p class="explore-card-degree">{{ gig.owner.level }}</p>
+        <p class="explore-card-degree">Level {{ gig.owner.level }} Seller</p>
         <p class="explore-card-title hover-green">
           {{ gig.title.split(" ").slice(0, 7).join(" ") }}...
         </p>
@@ -27,7 +27,7 @@
               d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z"
             ></path>
           </svg>
-          {{ gig.owner.rate }}
+          {{ gig.owner.rate }}<span>{{ getRandomInt }}</span>
         </p>
         <svg
           class="explore-card-like"
@@ -41,7 +41,7 @@
           ></path>
         </svg>
         <p class="explore-card-price">
-          <span> :STARTING AT</span><br />
+          <span> STARTING AT</span><br />
           ${{ gig.price }}
         </p>
       </div>
@@ -54,7 +54,9 @@ import caruselCard from "../cmps/carousel-card.vue";
 export default {
   props: ["gigs"],
   data() {
-    return {};
+    return {
+      num: 100,
+    };
   },
   created() {},
   components: {
@@ -64,8 +66,16 @@ export default {
     loadGig(id) {
       this.$router.push("/gig/" + id);
     },
+    randomInt(min = 400, max = 900) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    },
+    //min- in, max-out
   },
   computed: {
+    getRandomInt() {
+      const num = this.randomInt();
+      return " (" + num + ")";
+    },
     getTitle() {},
   },
   unmounted() {},

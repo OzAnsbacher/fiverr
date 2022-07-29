@@ -64,9 +64,9 @@ export default {
   methods: {
     updateScroll() {
       if (window.innerWidth > 1200) {
-        this.countIcon = 6;
+        this.countIcon = 7;
       } else if (window.innerWidth > 1000) {
-        this.countIcon = 5;
+        this.countIcon = 6;
       } else if (window.innerWidth > 800) {
         this.countIcon = 4;
         this.countScroll = 1;

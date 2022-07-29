@@ -3,6 +3,7 @@
   .el-select {
     .el-input__inner {
       color: black;
+      padding-top: 3px;
     }
   }
   .ex-btn {
@@ -34,6 +35,17 @@
     box-shadow: 0px 1px 1px 0.5px #bab2b2;
     padding: 5px;
   }
+}
+
+#el-id-1438-4 {
+  width: 60px !important;
+}
+
+#el-id-1438-8 {
+  color: black !important;
+  font-size: 1.2em !important;
+  font-weight: 700 !important;
+  width: 60px !important;
 }
 
 .count-gigs {
@@ -84,7 +96,6 @@
     margin: 10px;
     margin-right: 20px;
     h5 {
-   
     }
   }
   .el-input__wrapper {
