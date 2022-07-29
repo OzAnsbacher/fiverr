@@ -159,9 +159,9 @@ export default {
 }
 
 .vueperslides__arrow--next {
-  right: -15px;
+  right: -13px;
 }
 .vueperslides__arrow--prev {
-  left: -25px;
+  top: 200px;
 }
 </style>
