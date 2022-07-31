@@ -1,7 +1,8 @@
 <template>
   <div class="header-back-office flex">
     <div class="main-layout">
-      <p @click="switch">Switch to Seller</p>
+      <h4 v-if="isBuyer" @click="switchBuyer">Switch to Seller</h4>
+      <h4 v-else @click="switchBuyer">Switch to Buyer</h4>
     </div>
   </div>
 </template>
@@ -9,14 +10,20 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      isBuyer: true,
+    };
   },
   created() {},
-  methods: {},
+  methods: {
+      switchBuyer(){
+        this.isBuyer = !this.isBuyer;
+        console.log('this.isBuyer', this.isBuyer)
+        
+        this.$emit("order", this.isBuyer );
+      },
+  },
   computed: {
-    switch() {
-      this.$emit("seller");
-    },
   },
   unmounted() {},
 };

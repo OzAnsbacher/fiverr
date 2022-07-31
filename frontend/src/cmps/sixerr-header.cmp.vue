@@ -147,9 +147,9 @@ export default {
         },
         getIsNotHome() {
             var path = this.$route.path
-            if (!path.endsWith('#/')) {
+            if (!path.endsWith('/')) {
                 this.isNotHome = true
-            } else this.isNotHome = false
+            } else  this.isNotHome = false
             return this.isNotHome
         },
     },

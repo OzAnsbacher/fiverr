@@ -1,7 +1,7 @@
     
    <template>
   <section class="budget-filter-container">
-    <el-select class="ex-btn ex-price" @select="filterPrice" placeholder="Budget"
+    <el-select class="ex-price ex-btn" @select="filterPrice" placeholder="Budget"
       :class="{ 'full-filter': min > 0 || max > 0 }">
       <el-option hidden></el-option>
       <section class="budget-filter-container">

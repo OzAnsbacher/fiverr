@@ -1,12 +1,5 @@
 <template>
-  <header-back-office
-    v-if="isBuyer"
-    @seller="loadUserOrders(user)"
-    @click="isBuyer = !isBuyer"
-  />
-  <p v-else @seller="loadUserOrders" @click="isBuyer = !isBuyer">
-    Switch to Buyer
-  </p>
+  <header-back-office @order="loadUserOrders" />
   <div v-if="orders" class="user-board-content main-layout">
     <main class="user-main">
       <div class="profile-details-container">
@@ -155,7 +148,7 @@ export default {
       orders: null,
       gigs: null,
       user: null,
-      isBuyer: true,
+      // isBuyer: true,
     };
   },
   async created() {
@@ -169,13 +162,15 @@ export default {
     },
   },
   methods: {
-    async loadUserOrders(seller) {
-      if (this.isBuyer) var userId = this.user._id;
-      else var sellerId = seller._id;
+    async loadUserOrders(isBuyer = true) {
+      var userId = this.user._id;
+      const filterBy = {
+        userId,
+        isBuyer,
+      };
       this.orders = await this.$store.dispatch({
         type: "getOrdersById",
-        userId,
-        sellerId,
+        filterBy,
       });
       this.orders = this.$store.getters.getorders;
     },

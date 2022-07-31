@@ -1,9 +1,10 @@
 <template>
   <div class="flex align-center">
     <p>Sort By</p>
-    <el-select class="ex-filter-popular ex-btn"  v-model="value" @change="sortBy">
-      <el-option value="Name">Name</el-option>
-      <el-option value="Price">Price </el-option>
+    <el-select class="ex-sort ex-btn"  v-model="value" @change="sortBy">
+      <el-option value="title">Title</el-option>
+      <el-option value="price">Price </el-option>
+      <el-option value="name">Name </el-option>
     </el-select>
   </div>
 </template>

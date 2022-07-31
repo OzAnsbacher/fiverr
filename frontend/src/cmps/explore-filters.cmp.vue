@@ -27,21 +27,27 @@ export default {
     exploreFilterPrice,
     exploreFilterTime,
     exploreSort,
-    exploreBudget
+    exploreBudget,
   },
   created() {
     console.log(this.gigs);
   },
   methods: {
     async setFilter(filter) {
-       this.$store.commit({type: 'setFilterBy',filterBy: JSON.parse(JSON.stringify(filter)),});
+      this.$store.commit({
+        type: "setFilterBy",
+        filterBy: JSON.parse(JSON.stringify(filter)),
+      });
       // this.$store.dispatch({ type: "setFilterExp", filter });
-      await this.$store.dispatch({ type: "loadGigs"});
+      await this.$store.dispatch({ type: "loadGigs" });
     },
     async setSortby(sort) {
-      this.$store.commit({type: 'sortBy',filterBy: JSON.parse(JSON.stringify(sort)),});
+      this.$store.commit({
+        type: "sortBy",
+        filterBy: JSON.parse(JSON.stringify(sort)),
+      });
       //  this.$store.dispatch({ type: "setSortEx", sort });
-       await this.$store.dispatch({ type: "llteroadGigs"});
+      await this.$store.dispatch({ type: "loadGigs" });
     },
   },
   computed: {},

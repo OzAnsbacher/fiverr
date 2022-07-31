@@ -107,6 +107,7 @@ export default {
     },
     sortBy(state, { filterBy }) {
       state.filterBy.sort = filterBy;
+      console.log("state.filterBy", state.filterBy);
     },
   },
   actions: {
