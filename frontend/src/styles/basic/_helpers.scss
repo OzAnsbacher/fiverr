@@ -5,9 +5,15 @@
 .flex-start {
     justify-content: flex-start;
 }
+.flex-baseline {
+    justify-content: baseline;
+}
 
 .space-between {
     justify-content: space-between;
+}
+.space-around {
+    justify-content: space-around;
 }
 .justify-center {
     justify-content: center;

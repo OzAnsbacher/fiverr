@@ -39,9 +39,9 @@ export default {
                 console.log('Err in adding order', err)
             }
         },
-        async getOrdersById({ commit }, { userId }) {
+        async getOrdersById({ commit }, { userId, sellerId }) {
             try {
-                const orders = await orderService.query({ userId })
+                const orders = await orderService.query({ userId, sellerId})
                 commit({ type: 'setOrders', orders })
                 return orders
             } catch (error) {}

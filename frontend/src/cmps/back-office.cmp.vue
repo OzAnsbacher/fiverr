@@ -1,17 +1,19 @@
 <template>
-    <div class="user-board-content main-layout">
+    <header-back-office v-if="isBuyer" @seller="loadUserOrders(user)" @click="isBuyer = !isBuyer" />
+    <p v-else @seller="loadUserOrders" @click="isBuyer = !isBuyer">Switch to Buyer</p>
+    <div v-if="orders" class="user-board-content main-layout">
         <main class="user-main">
             <div class="profile-details-container">
-                <div class="user-details">
+                <div class="user-details flex space-between">
                     <div class="user-stats-wrapper">
                         <span class="online-status online">Online</span>
                         <div class="container-user-img">
-                            <div class="user-img">
-                                <span class="spanclass">T</span>
+                            <div class="user-img flex">
+                                <span class="spanclass">{{ user.fullname.slice(0) }}</span>
                                 <div class="undefined"></div>
                             </div>
                         </div>
-                        <div class="fullname">{{ orders[0].buyer.fullname }}</div>
+                        <div class="fullname">{{ user.fullname }}</div>
                         <div class="stars">
                             <div class="stars-svg">
                                 <span class="stars-details">
@@ -51,29 +53,33 @@
                                         ></path>
                                     </svg>
                                 </span>
-                                <span class="rate-num">(1k+)</span>
+                                <pre class="rate-num">  (1k+)</pre>
                             </div>
                         </div>
                         <div class="user-info-wrapper">
                             <div class="user-stats">
-                                <div class="origin-wrapper">
-                                    <div>
-                                        <svg
-                                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
-                                            focusable="false"
-                                            aria-hidden="true"
-                                            viewBox="0 0 24 24"
-                                            data-testid="LocationOnIcon"
-                                        >
-                                            <path
-                                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-                                            ></path>
-                                        </svg>
-                                        From
-                                    </div>
-                                    <div class="origin"></div>
-                                    <div class="member-since">
+                                <div class="origin-wrapper flex column">
+                                    <div class="place flex space-between">
                                         <div>
+                                            <svg
+                                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                                viewBox="0 0 24 24"
+                                                data-testid="LocationOnIcon"
+                                            >
+                                                <path
+                                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                                                ></path>
+                                            </svg>
+                                            From
+                                        </div>
+                                        <div>Tel-Aviv</div>
+                                    </div>
+                                    <div class="time flex space-between">
+                                        <!-- <div class="origin"></div> -->
+                                        <!-- <div class="member-since"></div> -->
+                                        <div class="member">
                                             <svg
                                                 class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                                                 focusable="false"
@@ -92,47 +98,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="seller-details-container">0</div>
+                        <!-- <div class="seller-details-container">0</div> -->
                     </div>
-                    <div class="orders-section">
+                    <div class="orders-section flex">
                         <main class="orders-content">
-                            <ul class="clean-list order-list">
-                                <li class="order-item flex">
-                                    <section class="order-preview flex">
-                                        <div class="main">
-                                            <a href="https://cdn.pixabay.com/photo/2021/02/12/07/03/icon-6007530__340.png" class="gig-img">
-                                                <div class="img-container">
-                                                    <img src="" alt="" />
-                                                </div>
-                                            </a>
-                                            <div class="user-info flex">
-                                                <h5>{{ orders[0].seller.fullname }}</h5>
-                                                <a class="clean-list" href="">
-                                                    <div class="user-img">
-                                                        <img :src="orders[0].seller.imgUrl" alt="" />
-                                                        <div></div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="gig-info flex">
-                                                <span class="price">Price</span>
-                                                <span>{{ orders[0].gig.price }}.00$</span>
-                                            </div>
-                                            <div class="delivery-container flex">
-                                                <span class="delivery-time">Delivery Time</span>
-                                                <span class="days">{{ orders[0].timeToDeliver }} Days</span>
-                                            </div>
-                                            <div class="order-date flex">
-                                                <span class="title">Issued At</span>
-                                                <span class="date">09:48 יולי 2022</span>
-                                            </div>
-                                        </div>
-                                        <div class="status-container">
-                                            <span class="order-type">Order Status:</span>
-                                            <span class="status gray">Pending</span>
-                                        </div>
-                                    </section>
-                                </li>
+                            <ul v-if="orders" class="clean-list order-list">
+                                <order-back-office v-for="order in getOrders" :order="order" />
                             </ul>
                         </main>
                     </div>
@@ -145,38 +116,43 @@
 
 <script>
 import aboutBuyer from '../cmps/about-buyer.cmp.vue'
+import orderBackOffice from '../cmps/order-back-office.cmp.vue'
+import headerBackOffice from './header-back-office.cmp.vue'
 export default {
-    props: ['buyer'],
-
     data() {
         return {
             orders: null,
             gigs: null,
+            user: null,
+            isBuyer: true,
         }
     },
     async created() {
-        await this.loadUserOrders()
-        console.log(this.orders)
+        this.user = this.$store.getters.getUser
+        if (!this.user) this.$router.push('/explore')
+        else await this.loadUserOrders()
     },
     computed: {
-        user() {
-            return this.$store.getters.getUser
-        },
-        getBuyer() {
-            return this.orders[0].buyer
+        getOrders() {
+            return this.orders
         },
     },
     methods: {
-        async loadUserOrders() {
-            const userId = this.user._id
+        async loadUserOrders(seller) {
+            if (this.isBuyer) var userId = this.user._id
+            else var sellerId = seller._id
             this.orders = await this.$store.dispatch({
                 type: 'getOrdersById',
                 userId,
+                sellerId,
             })
+            this.orders = this.$store.getters.getorders
         },
     },
     components: {
         aboutBuyer,
+        orderBackOffice,
+        headerBackOffice,
     },
 }
 </script>

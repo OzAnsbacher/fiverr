@@ -32,7 +32,7 @@ export default {
         },
         async addReview(context, { content, toyId }) {
             const user = context.rootGetters.getUser
-            if (!user) return router.push('/login')
+            // if (!user) return router.push('/login')
             const review = {
                 content,
                 userId: user._id,
