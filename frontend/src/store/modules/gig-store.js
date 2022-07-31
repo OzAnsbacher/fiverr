@@ -99,6 +99,8 @@ export default {
       state.filterBy.category = category.category;
     },
     setFilterBy(state, { filterBy }) {
+      console.log("filterBy", filterBy);
+
       const filter = Object.keys(filterBy);
       state.filterBy[filter[0]] = Object.values(filterBy)[0];
       if (filter[1]) state.filterBy[filter[1]] = Object.values(filterBy)[1];
@@ -106,7 +108,6 @@ export default {
     sortBy(state, { filterBy }) {
       state.filterBy.sort = filterBy;
     },
- 
   },
   actions: {
     async loadGigs({ commit, state }) {

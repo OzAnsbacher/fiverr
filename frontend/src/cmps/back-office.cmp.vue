@@ -1,19 +1,25 @@
 <template>
-  <div class="user-board-content main-layout">
+  <header-back-office
+    v-if="isBuyer"
+    @seller="loadUserOrders(user)"
+    @click="isBuyer = !isBuyer"
+  />
+  <p v-else @seller="loadUserOrders" @click="isBuyer = !isBuyer">
+    Switch to Buyer
+  </p>
+  <div v-if="orders" class="user-board-content main-layout">
     <main class="user-main">
       <div class="profile-details-container">
-        <div class="user-details">
+        <div class="user-details flex space-between">
           <div class="user-stats-wrapper">
             <span class="online-status online">Online</span>
             <div class="container-user-img">
               <div class="user-img flex">
-                <span class="spanclass">{{
-                  orders[0].buyer.fullname.slice(1)
-                }}</span>
+                <span class="spanclass">{{ user.fullname.slice(0) }}</span>
                 <div class="undefined"></div>
               </div>
             </div>
-            <div class="fullname">{{ orders[0].buyer.fullname }}</div>
+            <div class="fullname">{{ user.fullname }}</div>
             <div class="stars">
               <div class="stars-svg">
                 <span class="stars-details">
@@ -127,59 +133,8 @@
           </div>
           <div class="orders-section flex">
             <main class="orders-content">
-              <ul class="clean-list order-list">
-                <li class="order-item flex">
-                  <section class="order-preview flex">
-                    <div class="main">
-                      <!-- <a
-                        href="https://cdn.pixabay.com/photo/2021/02/12/07/03/icon-6007530__340.png"
-                        class="gig-img"
-                      >
-                        <div class="img-container">
-                          <img src="" alt="" />
-                        </div>
-                      </a> -->
-                      <img
-                        class="bo-img-gig"
-                        :src="orders[0].gig.images[0].image"
-                        alt=""
-                      />
-                      <div class="flex column space-between">
-                        <!-- <div class="user-info flex"> -->
-                        <img
-                          class="bo-img-seller"
-                          :src="orders[0].seller.imgUrl"
-                          alt=""
-                        />
-                        <h5>{{ orders[0].seller.fullname }}</h5>
-                      </div>
-                      <!-- <a class="clean-list" href=""> -->
-                      <!-- <div class="seller-img"> -->
-                      <!-- <div></div> -->
-                      <!-- </div> -->
-                      <!-- </a> -->
-                      <!-- </div> -->
-                      <div class="gig-info flex column">
-                        <span class="price">Price</span>
-                        <span>{{ orders[0].gig.price }}.00$</span>
-                      </div>
-                      <div class="delivery-container flex column">
-                        <span class="delivery-time">Delivery Time</span>
-                        <span class="days"
-                          >{{ orders[0].timeToDeliver }} Days</span
-                        >
-                      </div>
-                      <div class="order-date flex column space-between">
-                        <span class="title">Issued At</span>
-                        <span class="date">09:48 יולי 2022</span>
-                      </div>
-                    </div>
-                    <div class="status-container">
-                      <span class="order-type">Order Status:</span>
-                      <span class="status gray">Pending</span>
-                    </div>
-                  </section>
-                </li>
+              <ul v-if="orders" class="clean-list order-list">
+                <order-back-office v-for="order in getOrders" :order="order" />
               </ul>
             </main>
           </div>
@@ -192,38 +147,43 @@
 
 <script>
 import aboutBuyer from "../cmps/about-buyer.cmp.vue";
+import orderBackOffice from "../cmps/order-back-office.cmp.vue";
+import headerBackOffice from "./header-back-office.cmp.vue";
 export default {
-  props: ["buyer"],
-
   data() {
     return {
       orders: null,
       gigs: null,
+      user: null,
+      isBuyer: true,
     };
   },
   async created() {
-    await this.loadUserOrders();
-    console.log(this.orders);
+    this.user = this.$store.getters.getUser;
+    if (!this.user) this.$router.push("/explore");
+    else await this.loadUserOrders();
   },
   computed: {
-    user() {
-      return this.$store.getters.getUser;
-    },
-    getBuyer() {
-      return this.orders[0].buyer;
+    getOrders() {
+      return this.orders;
     },
   },
   methods: {
-    async loadUserOrders() {
-      const userId = this.user._id;
+    async loadUserOrders(seller) {
+      if (this.isBuyer) var userId = this.user._id;
+      else var sellerId = seller._id;
       this.orders = await this.$store.dispatch({
         type: "getOrdersById",
         userId,
+        sellerId,
       });
+      this.orders = this.$store.getters.getorders;
     },
   },
   components: {
     aboutBuyer,
+    orderBackOffice,
+    headerBackOffice,
   },
 };
 </script>

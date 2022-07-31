@@ -11,7 +11,7 @@ export default {
     },
     mutations: {
         setUser(state, { user }) {
-            state.loggedinUser = user
+                  state.loggedinUser = user
         },
     },
     actions: {
