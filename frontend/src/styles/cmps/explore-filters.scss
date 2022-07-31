@@ -41,12 +41,25 @@
   width: 60px !important;
 }
 
-
 .ex-sort input {
   color: black !important;
   font-size: 1.2em !important;
   font-weight: 700 !important;
   width: 60px !important;
+}
+
+.price-btn-ex {
+  // border-top: #bab2b2 1px solid;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+  & > * {
+    cursor: pointer;
+  }
+}
+
+.price-btn-ex button {
+  background-color: #1dbf73 !important;
 }
 
 .count-gigs {
