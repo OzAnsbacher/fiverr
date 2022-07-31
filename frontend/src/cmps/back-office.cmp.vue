@@ -1,5 +1,5 @@
 <template>
-    <div class="user-board-content">
+    <div class="user-board-content main-layout">
         <main class="user-main">
             <div class="profile-details-container">
                 <div class="user-details">
