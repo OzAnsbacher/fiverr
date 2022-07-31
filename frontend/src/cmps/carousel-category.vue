@@ -124,6 +124,20 @@ export default defineComponent({
 .vueperslides__arrows--outside .vueperslides__arrow--next {
     right: -1.2em;
 }
+
+.categories-container .vueperslides__arrow svg {
+    max-height: 52px !important;
+    stroke-width: 2.5px;
+    padding: 1em;
+    max-width: 3.5em !important;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+    color: black;
+    transform: translate(-10px, -28px);
+    font-family: 'Macan-bold';
+    stroke: #6f6f6f;
+}
 </style>
 
 <!-- .vueperslides--fixed-height.vueperslides--bullets-outside{
