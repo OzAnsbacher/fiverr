@@ -74,7 +74,7 @@ export default {
   created() {
     this.isBuyer = this.$store.getters.getIsBuyer;
     this.status = this.order.status;
-    console.log(this.status);
+   
   },
   methods: {
     async pending(order) {
@@ -82,9 +82,10 @@ export default {
       // if (!this.$store.getters.getIsBuyer) return
       // console.log(this.$store.getters.getIsBuyer);
       try {
-        console.log("order", order);
         const currOrder = { ...order };
-        currOrder.status = "Complete";
+        
+        currOrder.status = "Approved";
+        console.log(currOrder);
         const res = await orderService.save(currOrder);
         console.log(res);
         this.status = res.status;
@@ -92,29 +93,33 @@ export default {
         console.log(error);
       }
     },
-    created() {
-        this.isBuyer = this.$store.getters.getIsBuyer;
-        this.status = this.order.status;
-        console.log(this.status);
-    },
-    methods: {
-        async pending() {
-            console.log(this.$store.getters.getIsBuyer);
-            // if (!this.$store.getters.getIsBuyer) return
-            // console.log(this.$store.getters.getIsBuyer);
-            try {
-                const res = await orderService.save(this.order);
-                console.log(res);
-                this.status = "Complete";
-            } catch (error) {
-                console.log(error);
-            }
-        },
-    },
-    getStatus() {
+      },
+    computed: {
+          getStatus() {
+            console.log(this.status)
       return this.status;
+    }
     },
-  },
+    //created() {
+    //     this.isBuyer = this.$store.getters.getIsBuyer;
+    //     this.status = this.order.status;
+    //     console.log(this.status);
+    // },
+    // methods: {
+    //     async pending() {
+    //         console.log(this.$store.getters.getIsBuyer);
+    //         // if (!this.$store.getters.getIsBuyer) return
+    //         // console.log(this.$store.getters.getIsBuyer);
+    //         try {
+    //             const res = await orderService.save(this.order);
+    //             console.log(res);
+    //             this.status = "Complete";
+    //         } catch (error) {
+    //             console.log(error);
+    //         }
+    //     },
+    // },
+
   unmounted() {},
 };
 </script>
