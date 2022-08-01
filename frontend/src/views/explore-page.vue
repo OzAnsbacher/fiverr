@@ -8,11 +8,11 @@
         :categories="getCategories"
         @setCategory="setCategory"
       />
-      <explore-filters :gigs="getGigs" />
-      <explore-cards :gigs="getGigs" />
+      <explore-filters v-if="gigs" :gigs="getGigs" />
+      <explore-cards v-if="gigs" :gigs="getGigs" />
+      <img v-else class="explore-loading" src="../assets/gif/spinner.gif" alt="" />
     </div>
   </div>
-  <!-- <img v-else-if="!getGigs" src="../assets/gif/spinner.gif" alt=""> -->
   <div></div>
 </template>
 

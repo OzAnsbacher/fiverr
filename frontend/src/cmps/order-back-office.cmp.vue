@@ -1,6 +1,18 @@
 <template>
-  <div>
-    <li class="order-item flex">
+  
+    <li class="li-back-office flex">
+      <h5>Seller: Mosh</h5>
+      <h5 class="">Price: $40.00</h5>
+      <h5 class="">Time To Deliver:4 Days</h5>
+      <h5>Message To Seller</h5>
+    </li>
+    <!-- <li class="flex">
+      <h5>Seller:{{ order.seller.fullname }}</h5>
+      <h5 class="">Price: ${{ order.gig.price }}.00</h5>
+      <h5 class="">Time To Deliver: {{ order.timeToDeliver }} Days</h5>
+      <h5>Message To Seller</h5>
+    </li> -->
+    <!-- <li class="order-item flex">
       <section class="order-preview flex">
         <div class="main">
           <img class="bo-img-gig" :src="order.gig.images[0].image" alt="" />
@@ -27,27 +39,25 @@
           <span class="status gray">Pending</span>
         </div>
       </section>
-    </li>
-  </div>
+    </li> -->
+
 </template>
 
 <script>
 export default {
-props:["order"],
+  props: ["order"],
   data() {
     return {};
   },
-  created() {
-  },
+  created() {},
   methods: {},
   computed: {
-
     getBuyer() {
       return this.order.buyer;
     },
   },
   unmounted() {},
-}
+};
 </script>
 
 <style lang="scss" scoped></style>
