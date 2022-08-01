@@ -25,10 +25,10 @@
     <div class="flex align-center btn-bo">
       <h4
         class="pending-back-office"
-        @click="pending"
+        @click="pending(order)"
         :class="{ complete: status === 'Complete' }"
       >
-        {{ status }}
+        {{ getStatus }}
       </h4>
       <h4 class="msg-back-office">Message To Seller</h4>
     </div>
@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import { orderService } from '../services/order.service';
+import { orderService } from "../services/order.service";
 export default {
   props: ["order"],
   data() {
@@ -79,14 +79,17 @@ export default {
     console.log(this.status);
   },
   methods: {
-    async pending() {
+    async pending(order) {
       console.log(this.$store.getters.getIsBuyer);
       // if (!this.$store.getters.getIsBuyer) return
       // console.log(this.$store.getters.getIsBuyer);
       try {
-       const res= await orderService.save(this.order)
-       console.log(res);
-        this.status = "Complete";
+        console.log("order", order);
+        const currOrder = { ...order };
+        currOrder.status = "Complete";
+        const res = await orderService.save(currOrder);
+        console.log(res);
+        this.status = res.status;
       } catch (error) {
         console.log(error);
       }
@@ -98,6 +101,9 @@ export default {
     },
     getIsPending() {
       return this.pending;
+    },
+    getStatus() {
+      return this.status;
     },
   },
   unmounted() {},
