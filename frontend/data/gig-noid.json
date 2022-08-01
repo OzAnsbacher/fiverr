@@ -1389,12 +1389,12 @@
     },
     {
         "title": "I will create a professional logo",
-        "category": "Logo Design",
+        "category": "WordPress",
         "price": 200,
         "owner": {
             "_id": "u101",
-            "fullname": "Griesha Heinberg",
-            "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/5129c38ee6162243ebc6e900b8168a48-1560246563959/a4bb91d7-cef4-4575-836b-a020dac42c32.jpg",
+            "fullname": "Nissan Hassan",
+            "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/18c7c0738fc034b345a91eca46d8309c-1556973467573/db0dc305-dada-4cc9-b18e-a63070519c15.jpg",
             "level": "5",
             "rate": 4.8,
             "description": "Experienced coder with over 10 years of experience behind me, traveled through many companies, decided to freelance since its my real passion",
@@ -1408,16 +1408,16 @@
         "lastDelivery": "about 16 hours",
         "images": [
             {
-                "image": "https://images.unsplash.com/photo-1608338167542-ad0c670edd0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z3JhZmZpdGl8ZW58MHx8MHx8&auto=format&fit=crop&w=1200&q=60"
+                "image": "https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHdvcmRwcmVzc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1200&q=60"
             },
             {
-                "image": "https://images.unsplash.com/photo-1611063158871-7dd3ed4a2ac8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Z3JhZmZpdGl8ZW58MHx8MHx8&auto=format&fit=crop&w=1200&q=60"
+                "image": "https://images.unsplash.com/photo-1624916145576-5b5772d9bccb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHdvcmRwcmVzc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1200&q=60"
             },
             {
-                "image": "https://images.unsplash.com/photo-1651081042986-c7646d967dcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTY0fHxsb2dvJTIwZGVzaWdufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1200&q=60"
+                "image": "https://images.unsplash.com/photo-1557324232-b8917d3c3dcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHdvcmRwcmVzc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1200&q=60"
             },
             {
-                "image": "https://images.unsplash.com/photo-1646825461394-ebd1800141d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjAxfHxsb2dvJTIwZGVzaWdufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1200&q=60"
+                "image": "https://images.unsplash.com/photo-1580813464570-f36c6aaa0859?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDZ8fHdvcmRwcmVzc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1200&q=60"
             }
         ],
         "tags": ["webside desigener", "wordpress developer", "wordpress blog", "wordpress webside", "lading page"],
@@ -1425,7 +1425,7 @@
         "reviews": [
             {
                 "_id": "r100",
-                "txt": "frederickkessie ist a super kind artist doing the process he was super professional and only took him 1 shot to deliver a perfect result ! Highly recommended work with this guy !",
+                "txt": "Mosh is a super kind artist doing the process he was super professional and only took him 1 shot to deliver a perfect result ! Highly recommended work with this guy !",
                 "rate": 4,
                 "reviewedAt": "Published 2 months ago",
                 "by": {
@@ -1438,7 +1438,7 @@
             },
             {
                 "_id": "r1001",
-                "txt": "I requested a slightly earlier delivery on this and once again Frederick came through and provided a fantastic delivery. Thanks so much!",
+                "txt": "I requested a slightly earlier delivery on this and once again Mosh came through and provided a fantastic delivery. Thanks so much!",
                 "rate": 5,
                 "reviewedAt": "Published 3 weeks ago",
                 "by": {
@@ -1451,7 +1451,7 @@
             },
             {
                 "_id": "r1002",
-                "txt": "Frederick is amazing and extremely talented. This is the second time working with him and he has been a pleasure yet again!",
+                "txt": "Mosh is amazing and extremely talented. This is the second time working with him and he has been a pleasure yet again!",
                 "rate": 4,
                 "reviewedAt": "Published 4 weeks ago",
                 "by": {

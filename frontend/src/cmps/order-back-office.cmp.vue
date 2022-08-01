@@ -6,8 +6,8 @@
       <h5 class="">Time To Deliver:4 Days</h5>
       <h5>Message To Seller</h5>
     </li> -->
-  <li class="li-back-office flex">
-    <div class="wd-cell-bo">
+  <li class="li-back-office flex"  v-if="order">
+    <div class="wd-cell-bo" >
       <img class="" :src="order.seller.imgUrl" alt="" />
     </div>
     <div class="flex column wd-cell-bo">
