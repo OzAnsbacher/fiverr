@@ -115,10 +115,10 @@ export default {
   data() {
     return {
       images: [
-        "src/img/hero1.png",
-        "src/img/hero2.png",
-        "src/img/hero3.png",
-        "src/img/hero4.png",
+        this.getImgUrl("hero1.png"),
+        this.getImgUrl("hero2.png"),
+        this.getImgUrl("hero3.png"),
+        this.getImgUrl("hero4.png"),
       ],
       imgIdx: 0,
 
@@ -148,6 +148,10 @@ export default {
     setFilter(filterBy) {
       this.$store.dispatch({ type: "setFilter", filterBy });
       this.$router.push("/explore");
+    },
+    getImgUrl(file){
+      const imgUrl = new URL(`../img/${file}`,import.meta.url)
+      return  imgUrl
     },
 
     setSellerName() {

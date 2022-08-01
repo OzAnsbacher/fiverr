@@ -36,7 +36,7 @@
     display: flex;
     gap: 20px;
     padding-bottom: 30px;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
     img {
         height: 100%;
         width: 100%;
@@ -45,11 +45,11 @@
 }
 
 .check-out-page .right-side-container {
-    width: 100%;
+    width: 700px
 }
 
 .check-out-page .left-side-container {
-    width: 100%;
+    width: 90%;
 }
 .check-out-page .details h2 {
     color: #404145;

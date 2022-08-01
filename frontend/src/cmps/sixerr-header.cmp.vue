@@ -100,6 +100,7 @@ export default {
     created() {
         window.addEventListener('scroll', this.updateScroll)
         document.body.addEventListener('click', this.closeProfilePopover)
+       
     },
     methods: {
         updateScroll() {
@@ -139,9 +140,14 @@ export default {
     },
     mounted() {
         window.addEventListener('scroll', this.updateScroll)
+        console.log('uiserrr',this.user._id);
     },
 
     computed: {
+        user(){
+          return  this.$store.getters.getUser
+
+        },
         isHome() {
             return this.$route.path === '/'
         },

@@ -10,7 +10,7 @@
           class="explore-category-carusel"
           @click="loadCategory(category.name)"
         >
-          <img :src="category.icon" />
+          <img :src="getImgUrl(category.icon)" />
           <h5>{{ category.name }}</h5>
         </div>
       </slide>
@@ -62,6 +62,10 @@ export default {
     },
   },
   methods: {
+        getImgUrl(file){
+      const imgUrl = new URL(`../assets/icon/${file}`,import.meta.url)
+      return  imgUrl
+    },
     updateScroll() {
       if (window.innerWidth > 1200) {
         this.countIcon = 7;
