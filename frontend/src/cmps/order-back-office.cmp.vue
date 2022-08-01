@@ -19,16 +19,16 @@
       <h5>${{ order.gig.price }}.00</h5>
     </div>
     <div class="flex column wd-cell-bo">
-      <h4 class="">Time To Deliver:</h4>
+      <h4>Time To Deliver:</h4>
       <h5>{{ order.timeToDeliver }} Days</h5>
     </div>
     <div class="flex align-center btn-bo">
       <h4
         class="pending-back-office"
         @click="pending"
-        :class="{ complete: isPending === 'Complete' }"
+        :class="{ complete: status === 'Complete' }"
       >
-        {{ isPending }}
+        {{ status }}
       </h4>
       <h4 class="msg-back-office">Message To Seller</h4>
     </div>
@@ -64,22 +64,32 @@
 </template>
 
 <script>
+import { orderService } from '../services/order.service';
 export default {
   props: ["order"],
   data() {
     return {
       isBuyer: null,
-      isPending: "Pending",
+      status: null,
     };
   },
   created() {
     this.isBuyer = this.$store.getters.getIsBuyer;
+    this.status = this.order.status;
+    console.log(this.status);
   },
   methods: {
-    pending() {
-      // if (this.$store.getters.getIsBuyer) return;
-      if (this.isPending === "Pending") this.isPending = "Complete";
-      else if (this.isPending === "Complete") this.isPending = "Pending";
+    async pending() {
+      console.log(this.$store.getters.getIsBuyer);
+      // if (!this.$store.getters.getIsBuyer) return
+      // console.log(this.$store.getters.getIsBuyer);
+      try {
+       const res= await orderService.save(this.order)
+       console.log(res);
+        this.status = "Complete";
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
   computed: {

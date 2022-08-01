@@ -14,8 +14,7 @@ export const orderService = {
 }
 
 async function query(filterBy) {
-    console.log('filterBy orders', filterBy)
-    
+       
     return await httpService.get(ENDPOINT, filterBy)
 
     // var res = await axios.get('../../data/order.json')
