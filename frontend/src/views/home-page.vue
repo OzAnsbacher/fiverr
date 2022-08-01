@@ -30,13 +30,12 @@ export default {
     created() {
         // console.log(gigService.getCategories())
         // this.$store.dispatch({ type: loadCategories })
+
         this.categories = this.$store.getters.categoriesToShow
-        console.log(this.categories)
     },
     methods: {
         async get() {
             const res = await gigService.query()
-            console.log('res', res)
         },
     },
     computed: {

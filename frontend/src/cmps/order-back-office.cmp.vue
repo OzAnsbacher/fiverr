@@ -23,10 +23,10 @@
         <div class="flex align-center btn-bo">
             <h4
                 class="pending-back-office"
-                @click="pending"
+                @click="pending(order)"
                 :class="{ complete: status === 'Approved' }"
             >
-                {{ status }}
+                {{ getStatus }}
             </h4>
             <h4 class="msg-back-office">Message To Seller</h4>
         </div>
@@ -64,12 +64,33 @@
 <script>
 import { orderService } from "../services/order.service";
 export default {
-    props: ["order"],
-    data() {
-        return {
-            isBuyer: null,
-            status: null,
-        };
+  props: ["order"],
+  data() {
+    return {
+      isBuyer: null,
+      status: null,
+    };
+  },
+  created() {
+    this.isBuyer = this.$store.getters.getIsBuyer;
+    this.status = this.order.status;
+    console.log(this.status);
+  },
+  methods: {
+    async pending(order) {
+      console.log(this.$store.getters.getIsBuyer);
+      // if (!this.$store.getters.getIsBuyer) return
+      // console.log(this.$store.getters.getIsBuyer);
+      try {
+        console.log("order", order);
+        const currOrder = { ...order };
+        currOrder.status = "Complete";
+        const res = await orderService.save(currOrder);
+        console.log(res);
+        this.status = res.status;
+      } catch (error) {
+        console.log(error);
+      }
     },
     created() {
         this.isBuyer = this.$store.getters.getIsBuyer;
@@ -90,15 +111,11 @@ export default {
             }
         },
     },
-    computed: {
-        getBuyer() {
-            return this.order.buyer;
-        },
-        getIsPending() {
-            return this.pending;
-        },
+    getStatus() {
+      return this.status;
     },
-    unmounted() {},
+  },
+  unmounted() {},
 };
 </script>
 
