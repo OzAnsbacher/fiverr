@@ -48,7 +48,6 @@ export default {
     },
     async getOrdersById({ commit }, { filterBy }) {
       try {
-        console.log("filterBy", filterBy);
         commit({ type: "setIsBuyer", filterBy });
         const orders = await orderService.query(filterBy);
         commit({ type: "setOrders", orders });

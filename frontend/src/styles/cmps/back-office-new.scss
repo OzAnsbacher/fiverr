@@ -32,8 +32,9 @@
 .orders-back-office {
   margin-top: 3em;
   li {
+    border: 1px solid #dadbdd ;
     align-items: center;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
     padding: 0.8em;
     border-radius: 10px;
     h4 {
@@ -43,16 +44,18 @@
   }
 }
 
+
+
 .render-ul-back-office:nth-child(even) {
-  background-color: rgb(253, 250, 253);
+  background-color: rgb(245, 255, 255);
   &:hover {
-    background-color: rgb(248, 245, 248);
+    background-color: rgb(240, 250, 250);
   }
 }
 .render-ul-back-office:nth-child(odd) {
-  background-color: rgb(247, 241, 245);
+  background-color: rgb(250, 255, 255);
   &:hover {
-    background-color: rgb(242, 236, 240);
+    background-color: rgb(245, 250, 250);
   }
 }
 
