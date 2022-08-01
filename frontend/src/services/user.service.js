@@ -4,35 +4,30 @@ const ENDPOINT = 'auth'
 const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
 
 async function login(cred) {
-  const user = await httpService.post(ENDPOINT + '/login', cred)
-  if(user){
-    _saveLocalUser(user)
-    return user
-  }
+    const user = await httpService.post('auth/login', cred)
+    if (user) return _saveLocalUser(user)
 }
 async function signup(cred) {
-  
-  const user =await httpService.post(ENDPOINT + '/signup', cred)
-  _saveLocalUser(user)
-  return user
-
+    const user = await httpService.post('auth/signup', cred)
+    return _saveLocalUser(user)
 }
 async function logout() {
-  sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
-  return await httpService.post(ENDPOINT + '/logout')
+    sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
+    return await httpService.post('auth/logout')
 }
 async function getLoggedinUser() {
-  return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER) || 'null')
+    console.log(JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER)))
+    return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER) || 'null')
 }
 
 async function _saveLocalUser(user) {
-  sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
-  return user
+    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
+    return user
 }
 
 export const userService = {
-  login,
-  signup,
-  logout,
-  getLoggedinUser
+    login,
+    signup,
+    logout,
+    getLoggedinUser,
 }

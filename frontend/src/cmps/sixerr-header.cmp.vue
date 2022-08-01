@@ -41,11 +41,12 @@
                             <a :class="$route.meta.logoClass">Explore</a>
                         </router-link>
                         <router-link :class="$route.meta.logoClass" to="/" class="become-seller">Become a seller</router-link>
+                        <div v-if="user" class="user-avatar">{{ avatarTxt }}</div>
 
                         <!-- add functionality inside div tag later -->
-                        <a class="sign-in" :class="$route.meta.logoClass" @click="toggleLogin">Sign in</a>
+                        <a class="sign-in" v-if="!user" :class="$route.meta.logoClass" @click="toggleLogin">Sign in</a>
                     </div>
-                    <a class="join" :class="$route.meta.bodyClass" @click="toggleSignUp">Join</a>
+                    <a class="join" v-if="!user" :class="$route.meta.bodyClass" @click="toggleSignUp">Join</a>
                     <!-- <div class="avater"><p>A</p></div> -->
                     <div class="login-modal" v-show="showLogin" @click="closeLogin">
                         <sign-in @toggleLogin="toggleLogin" @closeLogin="toggleLogin" />
@@ -81,6 +82,7 @@
 import headerFilter from './header-filter.cmp.vue'
 import signIn from './sign-in.cmp.vue'
 import signUp from './sign-up.cmp.vue'
+import { userService } from '@/services/user.service.js'
 
 export default {
     data() {
@@ -90,6 +92,7 @@ export default {
             showLogin: false,
             showSignUp: false,
             showNav: false,
+            user: null,
         }
     },
     components: {
@@ -97,11 +100,16 @@ export default {
         signIn,
         signUp,
     },
-    created() {
+    async created() {
         window.addEventListener('scroll', this.updateScroll)
         document.body.addEventListener('click', this.closeProfilePopover)
+        await this.loadUser()
+        await console.log('useer', this.user)
     },
     methods: {
+        async loadUser() {
+            this.user = await this.$store.getters.getUser
+        },
         updateScroll() {
             if (!this.isHome) {
                 return
@@ -142,6 +150,10 @@ export default {
     },
 
     computed: {
+        avatarTxt() {
+            const userNames = this.user.fullname.split(' ')
+            return userNames[0].charAt(0) + userNames[1].charAt(0)
+        },
         isHome() {
             return this.$route.path === '/'
         },
