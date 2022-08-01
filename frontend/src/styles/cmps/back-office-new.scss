@@ -1,0 +1,51 @@
+.switch-btn {
+  h4 {
+    margin-left: 30px;
+    cursor: pointer;
+    padding: 20px 0;
+  }
+}
+
+.back-office-username {
+  padding: 20px 0;
+}
+
+.orders-back-office {
+  margin-top: 3em;
+  li {
+    align-items: center;
+    margin-bottom: 1em;
+    padding: .8em;
+    border-radius: 10px;
+    h5 {
+      margin-right: 1.5em;
+    }
+  }
+}
+
+.render-ul-back-office:nth-child(even) {
+  background-color: rgb(223, 202, 223);
+  &:hover {
+    background-color: rgb(217, 196, 217);
+  }
+}
+.render-ul-back-office:nth-child(odd) {
+  background-color: rgb(210, 206, 209);
+  &:hover {
+    background-color: rgb(205, 201, 204);
+  }
+}
+
+.li-back-office :last-child {
+  margin-left: auto;
+  padding: 10px;
+  background-color: rgb(91, 176, 91);
+  color: white;
+  border-radius: 10px;
+  transition: .5s ;
+  &:hover{
+    cursor: pointer;
+    background-color: white;
+    color: rgb(91, 176, 91);
+  }
+}

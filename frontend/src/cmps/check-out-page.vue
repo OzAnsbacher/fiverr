@@ -203,7 +203,7 @@ export default {
                 //TODO send order and get order and send order id.
 
                 this.$store.dispatch({ type: 'addOrder', order: this.order })
-                this.$router.push('/backoffice/')
+                this.$router.push('/backoffice')
             } catch (error) {
                 console.log('Error' + error)
             }

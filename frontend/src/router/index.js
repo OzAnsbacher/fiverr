@@ -47,7 +47,7 @@ const router = createRouter({
             component: signIn,
         },
         {
-            path: '/backoffice/',
+            path: '/backoffice',
             name: 'back-office',
             component: backOffice,
         },
