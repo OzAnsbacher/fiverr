@@ -1,4 +1,5 @@
 <template>
+  <section class="orders-back-office">
   <header-back-office
     class="header-back-office-conteiner"
     v-if="user"
@@ -6,7 +7,13 @@
     @order="loadUserOrders"
   />
   <!-- <data-entry /> -->
-  <div class="orders-back-office">
+  <div class="orders-back-office main-layout">
+        <div class="categories-container-backoffice">
+        <div>owner image</div>
+        <div>seller name</div>
+        <div>Price</div>
+        <div>Time for delivery</div>
+    </div>
     <ul v-if="orders" class="ul-back-office clean-list main-layout">
       <order-back-office
         class="render-ul-back-office"
@@ -15,7 +22,7 @@
       />
     </ul>
   </div>
-     
+     </section>
 </template>
 
 <script>
