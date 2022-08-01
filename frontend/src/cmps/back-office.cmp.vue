@@ -3,7 +3,11 @@
   <data-entry />
   <div class="orders-back-office">
     <ul v-if="orders" class="ul-back-office clean-list main-layout">
-      <order-back-office class="render-ul-back-office" v-for="order in getOrders" :order="order" />
+      <order-back-office
+        class="render-ul-back-office"
+        v-for="order in getOrders"
+        :order="order"
+      />
     </ul>
   </div>
   <!-- <data-entry :isBuyer="isBuyer" /> -->
@@ -138,7 +142,7 @@ import headerBackOffice from "./header-back-office.cmp.vue";
 export default {
   data() {
     return {
-      orders: {a:1, b:2, c:3},
+      orders: null,
       gigs: null,
       user: null,
       isBuyer: true,
@@ -146,8 +150,8 @@ export default {
   },
   async created() {
     this.user = this.$store.getters.getUser;
-    // if (!this.user) this.$router.push("/explore");
-    // else await this.loadUserOrders();
+    if (!this.user) this.$router.push("/explore");
+    else await this.loadUserOrders();
   },
   computed: {
     getOrders() {
@@ -155,27 +159,33 @@ export default {
 
       return this.orders;
     },
-  },
-  methods: {
-    async loadUserOrders(isBuyer = true) {
-      var userId = this.user._id;
-      const filterBy = {
-        userId,
-        isBuyer,
-      };
-      this.orders = await this.$store.dispatch({
-        type: "getOrdersById",
-        filterBy,
-      });
-      this.orders = this.$store.getters.getorders;
+    async created() {
+      this.user = this.$store.getters.getUser;
+      if (!this.user) this.$router.push("/explore");
+      else await this.loadUserOrders();
     },
   },
+     methods: {
+      async loadUserOrders(isBuyer = true) {
+        var userId = this.user._id;
+        const filterBy = {
+          userId,
+          isBuyer,
+        };
+        this.orders = await this.$store.dispatch({
+          type: "getOrdersById",
+          filterBy,
+        });
+        this.orders = this.$store.getters.getorders;
+      },
+    },
 
-  components: {
-    aboutBuyer,
-    orderBackOffice,
-    headerBackOffice,
-    dataEntry,
-  },
+    components: {
+      aboutBuyer,
+      orderBackOffice,
+      headerBackOffice,
+      dataEntry,
+    },
+
 };
 </script>

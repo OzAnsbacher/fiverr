@@ -13,7 +13,8 @@
         <h3 class="explore-card-name">{{ gig.owner.fullname }}</h3>
         <p class="explore-card-degree">Level {{ gig.owner.level }} Seller</p>
         <p class="explore-card-title hover-green">
-          {{ gig.title.split(" ").slice(0, 7).join(" ") }}...
+          {{ getGigSlice(gig.title) }}
+          <!-- {{ gig.title.split(" ").slice(0, 7).join(" ") }}... -->
         </p>
         <p class="explore-card-rate">
           <svg
@@ -78,9 +79,15 @@ export default {
       const num = this.randomInt();
       return " (" + num + ")";
     },
+    getGigSlice(title) {
+      console.log(title);
+      if (title.length > 60) {
+        title = title.slice(0, 60) + "...";
+      }
+      return title
+    },
   },
-  computed: {
-  },
+  computed: {},
   unmounted() {},
 };
 </script>
