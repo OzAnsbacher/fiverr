@@ -6,7 +6,7 @@
     >
         <main class="main-header" ref="nav">
             <div class="main-layout header-flex">
-        <button class="hamburger hide" @click="toggleActive">☰</button>
+                <button class="hamburger hide" @click="toggleActive">☰</button>
                 <div class="logo-and-search">
                     <h1 to="/">
                         <router-link class="logo" to="/">
@@ -147,7 +147,7 @@ export default {
         },
         getIsNotHome() {
             var path = this.$route.path
-            if (!path.endsWith('#/')) {
+            if (!path.endsWith('/')) {
                 this.isNotHome = true
             } else this.isNotHome = false
             return this.isNotHome
