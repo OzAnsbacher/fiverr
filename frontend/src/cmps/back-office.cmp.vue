@@ -138,7 +138,7 @@ import headerBackOffice from "./header-back-office.cmp.vue";
 export default {
   data() {
     return {
-      orders: {a:1, b:2, c:3},
+      orders:null,
       gigs: null,
       user: null,
       isBuyer: true,
@@ -146,8 +146,8 @@ export default {
   },
   async created() {
     this.user = this.$store.getters.getUser;
-    // if (!this.user) this.$router.push("/explore");
-    // else await this.loadUserOrders();
+    if (!this.user) this.$router.push("/explore");
+    else await this.loadUserOrders();
   },
   computed: {
     getOrders() {
