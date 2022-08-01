@@ -2,43 +2,35 @@
     {
         "gigs": [
             {
-                "_id": "g101",
-                "title": "I will develop a professional wordpress website with a responsive design",
-                "category": "WordPress",
-                "price": 200,
+                "title": "I will design a mobile responsive, modern wordpress website",
+                "price": 536.77,
                 "owner": {
                     "_id": "u101",
-                    "fullname": "Maham Rizwan",
-                    "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/d2b733c8f152a9baab1b8e2efc14e176-1655401248537/340ea128-2dbd-4524-83c3-321ae8101a44.jpeg",
+                    "fullname": "chellerose",
+                    "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/e310df10574434630befd918d72722a2-1648483193135/fd2516bd-25ff-468a-9c7b-67c5518eda27.jpg",
                     "level": "4",
                     "rate": 4.3,
                     "description": "Experienced coder with over 10 years of experience behind me, traveled through many companies, decided to freelance since its my real passion",
                     "country": "United States",
                     "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png"
                 },
-                "daysToMake": 3,
+                "daysToMake": 4,
                 "description": "Theme & Wordpress Installation + Design Customisation + 3 landing pages + Forms + Social Media.",
                 "memberSince": "Jul 2021",
                 "averageResponseTime": "1 hour",
                 "lastDelivery": "about 16 hours",
                 "images": [
                     {
-                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/207613188/original/844e47de271c5f59b0f26c562602b2bfe51448dc/create-one-page-website-in-wordpress-and-elementor.jpeg"
+                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/115633468/original/a4177d2eec0cdc344b0c3cc2ac9ffe052d60487b/design-a-modern-wordpress-business-website-or-blog.jpg"
                     },
                     {
-                        "image": "https://fiverr-res.cloudinary.com/videos/so_10.669187,t_main1,q_auto,f_auto/dbmhanrp865acppvgncr/design-redesign-and-customize-wordpress-website.png"
+                        "image": "https://fiverr-res.cloudinary.com/videos/so_23.127075,t_main1,q_auto,f_auto/m63zhnvkq4wycwkcf8z0/design-a-modern-wordpress-business-website-or-blog.png"
                     },
                     {
-                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/122982910/original/46a9da9988ad14b744b56ae30003c448bd314567/design-redesign-and-customize-wordpress-website.png"
+                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/115633468/original/2f1b8dbc9f572114546848a8e37ce75fd1f80bfa/design-a-modern-wordpress-business-website-or-blog.jpg"
                     }
                 ],
-                "tags": [
-                    "webside desigener",
-                    "wordpress developer",
-                    "wordpress blog",
-                    "wordpress webside",
-                    "lading page"
-                ],
+                "tags": ["webside desigener", "wordpress developer", "wordpress blog", "wordpress webside", "lading page"],
                 "likedByUsers": [
                     {
                         "_id": "u201",
@@ -49,7 +41,7 @@
                 "reviews": [
                     {
                         "_id": "r100",
-                        "txt": "frederickkessie ist a super kind artist doing the process he was super professional and only took him 1 shot to deliver a perfect result ! Highly recommended work with this guy !",
+                        "txt": "Michelle was awesome! She was very communicative and answered all my questions throughout the whole process. This was the first time I hired someone to create a website and I thought it would be complicated but Michelle was very helpful throughout the whole thing. I would recommend Michelle to anyone looking to create a beautiful site. Check mine out!! :)",
                         "rate": 4,
                         "reviewedAt": "Published 2 months ago",
                         "by": {
@@ -62,12 +54,12 @@
                     },
                     {
                         "_id": "r1001",
-                        "txt": "I requested a slightly earlier delivery on this and once again Frederick came through and provided a fantastic delivery. Thanks so much!",
+                        "txt": "Working with Chellerose....I only have three little words ~ ABOVE and BEYOND!!! This was an amazing experience, I felt so cared for. Someone cared about my dream. All the little details and plates in the air with all the decisions, large and small, so patient. Great communication. I can't even imagine how hard it must be to try to bring anothers vision to life... when that person isn't even positive of that looks like. . Thank you!",
                         "rate": 5,
                         "reviewedAt": "Published 3 weeks ago",
                         "by": {
                             "_id": "rb1001",
-                            "fullname": "liam31",
+                            "fullname": "christinehas191",
                             "country": "United Kingdom",
                             "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ec-1f1e7.png",
                             "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/8887e8d8297d9465132cac01aca9d90f-1641401341945/e2cfaf94-73e7-4aca-87e3-c119f48aa02d.jpg"
@@ -75,12 +67,12 @@
                     },
                     {
                         "_id": "r1002",
-                        "txt": "Frederick is amazing and extremely talented. This is the second time working with him and he has been a pleasure yet again!",
+                        "txt": "WOW. WOW. WOW. The communication alone was stellar. Then they went above and beyond to make sure everything was to my liking. I will most definitely return! I have favorited chellerose and honestly, if you're hesitating on the deal you'll get with having her design your website, then please do not wait.",
                         "rate": 4,
                         "reviewedAt": "Published 4 weeks ago",
                         "by": {
                             "_id": "rb1002",
-                            "fullname": "liam31",
+                            "fullname": "edfund2020",
                             "country": "United Kingdom",
                             "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ec-1f1e7.png",
                             "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/8887e8d8297d9465132cac01aca9d90f-1641401341945/e2cfaf94-73e7-4aca-87e3-c119f48aa02d.jpg"
@@ -88,12 +80,25 @@
                     },
                     {
                         "_id": "r1003",
-                        "txt": "Very detailed",
+                        "txt": "This was my first time to have a website made and I was hesitant about the process. She answered all my questions and did a great job putting it all together in a way I could not do! Would definitely recommend!",
                         "rate": 5,
                         "reviewedAt": "Published 1 week ago",
                         "by": {
                             "_id": "rb1003",
                             "fullname": "larsonraz",
+                            "country": "United States",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/d917d7c99b94861239f27d3d628dcb50-1642448970627/5ef42b13-32f3-4e99-a170-ddde0aedc532.JPG"
+                        }
+                    },
+                    {
+                        "_id": "r1003",
+                        "txt": "Stunning web design and she listened to everything we wanted and was so kind and patient working with us! She is very knowledgable and I would 100% recommend to anyone needing a new website!!",
+                        "rate": 5,
+                        "reviewedAt": "Published 1 week ago",
+                        "by": {
+                            "_id": "rb1003",
+                            "fullname": "lauradoran",
                             "country": "United States",
                             "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png",
                             "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/d917d7c99b94861239f27d3d628dcb50-1642448970627/5ef42b13-32f3-4e99-a170-ddde0aedc532.JPG"
@@ -131,13 +136,7 @@
                         "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/165877682/original/c217b26450ef5c2bbe16c90d1ee2401bd476cdf0/website-update-add-content-product-upload-add-products-upload-products.png"
                     }
                 ],
-                "tags": [
-                    "webside desigener",
-                    "wordpress developer",
-                    "wordpress blog",
-                    "wordpress webside",
-                    "lading page"
-                ],
+                "tags": ["webside desigener", "wordpress developer", "wordpress blog", "wordpress webside", "lading page"],
                 "likedByUsers": [
                     {
                         "_id": "u201",
@@ -231,13 +230,7 @@
                         "image": "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/f15cff7453ed4a1605cbf4569301cba8-1655461984/wordpress/design-wordpress-woocommerce-ecommerce-website.PNG"
                     }
                 ],
-                "tags": [
-                    "webside desigener",
-                    "Update wordpress",
-                    "wordpress blog",
-                    "wordpress webside",
-                    "edit wordpress"
-                ],
+                "tags": ["webside desigener", "Update wordpress", "wordpress blog", "wordpress webside", "edit wordpress"],
                 "likedByUsers": [
                     {
                         "_id": "u201",
@@ -330,13 +323,7 @@
                         "image": "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/20f35d54d895913157cb0558ec3e0d15-1655992149/Screenshot_82/build-responsive-wordpress-website-design-with-seo.png"
                     }
                 ],
-                "tags": [
-                    "webside desigener",
-                    "Update wordpress",
-                    "wordpress blog",
-                    "wordpress webside",
-                    "edit wordpress"
-                ],
+                "tags": ["webside desigener", "Update wordpress", "wordpress blog", "wordpress webside", "edit wordpress"],
                 "likedByUsers": [
                     {
                         "_id": "u201",
@@ -428,13 +415,7 @@
                         "image": "https://fiverr-res.cloudinary.com/images/t_smartwm/t_gig_pdf_gallery_view_ver4,q_auto,f_auto/attachments/delivery/asset/80db926531093069d4f3316fbfa6fd01-1658653474/Affordableflooringofswfl/provide-premium-wordpress-website-with-divi-or-astra-pro.pdf"
                     }
                 ],
-                "tags": [
-                    "webside desigener",
-                    "Update wordpress",
-                    "wordpress blog",
-                    "wordpress webside",
-                    "edit wordpress"
-                ],
+                "tags": ["webside desigener", "Update wordpress", "wordpress blog", "wordpress webside", "edit wordpress"],
                 "likedByUsers": [
                     {
                         "_id": "u201",
@@ -537,46 +518,106 @@
                 ]
             },
             {
-                "_id": "g106",
-                "title": "I will create wordpress landing page elementor landing page design using elementor",
+                "_id": "g101",
+                "title": "I will develop a professional wordpress website with a responsive design",
                 "category": "WordPress",
-                "price": 2500,
+                "price": 200,
                 "owner": {
-                    "_id": "u106",
-                    "fullname": "Even You",
-                    "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/fb5e1062fb144898f02feac3e44133dd-1656393604873/92896d13-5c6b-401d-8a9e-d6c5f051703a.JPG",
-                    "level": "5",
-                    "rate": 5.0,
-                    "country": "India"
+                    "_id": "u101",
+                    "fullname": "Maham Rizwan",
+                    "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/d2b733c8f152a9baab1b8e2efc14e176-1655401248537/340ea128-2dbd-4524-83c3-321ae8101a44.jpeg",
+                    "level": "4",
+                    "rate": 4.3,
+                    "description": "Experienced coder with over 10 years of experience behind me, traveled through many companies, decided to freelance since its my real passion",
+                    "country": "United States",
+                    "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png"
                 },
-                "daysToMake": 7,
-                "description": "Update or edit WordPress website",
+                "daysToMake": 3,
+                "description": "Theme & Wordpress Installation + Design Customisation + 3 landing pages + Forms + Social Media.",
                 "memberSince": "Jul 2021",
                 "averageResponseTime": "1 hour",
                 "lastDelivery": "about 16 hours",
                 "images": [
                     {
-                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/214194283/original/dbea3cf4157c66846a649393ac5a42fa75431096/do-web-design-and-professional-wordpress-landing-page-design-using-elementor-pro.png"
+                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/207613188/original/844e47de271c5f59b0f26c562602b2bfe51448dc/create-one-page-website-in-wordpress-and-elementor.jpeg"
                     },
                     {
-                        "image": "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/d32f49981cca2b35d6f24887ce8549d1-1637514617/screencapture-1stcapitalservice-2021-11-21-23_09_22/do-web-design-and-professional-wordpress-landing-page-design-using-elementor-pro.png"
+                        "image": "https://fiverr-res.cloudinary.com/videos/so_10.669187,t_main1,q_auto,f_auto/dbmhanrp865acppvgncr/design-redesign-and-customize-wordpress-website.png"
                     },
                     {
-                        "image": "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/fd8fed4db9226dd24cf83b8f2f2b1dbe-1646901565/Attachment_1646901504/do-web-design-and-professional-wordpress-landing-page-design-using-elementor-pro.jpeg"
+                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/122982910/original/46a9da9988ad14b744b56ae30003c448bd314567/design-redesign-and-customize-wordpress-website.png"
                     }
                 ],
+<<<<<<< HEAD
+                "tags": ["webside desigener", "Update wordpress", "wordpress blog", "wordpress webside", "edit wordpress"],
+=======
                 "tags": [
                     "webside desigener",
-                    "Update wordpress",
+                    "wordpress developer",
                     "wordpress blog",
                     "wordpress webside",
-                    "edit wordpress"
+                    "lading page"
                 ],
+>>>>>>> ee3e25632fe79af945bd538c042c962e97096b78
                 "likedByUsers": [
                     {
-                        "_id": "u204",
+                        "_id": "u201",
                         "fullname": "Design Logo",
                         "imgUrl": 20
+                    }
+                ],
+                "reviews": [
+                    {
+                        "_id": "r100",
+                        "txt": "frederickkessie ist a super kind artist doing the process he was super professional and only took him 1 shot to deliver a perfect result ! Highly recommended work with this guy !",
+                        "rate": 4,
+                        "reviewedAt": "Published 2 months ago",
+                        "by": {
+                            "_id": "rb100",
+                            "fullname": "tobiaspille300",
+                            "country": "Thailand",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1f9-1f1ed.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/profile/photos/414573/original/beach_picture.jpg"
+                        }
+                    },
+                    {
+                        "_id": "r1001",
+                        "txt": "I requested a slightly earlier delivery on this and once again Frederick came through and provided a fantastic delivery. Thanks so much!",
+                        "rate": 5,
+                        "reviewedAt": "Published 3 weeks ago",
+                        "by": {
+                            "_id": "rb1001",
+                            "fullname": "liam31",
+                            "country": "United Kingdom",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ec-1f1e7.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/8887e8d8297d9465132cac01aca9d90f-1641401341945/e2cfaf94-73e7-4aca-87e3-c119f48aa02d.jpg"
+                        }
+                    },
+                    {
+                        "_id": "r1002",
+                        "txt": "Frederick is amazing and extremely talented. This is the second time working with him and he has been a pleasure yet again!",
+                        "rate": 4,
+                        "reviewedAt": "Published 4 weeks ago",
+                        "by": {
+                            "_id": "rb1002",
+                            "fullname": "liam31",
+                            "country": "United Kingdom",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ec-1f1e7.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/8887e8d8297d9465132cac01aca9d90f-1641401341945/e2cfaf94-73e7-4aca-87e3-c119f48aa02d.jpg"
+                        }
+                    },
+                    {
+                        "_id": "r1003",
+                        "txt": "Very detailed",
+                        "rate": 5,
+                        "reviewedAt": "Published 1 week ago",
+                        "by": {
+                            "_id": "rb1003",
+                            "fullname": "larsonraz",
+                            "country": "United States",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/d917d7c99b94861239f27d3d628dcb50-1642448970627/5ef42b13-32f3-4e99-a170-ddde0aedc532.JPG"
+                        }
                     }
                 ]
             },
@@ -609,13 +650,7 @@
                         "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/224225067/original/c9a8a68be6fd05c33d44833bd208cc19025c4d20/design-modern-canvas-wall-art-and-motivational-minimal-designs-519c.jpg"
                     }
                 ],
-                "tags": [
-                    "Costom logo",
-                    "Badge logo",
-                    "sinature logo",
-                    "logo design",
-                    "minimal logo"
-                ],
+                "tags": ["Costom logo", "Badge logo", "sinature logo", "logo design", "minimal logo"],
 
                 "likedByUsers": [
                     {
@@ -734,13 +769,7 @@
                         "image": "https://fiverr-res.cloudinary.com/image/upload/t_gig_pdf_gallery_view_ver4,f_jpg/20200923/1_r9brls.jpg"
                     }
                 ],
-                "tags": [
-                    "Costom logo",
-                    "Badge logo",
-                    "sinature logo",
-                    "logo design",
-                    "minimal logo"
-                ],
+                "tags": ["Costom logo", "Badge logo", "sinature logo", "logo design", "minimal logo"],
                 "likedByUsers": [
                     {
                         "_id": "u202",
@@ -819,13 +848,7 @@
                         "image": "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/ec45526f24edcced4ced4f767449d6ce-1658243064/Preview/do-unique-minimalist-and-creative-luxury-logo-design.jpg"
                     }
                 ],
-                "tags": [
-                    "Costom logo",
-                    "Badge logo",
-                    "sinature logo",
-                    "logo design",
-                    "minimal logo"
-                ],
+                "tags": ["Costom logo", "Badge logo", "sinature logo", "logo design", "minimal logo"],
                 "likedByUsers": [
                     {
                         "_id": "u202",
@@ -977,12 +1000,7 @@
                         "image": "https://fiverr-res.cloudinary.com/video/upload/t_gig_cards_web/yawobth7fcvy5cvigdua.png"
                     }
                 ],
-                "tags": [
-                    "explainer video",
-                    "2d animation",
-                    "marketing video",
-                    "animated video"
-                ],
+                "tags": ["explainer video", "2d animation", "marketing video", "animated video"],
                 "likedByUsers": [
                     {
                         "_id": "u202",
@@ -1020,12 +1038,7 @@
                         "image": "https://fiverr-res.cloudinary.com/videos/t_smartwm/t_main1,q_auto,f_auto/cnp2lsqcu6todvr72iad/create-professional-live-action-explainer-video.png"
                     }
                 ],
-                "tags": [
-                    "explainer video",
-                    "2d animation",
-                    "marketing video",
-                    "animated video"
-                ],
+                "tags": ["explainer video", "2d animation", "marketing video", "animated video"],
                 "likedByUsers": [
                     {
                         "_id": "u202",
@@ -1063,12 +1076,7 @@
                         "image": "https://fiverr-res.cloudinary.com/videos/so_1.220538,t_main1,q_auto,f_auto/e4xjbnqi5hmmdip2qzcu/produce-a-live-action-explainer-video-with-female-spokesperson-for-your-brand.png"
                     }
                 ],
-                "tags": [
-                    "explainer video",
-                    "2d animation",
-                    "marketing video",
-                    "animated video"
-                ],
+                "tags": ["explainer video", "2d animation", "marketing video", "animated video"],
                 "likedByUsers": [
                     {
                         "_id": "u202",
@@ -1102,12 +1110,7 @@
                         "image": "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/a98f2f833aee25f4614f10cfa8370f2d-1637330350/IMG_20211119_185726/professionally-promote-and-manage-your-instagram-account.jpg"
                     }
                 ],
-                "tags": [
-                    "management",
-                    "instegram",
-                    "social media",
-                    "social network"
-                ],
+                "tags": ["management", "instegram", "social media", "social network"],
                 "likedByUsers": [
                     {
                         "_id": "u202",
@@ -1141,12 +1144,7 @@
                         "image": "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/fe749b7a1a5a08fab624df70a23a96f0-1658768238/SG6/photograph-my-labrador-modeling-your-dog-products.jpg"
                     }
                 ],
-                "tags": [
-                    "management",
-                    "instegram",
-                    "social media",
-                    "social network"
-                ],
+                "tags": ["management", "instegram", "social media", "social network"],
                 "likedByUsers": [
                     {
                         "_id": "u202",
@@ -1222,3 +1220,6 @@
         ]
     }
 ]
+
+
+

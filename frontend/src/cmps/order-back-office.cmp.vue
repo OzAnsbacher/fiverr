@@ -59,19 +59,19 @@
 
 <script>
 export default {
-  props: ["order"],
-  data() {
-    return {};
-  },
-  created() {},
-  methods: {},
-  computed: {
-    getBuyer() {
-      return this.order.buyer;
+    props: ['order'],
+    data() {
+        return {}
     },
-  },
-  unmounted() {},
-};
+    created() {},
+    methods: {},
+    computed: {
+        getBuyer() {
+            return this.order.buyer
+        },
+    },
+    unmounted() {},
+}
 </script>
 
 <style lang="scss" scoped></style>
