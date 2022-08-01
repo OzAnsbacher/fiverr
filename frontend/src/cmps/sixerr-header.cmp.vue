@@ -46,7 +46,7 @@
                         <a class="sign-in" :class="$route.meta.logoClass" @click="toggleLogin">Sign in</a>
                     </div>
                     <a class="join" :class="$route.meta.bodyClass" @click="toggleSignUp">Join</a>
-
+                    <!-- <div class="avater"><p>A</p></div> -->
                     <div class="login-modal" v-show="showLogin" @click="closeLogin">
                         <sign-in @toggleLogin="toggleLogin" @closeLogin="toggleLogin" />
                     </div>

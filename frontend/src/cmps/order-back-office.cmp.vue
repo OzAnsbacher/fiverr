@@ -1,17 +1,16 @@
 <template>
-  
-    <li class="li-back-office flex">
+    <!-- <li class="li-back-office flex">
       <h5>Seller: Mosh</h5>
       <h5 class="">Price: $40.00</h5>
       <h5 class="">Time To Deliver:4 Days</h5>
-      <h5>Message To Seller</h5>
+      <h5>Message To Seller</h5> -->
+    <!-- </li> -->
+    <li class="flex li-back-office">
+        <h5>Seller:{{ order.seller.fullname }}</h5>
+        <h5 class="">Price: ${{ order.gig.price }}.00</h5>
+        <h5 class="">Time To Deliver: {{ order.timeToDeliver }} Days</h5>
+        <h5>Message To Seller</h5>
     </li>
-    <!-- <li class="flex">
-      <h5>Seller:{{ order.seller.fullname }}</h5>
-      <h5 class="">Price: ${{ order.gig.price }}.00</h5>
-      <h5 class="">Time To Deliver: {{ order.timeToDeliver }} Days</h5>
-      <h5>Message To Seller</h5>
-    </li> -->
     <!-- <li class="order-item flex">
       <section class="order-preview flex">
         <div class="main">
@@ -40,24 +39,23 @@
         </div>
       </section>
     </li> -->
-
 </template>
 
 <script>
 export default {
-  props: ["order"],
-  data() {
-    return {};
-  },
-  created() {},
-  methods: {},
-  computed: {
-    getBuyer() {
-      return this.order.buyer;
+    props: ['order'],
+    data() {
+        return {}
     },
-  },
-  unmounted() {},
-};
+    created() {},
+    methods: {},
+    computed: {
+        getBuyer() {
+            return this.order.buyer
+        },
+    },
+    unmounted() {},
+}
 </script>
 
 <style lang="scss" scoped></style>

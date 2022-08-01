@@ -1,13 +1,13 @@
 <template>
-  <header-back-office v-if="user" :user="user" @order="loadUserOrders" />
-  <data-entry />
-  <div class="orders-back-office">
-    <ul v-if="orders" class="ul-back-office clean-list main-layout">
-      <order-back-office class="render-ul-back-office" v-for="order in getOrders" :order="order" />
-    </ul>
-  </div>
-  <!-- <data-entry :isBuyer="isBuyer" /> -->
-  <!-- <div v-if="orders" class="user-board-content main-layout">
+    <header-back-office v-if="user" :user="user" @order="loadUserOrders" />
+    <data-entry />
+    <div class="orders-back-office">
+        <ul v-if="orders" class="ul-back-office clean-list main-layout">
+            <order-back-office class="render-ul-back-office" v-for="order in getOrders" :order="order" />
+        </ul>
+    </div>
+    <!-- <data-entry :isBuyer="isBuyer" /> -->
+    <!-- <div v-if="orders" class="user-board-content main-layout">
     <main class="user-main">
       <div class="profile-details-container">
         <div class="user-details flex space-between">
@@ -127,55 +127,55 @@
     </main>
   </div>
   <img v-else class="explore-loading" src="../assets/gif/spinner.gif" alt="" />-->
-  <!-- <pre>{{ orders }}</pre> -->
+    <!-- <pre>{{ orders }}</pre> -->
 </template>
 
 <script>
-import dataEntry from "./data-entry.cmp.vue";
-import aboutBuyer from "../cmps/about-buyer.cmp.vue";
-import orderBackOffice from "../cmps/order-back-office.cmp.vue";
-import headerBackOffice from "./header-back-office.cmp.vue";
+import dataEntry from './data-entry.cmp.vue'
+import aboutBuyer from '../cmps/about-buyer.cmp.vue'
+import orderBackOffice from '../cmps/order-back-office.cmp.vue'
+import headerBackOffice from './header-back-office.cmp.vue'
 export default {
-  data() {
-    return {
-      orders: {a:1, b:2, c:3},
-      gigs: null,
-      user: null,
-      isBuyer: true,
-    };
-  },
-  async created() {
-    this.user = this.$store.getters.getUser;
-    // if (!this.user) this.$router.push("/explore");
-    // else await this.loadUserOrders();
-  },
-  computed: {
-    getOrders() {
-      console.log("this.orders", this.orders);
-
-      return this.orders;
+    data() {
+        return {
+            orders: null,
+            gigs: null,
+            user: null,
+            isBuyer: true,
+        }
     },
-  },
-  methods: {
-    async loadUserOrders(isBuyer = true) {
-      var userId = this.user._id;
-      const filterBy = {
-        userId,
-        isBuyer,
-      };
-      this.orders = await this.$store.dispatch({
-        type: "getOrdersById",
-        filterBy,
-      });
-      this.orders = this.$store.getters.getorders;
+    async created() {
+        this.user = this.$store.getters.getUser
+        if (!this.user) this.$router.push('/explore')
+        else await this.loadUserOrders()
     },
-  },
+    computed: {
+        getOrders() {
+            console.log('this.orders', this.orders)
 
-  components: {
-    aboutBuyer,
-    orderBackOffice,
-    headerBackOffice,
-    dataEntry,
-  },
-};
+            return this.orders
+        },
+    },
+    methods: {
+        async loadUserOrders(isBuyer = true) {
+            var userId = this.user._id
+            const filterBy = {
+                userId,
+                isBuyer,
+            }
+            this.orders = await this.$store.dispatch({
+                type: 'getOrdersById',
+                filterBy,
+            })
+            this.orders = this.$store.getters.getorders
+        },
+    },
+
+    components: {
+        aboutBuyer,
+        orderBackOffice,
+        headerBackOffice,
+        dataEntry,
+    },
+}
 </script>
