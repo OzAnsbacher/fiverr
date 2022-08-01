@@ -24,6 +24,7 @@ export default {
   methods: {
     switchBuyer() {
       this.isBuyer = !this.isBuyer;
+
       console.log("this.isBuyer", this.isBuyer);
 
       this.$emit("order", this.isBuyer);
