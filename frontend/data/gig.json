@@ -2,34 +2,32 @@
     {
         "gigs": [
             {
-                "_id": "g101",
-                "title": "I will develop a professional wordpress website with a responsive design",
-                "category": "WordPress",
-                "price": 200,
+                "title": "I will design a mobile responsive, modern wordpress website",
+                "price": 536.77,
                 "owner": {
                     "_id": "u101",
-                    "fullname": "Maham Rizwan",
-                    "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/d2b733c8f152a9baab1b8e2efc14e176-1655401248537/340ea128-2dbd-4524-83c3-321ae8101a44.jpeg",
+                    "fullname": "chellerose",
+                    "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/e310df10574434630befd918d72722a2-1648483193135/fd2516bd-25ff-468a-9c7b-67c5518eda27.jpg",
                     "level": "4",
                     "rate": 4.3,
                     "description": "Experienced coder with over 10 years of experience behind me, traveled through many companies, decided to freelance since its my real passion",
                     "country": "United States",
                     "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png"
                 },
-                "daysToMake": 3,
+                "daysToMake": 4,
                 "description": "Theme & Wordpress Installation + Design Customisation + 3 landing pages + Forms + Social Media.",
                 "memberSince": "Jul 2021",
                 "averageResponseTime": "1 hour",
                 "lastDelivery": "about 16 hours",
                 "images": [
                     {
-                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/207613188/original/844e47de271c5f59b0f26c562602b2bfe51448dc/create-one-page-website-in-wordpress-and-elementor.jpeg"
+                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/115633468/original/a4177d2eec0cdc344b0c3cc2ac9ffe052d60487b/design-a-modern-wordpress-business-website-or-blog.jpg"
                     },
                     {
-                        "image": "https://fiverr-res.cloudinary.com/videos/so_10.669187,t_main1,q_auto,f_auto/dbmhanrp865acppvgncr/design-redesign-and-customize-wordpress-website.png"
+                        "image": "https://fiverr-res.cloudinary.com/videos/so_23.127075,t_main1,q_auto,f_auto/m63zhnvkq4wycwkcf8z0/design-a-modern-wordpress-business-website-or-blog.png"
                     },
                     {
-                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/122982910/original/46a9da9988ad14b744b56ae30003c448bd314567/design-redesign-and-customize-wordpress-website.png"
+                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/115633468/original/2f1b8dbc9f572114546848a8e37ce75fd1f80bfa/design-a-modern-wordpress-business-website-or-blog.jpg"
                     }
                 ],
                 "tags": [
@@ -49,7 +47,7 @@
                 "reviews": [
                     {
                         "_id": "r100",
-                        "txt": "frederickkessie ist a super kind artist doing the process he was super professional and only took him 1 shot to deliver a perfect result ! Highly recommended work with this guy !",
+                        "txt": "Michelle was awesome! She was very communicative and answered all my questions throughout the whole process. This was the first time I hired someone to create a website and I thought it would be complicated but Michelle was very helpful throughout the whole thing. I would recommend Michelle to anyone looking to create a beautiful site. Check mine out!! :)",
                         "rate": 4,
                         "reviewedAt": "Published 2 months ago",
                         "by": {
@@ -62,12 +60,12 @@
                     },
                     {
                         "_id": "r1001",
-                        "txt": "I requested a slightly earlier delivery on this and once again Frederick came through and provided a fantastic delivery. Thanks so much!",
+                        "txt": "Working with Chellerose....I only have three little words ~ ABOVE and BEYOND!!! This was an amazing experience, I felt so cared for. Someone cared about my dream. All the little details and plates in the air with all the decisions, large and small, so patient. Great communication. I can't even imagine how hard it must be to try to bring anothers vision to life... when that person isn't even positive of that looks like. . Thank you!",
                         "rate": 5,
                         "reviewedAt": "Published 3 weeks ago",
                         "by": {
                             "_id": "rb1001",
-                            "fullname": "liam31",
+                            "fullname": "christinehas191",
                             "country": "United Kingdom",
                             "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ec-1f1e7.png",
                             "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/8887e8d8297d9465132cac01aca9d90f-1641401341945/e2cfaf94-73e7-4aca-87e3-c119f48aa02d.jpg"
@@ -75,12 +73,12 @@
                     },
                     {
                         "_id": "r1002",
-                        "txt": "Frederick is amazing and extremely talented. This is the second time working with him and he has been a pleasure yet again!",
+                        "txt": "WOW. WOW. WOW. The communication alone was stellar. Then they went above and beyond to make sure everything was to my liking. I will most definitely return! I have favorited chellerose and honestly, if you're hesitating on the deal you'll get with having her design your website, then please do not wait.",
                         "rate": 4,
                         "reviewedAt": "Published 4 weeks ago",
                         "by": {
                             "_id": "rb1002",
-                            "fullname": "liam31",
+                            "fullname": "edfund2020",
                             "country": "United Kingdom",
                             "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ec-1f1e7.png",
                             "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/8887e8d8297d9465132cac01aca9d90f-1641401341945/e2cfaf94-73e7-4aca-87e3-c119f48aa02d.jpg"
@@ -88,12 +86,25 @@
                     },
                     {
                         "_id": "r1003",
-                        "txt": "Very detailed",
+                        "txt": "This was my first time to have a website made and I was hesitant about the process. She answered all my questions and did a great job putting it all together in a way I could not do! Would definitely recommend!",
                         "rate": 5,
                         "reviewedAt": "Published 1 week ago",
                         "by": {
                             "_id": "rb1003",
                             "fullname": "larsonraz",
+                            "country": "United States",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/d917d7c99b94861239f27d3d628dcb50-1642448970627/5ef42b13-32f3-4e99-a170-ddde0aedc532.JPG"
+                        }
+                    },
+                    {
+                        "_id": "r1003",
+                        "txt": "Stunning web design and she listened to everything we wanted and was so kind and patient working with us! She is very knowledgable and I would 100% recommend to anyone needing a new website!!",
+                        "rate": 5,
+                        "reviewedAt": "Published 1 week ago",
+                        "by": {
+                            "_id": "rb1003",
+                            "fullname": "lauradoran",
                             "country": "United States",
                             "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png",
                             "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/d917d7c99b94861239f27d3d628dcb50-1642448970627/5ef42b13-32f3-4e99-a170-ddde0aedc532.JPG"
@@ -1222,3 +1233,6 @@
         ]
     }
 ]
+
+
+
