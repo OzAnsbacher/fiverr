@@ -11,14 +11,16 @@ export default {
     },
     mutations: {
         setUser(state, { user }) {
-                  state.loggedinUser = user
+            state.loggedinUser = user ? { ...user } : null
         },
     },
     actions: {
         async login({ commit }, { cred }) {
             try {
+                console.log(';logging')
                 const user = await userService.login(cred)
                 commit({ type: 'setUser', user })
+                return user
             } catch (err) {
                 console.log(err)
             }
@@ -27,6 +29,7 @@ export default {
             try {
                 const user = await userService.signup(cred)
                 commit({ type: 'setUser', user })
+                return user
             } catch (err) {
                 console.log(err)
             }

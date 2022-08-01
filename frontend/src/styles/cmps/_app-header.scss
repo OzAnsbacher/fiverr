@@ -19,6 +19,18 @@
         }
     }
 }
+
+.user-avatar {
+    text-transform: uppercase;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e4e5e7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .change-color {
     .become-seller:hover {
         color: #1dbf73;
@@ -251,6 +263,7 @@ nav {
 .left-links {
     display: flex;
     gap: 20px;
+    align-items: baseline;
 }
 
 .join {
