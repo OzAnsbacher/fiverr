@@ -104,7 +104,7 @@ export default {
         window.addEventListener('scroll', this.updateScroll)
         document.body.addEventListener('click', this.closeProfilePopover)
         await this.loadUser()
-        await console.log('useer', this.user)
+        await console.log('user', this.user)
     },
     methods: {
         async loadUser() {
@@ -151,6 +151,7 @@ export default {
 
     computed: {
         avatarTxt() {
+            // if (!this.user) return
             const userNames = this.user.fullname.split(' ')
             return userNames[0].charAt(0) + userNames[1].charAt(0)
         },
