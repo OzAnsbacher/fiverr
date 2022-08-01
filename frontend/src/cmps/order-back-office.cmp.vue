@@ -7,9 +7,9 @@
       <h5>Message To Seller</h5>
     </li> -->
   <li class="li-back-office flex">
-   <div class=" wd-cell-bo">
-    <img class="" :src="order.seller.imgUrl" alt="" />
-   </div>
+    <div class="wd-cell-bo">
+      <img class="" :src="order.seller.imgUrl" alt="" />
+    </div>
     <div class="flex column wd-cell-bo">
       <h4>Seller:</h4>
       <h5>{{ order.seller.fullname }}</h5>
@@ -23,7 +23,13 @@
       <h5>{{ order.timeToDeliver }} Days</h5>
     </div>
     <div class="flex align-center btn-bo">
-      <h4 class="pending-back-office">Pending</h4>
+      <h4
+        class="pending-back-office"
+        @click="pending"
+        :class="{ complete: isPending === 'Complete' }"
+      >
+        {{ isPending }}
+      </h4>
       <h4 class="msg-back-office">Message To Seller</h4>
     </div>
   </li>
@@ -59,19 +65,33 @@
 
 <script>
 export default {
-    props: ['order'],
-    data() {
-        return {}
+  props: ["order"],
+  data() {
+    return {
+      isBuyer: null,
+      isPending: "Pending",
+    };
+  },
+  created() {
+    this.isBuyer = this.$store.getters.getIsBuyer;
+  },
+  methods: {
+    pending() {
+      // if (this.$store.getters.getIsBuyer) return;
+      if (this.isPending === "Pending") this.isPending = "Complete";
+      else if (this.isPending === "Complete") this.isPending = "Pending";
     },
-    created() {},
-    methods: {},
-    computed: {
-        getBuyer() {
-            return this.order.buyer
-        },
+  },
+  computed: {
+    getBuyer() {
+      return this.order.buyer;
     },
-    unmounted() {},
-}
+    getIsPending() {
+      return this.pending;
+    },
+  },
+  unmounted() {},
+};
 </script>
 
 <style lang="scss" scoped></style>

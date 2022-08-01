@@ -1,5 +1,10 @@
 <template>
-  <header-back-office v-if="user" :user="user" @order="loadUserOrders" />
+  <header-back-office
+    class="header-back-office-conteiner"
+    v-if="user"
+    :user="user"
+    @order="loadUserOrders"
+  />
   <data-entry />
   <div class="orders-back-office">
     <ul v-if="orders" class="ul-back-office clean-list main-layout">
@@ -165,27 +170,28 @@ export default {
       else await this.loadUserOrders();
     },
   },
-     methods: {
-      async loadUserOrders(isBuyer = true) {
-        var userId = this.user._id;
-        const filterBy = {
-          userId,
-          isBuyer,
-        };
-        this.orders = await this.$store.dispatch({
-          type: "getOrdersById",
-          filterBy,
-        });
-        this.orders = this.$store.getters.getorders;
-      },
-    },
+  methods: {
+    async loadUserOrders(isBuyer = true) {
+      var userId = this.user._id;
+      const filterBy = {
+        userId,
+        isBuyer,
+      };
+      console.log("filterBy", filterBy);
 
-    components: {
-      aboutBuyer,
-      orderBackOffice,
-      headerBackOffice,
-      dataEntry,
+      this.orders = await this.$store.dispatch({
+        type: "getOrdersById",
+        filterBy,
+      });
+      this.orders = this.$store.getters.getorders;
     },
+  },
 
+  components: {
+    aboutBuyer,
+    orderBackOffice,
+    headerBackOffice,
+    dataEntry,
+  },
 };
 </script>

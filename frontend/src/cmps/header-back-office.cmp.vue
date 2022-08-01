@@ -2,10 +2,10 @@
   <div class="header-back-office flex main-layout space-between">
     <h4 class="back-office-username">Hello {{ user.fullname }}</h4>
     <div class="switch-btn flex">
-    <h4 :class="{ 'active-user': isBuyer }" @click="switchBuyer">
+    <h4 :class="{ 'active-user': !isBuyer }" @click="switchBuyer">
       Switch to Seller
     </h4>
-    <h4 :class="{ 'active-user': !isBuyer }" @click="switchBuyer">
+    <h4 :class="{ 'active-user': isBuyer }" @click="switchBuyer">
       Switch to Buyer
     </h4>
     </div>
