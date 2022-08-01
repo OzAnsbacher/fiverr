@@ -1199,6 +1199,218 @@
             }
         }
     ]
-}
+},
+{
+"title": "I will develop a professional wordpress website with a responsive design",
+                "category": "WordPress",
+                "price": 200,
+                "owner": {
+                    "_id": "u101",
+                    "fullname": "Maham Rizwan",
+                    "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/d2b733c8f152a9baab1b8e2efc14e176-1655401248537/340ea128-2dbd-4524-83c3-321ae8101a44.jpeg",
+                    "level": "4",
+                    "rate": 4.3,
+                    "description": "Experienced coder with over 10 years of experience behind me, traveled through many companies, decided to freelance since its my real passion",
+                    "country": "United States",
+                    "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png"
+                },
+                "daysToMake": 3,
+                "description": "Theme & Wordpress Installation + Design Customisation + 3 landing pages + Forms + Social Media.",
+                "memberSince": "Jul 2021",
+                "averageResponseTime": "1 hour",
+                "lastDelivery": "about 16 hours",
+                "images": [
+                    {
+                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/207613188/original/844e47de271c5f59b0f26c562602b2bfe51448dc/create-one-page-website-in-wordpress-and-elementor.jpeg"
+                    },
+                    {
+                        "image": "https://fiverr-res.cloudinary.com/videos/so_10.669187,t_main1,q_auto,f_auto/dbmhanrp865acppvgncr/design-redesign-and-customize-wordpress-website.png"
+                    },
+                    {
+                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/122982910/original/46a9da9988ad14b744b56ae30003c448bd314567/design-redesign-and-customize-wordpress-website.png"
+                    }
+                ],
+                "tags": [
+                    "webside desigener",
+                    "wordpress developer",
+                    "wordpress blog",
+                    "wordpress webside",
+                    "lading page"
+                ],
+                "likedByUsers": [
+                    {
+                        "_id": "u201",
+                        "fullname": "Design Logo",
+                        "imgUrl": 20
+                    }
+                ],
+                "reviews": [
+                    {
+                        "_id": "r100",
+                        "txt": "frederickkessie ist a super kind artist doing the process he was super professional and only took him 1 shot to deliver a perfect result ! Highly recommended work with this guy !",
+                        "rate": 4,
+                        "reviewedAt": "Published 2 months ago",
+                        "by": {
+                            "_id": "rb100",
+                            "fullname": "tobiaspille300",
+                            "country": "Thailand",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1f9-1f1ed.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/profile/photos/414573/original/beach_picture.jpg"
+                        }
+                    },
+                    {
+                        "_id": "r1001",
+                        "txt": "I requested a slightly earlier delivery on this and once again Frederick came through and provided a fantastic delivery. Thanks so much!",
+                        "rate": 5,
+                        "reviewedAt": "Published 3 weeks ago",
+                        "by": {
+                            "_id": "rb1001",
+                            "fullname": "liam31",
+                            "country": "United Kingdom",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ec-1f1e7.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/8887e8d8297d9465132cac01aca9d90f-1641401341945/e2cfaf94-73e7-4aca-87e3-c119f48aa02d.jpg"
+                        }
+                    },
+                    {
+                        "_id": "r1002",
+                        "txt": "Frederick is amazing and extremely talented. This is the second time working with him and he has been a pleasure yet again!",
+                        "rate": 4,
+                        "reviewedAt": "Published 4 weeks ago",
+                        "by": {
+                            "_id": "rb1002",
+                            "fullname": "liam31",
+                            "country": "United Kingdom",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ec-1f1e7.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/8887e8d8297d9465132cac01aca9d90f-1641401341945/e2cfaf94-73e7-4aca-87e3-c119f48aa02d.jpg"
+                        }
+                    },
+                    {
+                        "_id": "r1003",
+                        "txt": "Very detailed",
+                        "rate": 5,
+                        "reviewedAt": "Published 1 week ago",
+                        "by": {
+                            "_id": "rb1003",
+                            "fullname": "larsonraz",
+                            "country": "United States",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/d917d7c99b94861239f27d3d628dcb50-1642448970627/5ef42b13-32f3-4e99-a170-ddde0aedc532.JPG"
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "I will do professional and custom business logo design and branding",
+                "price": 350,
+                "owner": {
+                    "_id": "u101",
+                    "fullname": "bilalhaider23",
+                    "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/profile/photos/27046634/original/h.png",
+                    "level": "5",
+                    "rate": 4.4,
+                    "description": "Hello, and welcome! I will use my passion, creativity, and skills to design a Professional and Custom Business Logo in Vector (.ai, EPS, PDF, and SVG) formats. Updated Portfolio: https://goo.gl/RrT54A         Order now for your Business Logo!Thank you!",                   
+                    "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png"
+                },
+                "daysToMake": 4,
+                "description": "Theme & Wordpress Installation + Design Customisation + 3 landing pages + Forms + Social Media.",
+                "memberSince": "Jul 2021",
+                "averageResponseTime": "1 hour",
+                "lastDelivery": "about 16 hours",
+                "images": [
+                    {
+                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/38884985/original/e6d0ddf05d4763dfd57cbcdcf619a6596435bdd3/design-professional-logo-design.png"
+                    },
+                    {
+                        "image": "https://fiverr-res.cloudinary.com/videos/so_29.558588,t_main1,q_auto,f_auto/ylcwz3h67n8fetelqjkb/design-professional-logo-design.png"
+                    },
+                    {
+                        "image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/38884985/original/95b06faaed3f91617de2c12397c9a8886f00e5ca/design-professional-logo-design.png"
+                    }
+                ],
+                "tags": [
+                    "webside desigener",
+                    "wordpress developer",
+                    "wordpress blog",
+                    "wordpress webside",
+                    "lading page"
+                ],
+                "likedByUsers": [
+                    {
+                        "_id": "u201",
+                        "fullname": "Design Logo",
+                        "imgUrl": 20
+                    }
+                ],
+                "reviews": [
+                    {
+                        "_id": "r100",
+                        "txt": "I’ve been using Fiverr since 2012 and I’ve found some gems over the years, Bilal is my newest find. Together we executed a brilliant branding package that I absolutely love. I appreciate Bilal’s artistry, communication and patience. Don’t hesitate for a minute, you’ve unearthed a Fiverr gem on this page. Bilal is a rockstar who doesn’t disappoint. ",
+                        "rate": 5.0,
+                        "reviewedAt": "Published 2 months ago",
+                        "by": {
+                            "_id": "rb100",
+                            "fullname": "shabriji",
+                            "country": "Thailand",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1f9-1f1ed.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/profile/photos/414573/original/beach_picture.jpg"
+                        }
+                    },
+                    {
+                        "_id": "r1001",
+                        "txt": "Very good execution of the logo and they best forecast my market and my business logo. After they delivered the logo which was just awesome. If you are looking for a great memorable business logo then Stride is the team for you. I am used them and saying personally. What you are waiting for..? Order Now and let them work their magic....<3",
+                        "rate": 5.0,
+                        "reviewedAt": "Published 3 weeks ago",
+                        "by": {
+                            "_id": "rb1001",
+                            "fullname": "coniroy",
+                            "country": "United Kingdom",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ec-1f1e7.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/8887e8d8297d9465132cac01aca9d90f-1641401341945/e2cfaf94-73e7-4aca-87e3-c119f48aa02d.jpg"
+                        }
+                    },
+                    {
+                        "_id": "r1002",
+                        "txt": "Overall beautiful experience, professional and great service. I had heard somewhere, that quality and quantity be never equal but I am seriously speaking Strideinit proved it totally wrong, I got many versions of the logo and all are really very good, it makes me hard now to choose. Thank you, god bless!",
+                        "rate": 5.0,
+                        "reviewedAt": "Published 4 weeks ago",
+                        "by": {
+                            "_id": "rb1002",
+                            "fullname": "startrek7",
+                            "country": "United Kingdom",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ec-1f1e7.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/8887e8d8297d9465132cac01aca9d90f-1641401341945/e2cfaf94-73e7-4aca-87e3-c119f48aa02d.jpg"
+                        }
+                    },
+                    {
+                        "_id": "r1003",
+                        "txt": "Extraordinary Seller with Mind-blowing communication skills. They are best in what they committed prior to the project. I opt for this package for quality and service and they stand strong. I love everything working with them. Extremely friendly persons you will find digitally.",
+                        "rate": 5.0,
+                        "reviewedAt": "Published 1 week ago",
+                        "by": {
+                            "_id": "rb1003",
+                            "fullname": "chiefbrief2",
+                            "country": "United States",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/d917d7c99b94861239f27d3d628dcb50-1642448970627/5ef42b13-32f3-4e99-a170-ddde0aedc532.JPG"
+                        }
+                    },
+                    {
+                        "_id": "r1003",
+                        "txt": "This is my first experience and I was a bit nervous. I was amazed by the ease of use from beginning to end. Also very happy with the results I've received and the communication with the artist is fantastic. Thank you",
+                        "rate": 5.0,
+                        "reviewedAt": "Published 1 week ago",
+                        "by": {
+                            "_id": "rb1003",
+                            "fullname": "ronrogers9",
+                            "country": "United States",
+                            "flag": "https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png",
+                            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/d917d7c99b94861239f27d3d628dcb50-1642448970627/5ef42b13-32f3-4e99-a170-ddde0aedc532.JPG"
+                        }
+                    
+                    }
+                
+                ]
+            }
 ]
+
 
