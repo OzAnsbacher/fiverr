@@ -1,5 +1,5 @@
 <template>
-  <div id="app" style="width: 290px">
+  <div id="app-chart" style="width: 290px">
     <!-- <button @click="shuffleData">Shuffle</button> -->
     <DoughnutChart v-bind="doughnutChartProps" />
   </div>
@@ -46,7 +46,7 @@ export default defineComponent({
 </script>
 
 <style>
-#app {
+#app-chart {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
